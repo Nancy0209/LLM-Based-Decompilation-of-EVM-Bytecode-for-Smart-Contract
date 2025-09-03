@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xb611B4D07f9ED4f7a6C53092BF079e76c5c95AEf",
+    "heimdall_input": "function setExecutor(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) == (address(store_a / 0x01)), \"Access denied\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x0d;\n        var_e = 0x4163636573732064656e69656400000000000000000000000000000000000000;\n        store_a = (address(arg0) * 0x01) | (uint96(store_a));\n    }",
+    "llm_output": "function setExecutor(address _newExecutor) public {\n    require(_newExecutor == address(_newExecutor));\n    require(msg.sender == address(store_a / 0x01), \"Access denied\");\n    store_a = (address(_newExecutor) * 0x01) | (uint96(store_a));\n}",
+    "ground_truth": "function setExecutor(address _newExector) external {\r\n        require(msg.sender == _executor, \"Access denied\");\r\n        _executor = _newExector;\r\n    }"
+}

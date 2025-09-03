@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x172F7a6F8C76321376cf077c4b68f6C0A0907d2f",
+    "heimdall_input": "function getDividendsClaimedOf(address arg0) public returns (uint256) {\n        require(arg0 == (address(arg0)));\n        var_a = 0x5cc33f7400000000000000000000000000000000000000000000000000000000;\n        address var_b = address(arg0);\n        (bool success, bytes memory ret0) = address(blacklistEnabled / 0x01).Unresolved_5cc33f74(var_b); // staticcall\n        uint256 var_c = var_c + (uint248(ret0.length + 0x1f));\n        require(!((var_c + ret0.length) - var_c) < 0x20);\n        require(var_d == (var_d));\n        var_e = var_d;\n        return var_d;\n    }",
+    "llm_output": "function getDividendsClaimedOf(address shareholder) public view returns (uint256) {\n    require(shareholder == address(shareholder));\n    return distributor.getDividendsClaimedOf(shareholder);\n}",
+    "ground_truth": "function getDividendsClaimedOf (address shareholder) external view returns (uint256) {\r\n        return distributor.getDividendsClaimedOf(shareholder);\r\n    }"
+}

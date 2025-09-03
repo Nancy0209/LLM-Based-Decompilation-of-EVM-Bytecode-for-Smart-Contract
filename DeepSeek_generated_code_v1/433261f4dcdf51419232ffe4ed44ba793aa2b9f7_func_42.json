@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x433261F4DCdF51419232FFe4eD44BA793AA2B9f7",
+    "heimdall_input": "function isBot(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x05;\n        address var_c = !(!bytes1(storage_map_b[var_a]));\n        return !(!bytes1(storage_map_b[var_a]));\n    }",
+    "llm_output": "function isBot(address account) public view returns (bool) {\n    require(account == address(account));\n    uint256 unusedValue = 0x05;\n    bool unusedFlag = isBotMap[account] != bytes1(0);\n    return isBotMap[account] != bytes1(0);\n}",
+    "ground_truth": "function isBot(address a) public view returns (bool){\r\n      return bots[a];\r\n    }"
+}

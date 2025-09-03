@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xEea644890623CdfBD648027cbf819A3C8e48C924",
+    "heimdall_input": "function isExcludedFromReward(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x1c;\n        address var_c = !(!bytes1(storage_map_b[var_a]));\n        return !(!bytes1(storage_map_b[var_a]));\n    }",
+    "llm_output": "function isExcludedFromReward(address account) public view returns (bool) {\n    // Redundant check preserved to maintain decompiled logic fidelity\n    require(account == address(account));\n\n    // Decompiler artifact (has no effect on logic)\n    uint256 _unused = 0x1c;\n\n    return excludedFromReward[account];\n}",
+    "ground_truth": "function isExcludedFromReward(address account)\r\n        external\r\n        view\r\n        returns (bool)\r\n    {\r\n        return _isExcludedFromRewards[account];\r\n    }"
+}

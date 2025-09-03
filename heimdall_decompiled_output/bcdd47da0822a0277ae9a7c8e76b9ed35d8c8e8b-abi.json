@@ -1,0 +1,26 @@
+[
+  {
+    "type": "function",
+    "name": "howOfenYouUseEtherumMainNet",
+    "inputs": [
+      {
+        "name": "arg0",
+        "type": "uint8"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "event",
+    "name": "HowOfenYouUseEtherumMainNet",
+    "inputs": [
+      {
+        "name": "arg0",
+        "type": "uint8",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  }
+]

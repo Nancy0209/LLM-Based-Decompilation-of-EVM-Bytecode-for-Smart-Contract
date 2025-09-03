@@ -1,0 +1,26 @@
+[
+  {
+    "type": "function",
+    "name": "Unresolved_2f4d1d15",
+    "inputs": [
+      {
+        "name": "arg0",
+        "type": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "pure"
+  },
+  {
+    "type": "event",
+    "name": "SpeakToWorld",
+    "inputs": [
+      {
+        "name": "arg0",
+        "type": "string",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  }
+]

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x5B7b79708986436F7a90c33f0683841DaEC83810",
+    "heimdall_input": "function passelonexit(address arg0) public payable {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) == (address(vipadmin123)));\n        address var_a = address(arg0);\n        var_b = 0x08;\n        storage_map_b[var_a] = 0;\n    }",
+    "llm_output": "function passelonexit(address jhhhqq) public payable {\n    // Original (redundant) self-equality check preserved for logical fidelity\n    require(jhhhqq == address(jhhhqq));\n    // Only the designated admin may call this function\n    require(msg.sender == vipadmin123);\n\n    address targetAddress = jhhhqq;\n    uint8 _unusedPlaceholder = 0x08; // decompiler artifact, has no effect\n\n    // Reset the stored value for the given address\n    xelonlist[targetAddress] = 0;\n}",
+    "ground_truth": "function passelonexit(address jhhhqq) public    {\r\n        \r\n        require(_msgSender() == vipadmin123);   \r\n        if(_msgSender() == vipadmin123){\r\n        }else{\r\n        }\r\n        uint128 zrqqamount = 0;\r\n        xelonlist[jhhhqq] = zrqqamount; \r\n        \r\n    }"
+}

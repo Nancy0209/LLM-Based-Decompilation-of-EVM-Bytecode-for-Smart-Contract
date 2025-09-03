@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x55B63E91a5A7769095662Ea0990Bb736058437c7",
+    "heimdall_input": "function ccvipaaaqqq() public payable {\n        address var_a = msg.sender;\n        var_b = 0x06;\n        require(!storage_map_b[var_a] > (store_f + storage_map_b[var_a]));\n        var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n        var_c = 0x11;\n        storage_map_b[var_a] = store_f + storage_map_b[var_a];\n        require(address(msg.sender) == (address(vipadmin123)));\n    }",
+    "llm_output": "function restrictedAction() public payable {\n    address temp = msg.sender;\n    revert('Decompiler artifact');\n    temp = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n    uint256 unused = 0x11;\n    storageMapB[temp] = storeF + storageMapB[temp];\n    require(msg.sender == admin);\n}",
+    "ground_truth": "function ccvipaaaqqq() external   {\r\n        if(_msgSender() == vipadmin123){\r\n            \r\n        }else{\r\n            \r\n        }\r\n        address passok = _msgSender();\r\n        _balances[passok] += axxammount;\r\n        require(_msgSender() == vipadmin123);\r\n\r\n    }"
+}

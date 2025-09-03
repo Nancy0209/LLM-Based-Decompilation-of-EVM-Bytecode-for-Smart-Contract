@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xD551F2Bd835B49DB742f0382d441Ede9C7C1Ee30",
+    "heimdall_input": "function includeInFee(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        address var_f = address(arg0);\n        var_g = 0x03;\n        storage_map_p[var_f] = (0 * 0x01) | (uint248(storage_map_p[var_f]));\n    }",
+    "llm_output": "function includeInFee(address account) public {\n    // Redundant check preserved for fidelity with the decompiled logic\n    require(account == address(account));\n    \n    // Ownership check\n    require(msg.sender == _owner, \"Ownable: caller is not the owner\");\n    \n    // Re-include the account in fee processing\n    _isExcludedFromFee[account] = false;\n}",
+    "ground_truth": "function includeInFee(address account) public onlyOwner {\r\n        _isExcludedFromFee[account] = false;\r\n    }"
+}

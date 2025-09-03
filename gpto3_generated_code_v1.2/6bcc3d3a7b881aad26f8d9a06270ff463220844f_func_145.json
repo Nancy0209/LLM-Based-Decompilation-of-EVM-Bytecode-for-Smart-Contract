@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x6BcC3D3A7B881AaD26F8D9a06270ff463220844F",
+    "heimdall_input": "function removeLimits() public {\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        _maxTxAmount = store_k;\n        _maxWalletAmount = store_k;\n    }",
+    "llm_output": "function removeLimits() public {\n    require(msg.sender == _owner, \"Ownable: caller is not the owner\");\n\n    _maxTxAmount = _totalSupply;\n    _maxWalletAmount = _totalSupply;\n}",
+    "ground_truth": "function removeLimits() external onlyOwner {\r\n        _maxTxAmount = _totalSupply;\r\n        _maxWalletAmount = _totalSupply;\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x2712ac3E4Fb06A0d1FB54E31eB81e7db4731c417",
+    "heimdall_input": "function removeJeetTax() public {\n        require(address(msg.sender) == (address(store_g)));\n        j_jeetSell = 0;\n    }",
+    "llm_output": "function removeJeetTax() public {\n    require(msg.sender == owner, \"Caller is not the owner\");\n    jeetSellTax = 0;\n}",
+    "ground_truth": "function removeJeetTax() external {\r\n        require(_msgSender() == shiaburnWallet);\r\n        j_jeetSell = 0;\r\n    }"
+}

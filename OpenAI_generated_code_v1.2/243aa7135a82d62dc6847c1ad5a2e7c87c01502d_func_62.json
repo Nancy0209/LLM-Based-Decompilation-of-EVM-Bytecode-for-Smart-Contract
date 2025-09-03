@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x243aA7135A82d62dc6847C1Ad5A2E7c87c01502d",
+    "heimdall_input": "function updateLPWallet(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        emit lpWalletUpdated(address(arg0), address(lpWallet / 0x01));\n        lpWallet = (address(arg0) * 0x01) | (uint96(lpWallet));\n    }",
+    "llm_output": "function updateLPWallet(address newLPWallet) public {\n    require(newLPWallet != address(0), \"Invalid address\");\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    \n    emit lpWalletUpdated(newLPWallet, lpWallet);\n    lpWallet = newLPWallet;\n}",
+    "ground_truth": "function updateLPWallet(address newLPWallet)\r\n        external\r\n        onlyOwner\r\n    {\r\n        emit lpWalletUpdated(newLPWallet, lpWallet);\r\n        lpWallet = newLPWallet;\r\n    }"
+}

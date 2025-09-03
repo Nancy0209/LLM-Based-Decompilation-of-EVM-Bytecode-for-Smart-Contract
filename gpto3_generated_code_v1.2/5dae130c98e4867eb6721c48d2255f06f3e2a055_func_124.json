@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x5Dae130C98E4867Eb6721c48D2255F06f3E2a055",
+    "heimdall_input": "function reduceFee(uint256 arg0) public {\n        require(arg0 == arg0);\n        require(address(msg.sender) == (address(transferDelayEnabled / 0x0100)));\n        require(arg0 > store_e);\n        require(!arg0 > store_e);\n        store_e = arg0;\n        store_p = arg0;\n    }",
+    "llm_output": "function reduceFee(uint256 newFee) external {\n    // original decompiler comparison to `address(transferDelayEnabled / 0x0100)` is nonsensical;\n    // it clearly intended an ownership check\n    require(msg.sender == _owner, \"Not owner\");\n\n    // keep original logical intent (newFee must be greater than current fees)\n    require(newFee > _finalBuyTax, \"newFee must exceed current buy tax\");\n    require(newFee > _finalSellTax, \"newFee must exceed current sell tax\");\n\n    // update both buy & sell final tax\n    _finalBuyTax = newFee;\n    _finalSellTax = newFee;\n}",
+    "ground_truth": "function reduceFee(uint256 _newFee) external{\r\n      require(_msgSender()==_taxWallet);\r\n      require(_newFee<=_finalBuyTax && _newFee<=_finalSellTax);\r\n      _finalBuyTax=_newFee;\r\n      _finalSellTax=_newFee;\r\n    }"
+}

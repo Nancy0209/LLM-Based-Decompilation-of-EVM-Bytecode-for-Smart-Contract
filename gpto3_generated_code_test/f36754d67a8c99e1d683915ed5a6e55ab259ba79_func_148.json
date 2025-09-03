@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xF36754d67a8C99e1D683915ED5A6E55aB259ba79",
+    "heimdall_input": "function excludeFromFee(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        address var_f = address(arg0);\n        var_g = 0x03;\n        storage_map_p[var_f] = (0x01 * 0x01) | (uint248(storage_map_p[var_f]));\n    }",
+    "llm_output": "function excludeFromFee(address account) public {\n        // Redundant check preserved from original bytecode\n        require(account == address(account));\n\n        // Ownership check (mirrors original logic)\n        require(msg.sender == _owner, \"Ownable: caller is not the owner\");\n\n        // Mark the account as excluded from fees\n        _isExcludedFromFee[account] = true;\n    }",
+    "ground_truth": "function excludeFromFee(address account) public onlyOwner {\r\n        _isExcludedFromFee[account] = true;\r\n    }"
+}

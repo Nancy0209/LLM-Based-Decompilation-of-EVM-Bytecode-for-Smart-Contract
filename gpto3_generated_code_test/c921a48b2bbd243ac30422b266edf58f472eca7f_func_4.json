@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xc921a48b2bBd243aC30422B266edf58F472Eca7F",
+    "heimdall_input": "function checkRewards() public view returns (uint256) {\n        address var_a = msg.sender;\n        var_b = 0x1a;\n        address var_c = storage_map_i[var_a];\n        return storage_map_i[var_a];\n    }",
+    "llm_output": "function checkRewards() public view returns (uint256) {\n    // Retained to preserve decompiled semantics; has no functional impact\n    uint256 _unusedPlaceholder = 0x1a;\n\n    return addressRewards[msg.sender];\n}",
+    "ground_truth": "function checkRewards() public view virtual returns (uint256) {\\r\\n        return addressRewards[msg.sender];\\r\\n    }"
+}

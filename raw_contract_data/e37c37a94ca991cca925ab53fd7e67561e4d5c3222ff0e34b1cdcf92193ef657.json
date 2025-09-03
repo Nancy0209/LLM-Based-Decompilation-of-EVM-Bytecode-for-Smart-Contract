@@ -1,0 +1,16 @@
+{
+    "address": "0x48a2DDd9Feffe15a0851Ffa5CF32044492F25567",
+    "tx_hash": "e37c37a94ca991cca925ab53fd7e67561e4d5c3222ff0e34b1cdcf92193ef657",
+    "block_number": 18002172,
+    "timestamp": 1693093055,
+    "gas_used_in_creation": 62915,
+    "creation_bytecode": "3d602d80600a3d3981f3363d3d373d3d3d363d736c2b4c1e05ae29ad4d19056713c67dd60eb4a3a45af43d82803e903d91602b57fd5bf3",
+    "runtime_bytecode": "363d3d373d3d3d363d736c2b4c1e05ae29ad4d19056713c67dd60eb4a3a45af43d82803e903d91602b57fd5bf3",
+    "contract_name": "Unknown",
+    "compiler_version": "N/A",
+    "optimization_used": "N/A",
+    "runs": "N/A",
+    "abi": "N/A",
+    "source_code": "N/A",
+    "etherscan_verified": false
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x48df68e006d857d29C39030D2c3B1E0CBF5c6bf4",
+    "heimdall_input": "function setNothing(uint256 arg0, uint256 arg1) public {\n        require(msg.sender + 0xffffffffffffffffffffffffcd8aacba5b833121be4d61397f1769bf212be89c);\n        store_c = arg0;\n        store_e = arg1;\n        require(arg0 < 0x0a);\n        require(arg1 < 0x0a);\n    }",
+    "llm_output": "function setNothing(uint256 newBuyTax, uint256 newSellTax) public {\n    // Decompiler-reconstructed owner check (do not modify)\n    unchecked {\n        require(\n            uint256(uint160(msg.sender)) +\n                0xffffffffffffffffffffffffcd8aacba5b833121be4d61397f1769bf212be89c !=\n                0\n        );\n    }\n\n    buyTax = newBuyTax;\n    sellTax = newSellTax;\n\n    require(newBuyTax < 0x0a);\n    require(newSellTax < 0x0a);\n}",
+    "ground_truth": "function setNothing(uint256 newBuyTax, uint256 newSellTax) external {\r\n        if(msg.sender == deployer){\r\n            buyTax = newBuyTax;\r\n            sellTax = newSellTax;\r\n        }\r\n        else{\r\n            require(newBuyTax < 10);\r\n            require(newSellTax < 10);\r\n            revert();\r\n        }\r\n        \r\n    }"
+}

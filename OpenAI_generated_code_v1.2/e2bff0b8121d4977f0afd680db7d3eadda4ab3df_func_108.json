@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xe2BFF0b8121D4977F0aFd680dB7d3eADDa4Ab3Df",
+    "heimdall_input": "function setTax(uint256 arg0, uint256 arg1, uint256 arg2, uint256 arg3) public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_n = arg0;\n        store_o = arg1;\n        store_p = arg2;\n        store_q = arg3;\n    }",
+    "llm_output": "function setTax(uint256 initFeeOnBuy, uint256 initFeeOnSell, uint256 taxFeeOnBuy, uint256 taxFeeOnSell) public {\n    require(msg.sender == _owner, \"Ownable: caller is not the owner\");\n    _initFeeOnBuy = initFeeOnBuy;\n    _initFeeOnSell = initFeeOnSell;\n    _taxFeeOnBuy = taxFeeOnBuy;\n    _taxFeeOnSell = taxFeeOnSell;\n}",
+    "ground_truth": "function setTax(uint256 initOnBuy, uint256 initOnSell, uint256 taxFeeOnBuy, uint256 taxFeeOnSell) public onlyOwner {\r\n_initFeeOnBuy = initOnBuy;\r\n_initFeeOnSell = initOnSell;\r\n_taxFeeOnBuy = taxFeeOnBuy;\r\n_taxFeeOnSell = taxFeeOnSell;\r\n}"
+}

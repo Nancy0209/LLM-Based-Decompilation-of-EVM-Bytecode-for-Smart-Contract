@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x172F7a6F8C76321376cf077c4b68f6C0A0907d2f",
+    "heimdall_input": "function setMarketingWallet(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) == (address(getOwner / 0x01)), \"!Owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x06;\n        var_e = 0x214f776e65720000000000000000000000000000000000000000000000000000;\n        marketingWallet = (address(arg0) * 0x01) | (uint96(marketingWallet));\n    }",
+    "llm_output": "function setMarketingWallet(address _marketingWallet) public {\n    require(_marketingWallet == address(_marketingWallet));\n    require(msg.sender == getOwner(), \"!Owner\");\n    marketingWallet = payable(_marketingWallet);\n}",
+    "ground_truth": "function setMarketingWallet(address _marketingWallet) external onlyOwner {\r\n        marketingWallet = payable(_marketingWallet);\r\n    }"
+}

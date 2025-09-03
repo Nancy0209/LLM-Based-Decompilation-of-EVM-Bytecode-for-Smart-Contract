@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x636aD441CdA1EC74BC059A23615b9D9c3464d9e3",
+    "heimdall_input": "function setTeamWalletAddress(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        teamWalletAddress = (address(arg0)) | (uint96(teamWalletAddress));\n    }",
+    "llm_output": "function setTeamWalletAddress(address newTeamWalletAddress) public {\n    require(newTeamWalletAddress == address(newTeamWalletAddress));\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n\n    uint160 mergedValue = uint160(newTeamWalletAddress) | uint96(uint160(teamWalletAddress));\n    teamWalletAddress = address(mergedValue);\n}",
+    "ground_truth": "function setTeamWalletAddress(address newAddress) external onlyOwner() {\r\n        teamWalletAddress = payable(newAddress);\r\n    }"
+}

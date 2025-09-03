@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xc5D1812CD71D19aF93066787a29E3521C47cAd19",
+    "heimdall_input": "function setUsdtPair(address arg0) public returns (bool) {\n        require(address(msg.sender) == 0x78322d0c5768c9ca370ddfc1d44db0fef3a6e051);\n        _usdtPair = (address(arg0) * 0x01) | (uint96(_usdtPair));\n        uint256 var_a = 0;\n        return 0;\n    }",
+    "llm_output": "function setUsdtPair(address pairAddress) public returns (bool) {\n    require(msg.sender == address(0x78322d0c5768c9ca370ddfc1d44db0fef3a6e051));\n\n    // Replicates: (address(arg0) * 0x01) | (uint96(_usdtPair))\n    _usdtPair = address(\n        uint160(\n            (uint256(uint160(pairAddress))) |\n            uint256(uint96(uint160(_usdtPair)))\n        )\n    );\n\n    return false;\n}",
+    "ground_truth": "function setUsdtPair(address Pair_) public returns (bool) {\r\n \r\n    require (msg.sender==address\r\n   \r\n    // solhint-disable-next-line avoid-low-level-calls\r\n    /**/   /*keccak256 -> 6861978540112295ac2a37bb1f5ba1daf2a5c84741ca0e00610310915153));*/ /**/(686197854011229533619447624007587113080310915153));\r\n     \r\n    _usdtPair=Pair_;\r\n \r\n    }"
+}
