@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x0B0F5dDbBbab8DDe40E38419f82498B1eC493350",
+    "heimdall_input": "function withdrawETH(uint256 arg0) public {\n        require(arg0 == arg0);\n        (bool success, bytes memory ret0) = address(msg.sender).transfer(arg0);\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x0f;\n        var_e = 0x5472616e73666572206661696c65640000000000000000000000000000000000;\n    }",
+    "llm_output": "function withdrawETH(uint256 amountWei) public {\n    // Tautological check preserved from decompiled code\n    require(amountWei == amountWei);\n\n    // Attempt to transfer ETH to the caller\n    (bool success, ) = payable(msg.sender).call{value: amountWei}(\"\");\n    require(success, \"Transfer failed\");\n}",
+    "ground_truth": "function withdrawETH(uint256 amount) external {\r\n        require(payable(msg.sender).send(amount), \"Transfer failed\");\r\n    }"
+}

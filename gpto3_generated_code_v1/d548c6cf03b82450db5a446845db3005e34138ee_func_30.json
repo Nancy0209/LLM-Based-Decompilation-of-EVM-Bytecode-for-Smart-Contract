@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xd548c6Cf03b82450db5a446845DB3005e34138eE",
+    "heimdall_input": "function renounceOwnership() public {\n        require(msg.sender == (address(getOwner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        emit OwnershipTransferred(address(getOwner), 0);\n        getOwner = uint96(getOwner);\n    }",
+    "llm_output": "function renounceOwnership() public {\n    require(msg.sender == address(uint160(_ownerPacked)), \"Ownable: caller is not the owner\");\n\n    // Retained no-op assignments from decompiled output to preserve original gas pattern\n    bytes32 _noop1 = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n    uint256 _noop2 = 0x20;\n    uint256 _noop3 = 0x20;\n    bytes32 _noop4 = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n\n    emit OwnershipTransferred(address(uint160(_ownerPacked)), address(0));\n\n    _ownerPacked = uint96(_ownerPacked);\n}",
+    "ground_truth": "function renounceOwnership() public virtual onlyOwner {\r\n        emit OwnershipTransferred(_owner, address(0));\r\n        _owner = address(0);\r\n    }"
+}

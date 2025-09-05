@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xb611B4D07f9ED4f7a6C53092BF079e76c5c95AEf",
-    "heimdall_input": "function setExecutor(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) == (address(store_a / 0x01)), \"Access denied\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x0d;\n        var_e = 0x4163636573732064656e69656400000000000000000000000000000000000000;\n        store_a = (address(arg0) * 0x01) | (uint96(store_a));\n    }",
-    "llm_output": "function setExecutor(address _newExecutor) public {\n    // Retain the original, logically-redundant check\n    require(_newExecutor == address(_newExecutor));\n\n    // Access control: only the current executor stored in `packedStorage` may update it\n    require(msg.sender == address(uint160(packedStorage)), \"Access denied\");\n\n    // Keep the lowest 96 bits intact while replacing the executor address (lower 160 bits)\n    uint256 lower96Bits = uint96(packedStorage);\n    packedStorage = uint256(uint160(_newExecutor)) | lower96Bits;\n}",
-    "ground_truth": "function setExecutor(address _newExector) external {\r\n        require(msg.sender == _executor, \"Access denied\");\r\n        _executor = _newExector;\r\n    }"
-}

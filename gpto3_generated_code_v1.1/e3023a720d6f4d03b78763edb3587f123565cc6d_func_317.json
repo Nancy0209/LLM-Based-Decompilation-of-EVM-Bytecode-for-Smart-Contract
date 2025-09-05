@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xe3023a720d6f4d03b78763EDB3587f123565Cc6D",
+    "heimdall_input": "function getAvailableBalance() public returns (uint256) {\n        var_a = 0x70a0823100000000000000000000000000000000000000000000000000000000;\n        address var_b = address(this);\n        (bool success, bytes memory ret0) = address(IUCNcoin).Unresolved_70a08231(var_b); // staticcall\n        uint256 var_c = var_c + (uint248(ret0.length + 0x1f));\n        require(!((var_c + ret0.length) - var_c) < 0x20);\n        uint256 var_d = var_c.length;\n        return var_c.length;\n    }",
+    "llm_output": "function getAvailableBalance() public view returns (uint256) {\n    return IERC20(IUCNcoin).balanceOf(address(this));\n}",
+    "ground_truth": "function getAvailableBalance() public view returns (uint) {\r\n        return IUCNcoin.balanceOf(address(this));\r\n    }"
+}

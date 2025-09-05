@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x95f7bFda575e002777B856665bD36D954c3aaa59",
+    "heimdall_input": "function approve(address arg0, uint256 arg1) public returns (bool) {\n        require(arg0 == (address(arg0)));\n        require(arg1 == arg1);\n        address var_a = address(msg.sender);\n        var_b = 0x06;\n        var_a = address(arg0);\n        address var_b = keccak256(var_a);\n        storage_map_j[var_a] = arg1;\n        uint256 var_c = arg1;\n        emit Approval(address(msg.sender), address(arg0), arg1);\n        var_c = 0x01;\n        return 0x01;\n    }",
+    "llm_output": "function approve(address spender, uint256 amount) public returns (bool) {\n    // Original no-op checks kept for bytecode fidelity\n    require(spender == address(spender));\n    require(amount == amount);\n\n    _allowances[msg.sender][spender] = amount;\n\n    emit Approval(msg.sender, spender, amount);\n    return true;\n}",
+    "ground_truth": "function approve(address spender, uint256 amount) public override returns (bool) {\r\n        _allowances[msg.sender][spender] = amount;\r\n        emit Approval(msg.sender, spender, amount);\r\n        return true;\r\n    }"
+}

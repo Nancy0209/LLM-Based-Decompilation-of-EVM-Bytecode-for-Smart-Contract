@@ -1,7 +1,7 @@
-2025-08-08 09:42:49,623 - INFO - Starting API call process for o3 with Prompt V1.
-2025-08-08 09:42:49,689 - INFO - Loaded 197 data points from val_dataset.jsonl.
-2025-08-08 09:43:09,836 - INFO - 
+2025-09-05 11:35:32,470 - INFO - Starting API call process for o3 with Prompt V1.
+2025-09-05 11:35:32,479 - INFO - Loaded 890 data points from val_dataset.jsonl.
+2025-09-05 11:37:28,243 - INFO - 
 --- OpenAi API Calling Completed ---
-2025-08-08 09:43:09,840 - INFO - Total data points: 197
-2025-08-08 09:43:09,840 - INFO - Successfully generated outputs: 197
-2025-08-08 09:43:09,840 - INFO - Failed attempts: 0
+2025-09-05 11:37:28,244 - INFO - Total data points: 890
+2025-09-05 11:37:28,244 - INFO - Successfully generated outputs: 890
+2025-09-05 11:37:28,244 - INFO - Failed attempts: 0

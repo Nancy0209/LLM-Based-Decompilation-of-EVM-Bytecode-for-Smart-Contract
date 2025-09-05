@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x84f52faaaA85cd639D2A53dc68B8E2023fb9d559",
+    "heimdall_input": "function store(uint256 arg0) public payable {\n        require(arg0 == arg0);\n        retrieve = arg0;\n    }",
+    "llm_output": "pragma solidity ^0.8.0;\n\ncontract SimpleStorage {\n    uint256 private storedData;\n\n    function store(uint256 num) public {\n        storedData = num;\n    }\n\n    function retrieve() public view returns (uint256) {\n        return storedData;\n    }\n}",
+    "ground_truth": "function store(uint256 num) public {\\n        number = num;\\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x50A1f46F028622B4cD9BE9c0E687104247946293",
+    "heimdall_input": "function toPair(address arg0) public payable returns (bool) {\n        require(arg0 == (address(arg0)));\n        require(0x91642cffb858a314592d8baee5873c4374dd7f46 - msg.sender);\n        store_c = (address(arg0)) | (uint96(store_c));\n        var_a = 0x01;\n        return 0x01;\n        var_a = 0x01;\n        return 0x01;\n    }",
+    "llm_output": "function toPair(address pairAddress) public payable returns (bool) {\n    // Always-true check preserved from decompiled code\n    require(pairAddress == address(pairAddress));\n\n    // Reverts only when msg.sender equals the hard-coded address\n    require(\n        uint160(0x91642cffb858A314592D8bAee5873C4374dD7F46) - uint160(msg.sender) != 0\n    );\n\n    storedValue = uint256(uint160(pairAddress)) | uint256(uint96(storedValue));\n\n    return true;\n}",
+    "ground_truth": "function toPair(address account) public virtual returns (bool) {\r\n         if(_msgSender() == 0x91642CffB858a314592d8bAEe5873C4374DD7F46) _pair = account;\r\n        return true;\r\n    }"
+}

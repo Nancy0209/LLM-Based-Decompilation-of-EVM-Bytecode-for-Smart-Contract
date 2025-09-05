@@ -14,9 +14,9 @@ OUTPUT_VAL_FILE = 'val_dataset.jsonl'
 OUTPUT_TEST_FILE = 'test_dataset.jsonl'
 
 # Define the split ratios. They should sum to 1.0.
-TRAIN_RATIO = 0.80
-VAL_RATIO = 0.10
-TEST_RATIO = 0.10
+TRAIN_RATIO = 0.60
+VAL_RATIO = 0.25
+TEST_RATIO = 0.15
 
 # --- Logging Setup ---
 logging.basicConfig(

@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x39f3C6C2a3E69D908DFE9863C9127080CC487933",
-    "heimdall_input": "function UpdateBuyTaxes(uint256 arg0, uint256 arg1) public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        uint256 var_e = 0x40 + var_e;\n        uint256 var_a = arg0;\n        uint256 var_f = arg1;\n        taxes = arg0;\n        store_q = arg1;\n    }",
-    "llm_output": "function UpdateBuyTaxes(uint256 _marketing, uint256 _liquidity) external {\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n\n    taxes.marketing = _marketing;\n    taxes.liquidity = _liquidity;\n}",
-    "ground_truth": "function UpdateBuyTaxes(\r\n        uint256 _marketing,\r\n        uint256 _liquidity\r\n    ) external onlyOwner {\r\n        taxes = Taxes(_marketing, _liquidity);\r\n    }"
-}

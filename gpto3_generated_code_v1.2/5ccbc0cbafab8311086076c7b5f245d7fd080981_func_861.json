@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x5Ccbc0cbaFAB8311086076C7B5f245D7fD080981",
+    "heimdall_input": "function balanceOf(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x06;\n        address var_c = storage_map_b[var_a];\n        return storage_map_b[var_a];\n    }",
+    "llm_output": "function balanceOf(address account) public view returns (uint256) {\n    // Decompiler-injected check (always true, kept for logical fidelity)\n    require(account == address(account));\n\n    // No-op value to mirror decompiled artifact\n    uint8 _noop = 0x06;\n    _noop; // suppress unused-variable warning\n\n    // Return stored token balance\n    uint256 balance = _balances[account];\n    return balance;\n}",
+    "ground_truth": "function balanceOf(address account) public view returns (uint256) {\r\n        return _balances[account];\r\n    }"
+}

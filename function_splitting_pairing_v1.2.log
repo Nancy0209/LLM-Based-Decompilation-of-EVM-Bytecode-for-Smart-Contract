@@ -1,0 +1,4 @@
+2025-09-03 23:19:36,618 - INFO - Starting function splitting and pairing process (with FULL context)...
+2025-09-03 23:19:36,620 - INFO - Found 419 contract addresses to process.
+2025-09-03 23:19:39,126 - INFO - --- Process Complete ---
+2025-09-03 23:19:39,126 - INFO - Total function pairs found and saved (with full context): 3561

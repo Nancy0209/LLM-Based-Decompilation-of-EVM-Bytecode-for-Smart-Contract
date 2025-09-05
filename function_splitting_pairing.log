@@ -1,0 +1,46 @@
+2025-09-03 23:19:58,376 - INFO - Starting function splitting and pairing process...
+2025-09-03 23:19:58,376 - INFO - Found 419 contract addresses to process from final_verified_addresses.txt.
+2025-09-03 23:19:58,415 - WARNING - Could not pair any functions for contract 0xa57D1519F426D5F961B3B37E298f3020a8fae115.
+2025-09-03 23:19:58,425 - WARNING - Could not pair any functions for contract 0x99DcFEC4525D0647610f4A7d412f6b5f4Ec0e35c.
+2025-09-03 23:19:58,426 - WARNING - Could not pair any functions for contract 0x3C8AA405E7EC608242096610DE3198677718fa9c.
+2025-09-03 23:19:58,477 - WARNING - Could not pair any functions for contract 0xb549446ddA2AcC32dD4bA47BE8bfA478E46CEfBD.
+2025-09-03 23:19:58,581 - WARNING - Could not pair any functions for contract 0x2De3d32274c787861A05DE7146148E6284F70307.
+2025-09-03 23:19:58,615 - WARNING - Could not pair any functions for contract 0x0611ef165534C1606f56F22966a6641994506abb.
+2025-09-03 23:19:58,646 - WARNING - Could not pair any functions for contract 0xBD12E5b55D392080a3220B18D79256501D7b4e5B.
+2025-09-03 23:19:58,656 - WARNING - Could not pair any functions for contract 0x1183E22fd7395c4a536793277C12fC46ee6916f4.
+2025-09-03 23:19:58,674 - WARNING - Could not pair any functions for contract 0xDd27f2596ABd2d452d27Cd998780e27A9f40C6f0.
+2025-09-03 23:19:58,682 - WARNING - Could not pair any functions for contract 0x42833b4aEb57A19c2FE4972F5Bb4Af9a86B7852f.
+2025-09-03 23:19:58,734 - WARNING - Could not find matching closing brace for function transfer starting at pos 1958.
+2025-09-03 23:19:58,747 - WARNING - Could not pair any functions for contract 0x99DA31CF682d1F2b61b57c826B954bB1783D50E5.
+2025-09-03 23:19:58,755 - WARNING - Could not pair any functions for contract 0x86d6f052C725439fE291D3937CF0f4d323aF8E42.
+2025-09-03 23:19:58,896 - WARNING - Could not pair any functions for contract 0x20B8eeF1ef4b33f68aCAca3739e4e6a6a30b932d.
+2025-09-03 23:19:58,903 - WARNING - Could not pair any functions for contract 0xDE542530037Fd01D10AaBe0C5953feC17BdCCEd4.
+2025-09-03 23:19:58,931 - WARNING - Could not pair any functions for contract 0x6c6b587aD8988d1867E4343cf4a7Ae3eD36E793D.
+2025-09-03 23:19:58,950 - WARNING - Could not pair any functions for contract 0xEAD67175CDb9CBDeA5bDDC36015e52f4A954E3fD.
+2025-09-03 23:19:58,952 - WARNING - Could not pair any functions for contract 0x656F0d81B0c43A26ad552BDcE3397bEb0908D8B8.
+2025-09-03 23:19:58,973 - WARNING - Could not pair any functions for contract 0x1d1B4845a48Da11196E955Be5500A4C64152CbD3.
+2025-09-03 23:19:59,032 - WARNING - Could not pair any functions for contract 0xe5674733bDa3D2643839F8bC7837311A2734Ae8E.
+2025-09-03 23:19:59,079 - WARNING - Could not pair any functions for contract 0x76440C966843cBac94ae87B6Ea4e94E851D169BD.
+2025-09-03 23:19:59,082 - WARNING - Could not pair any functions for contract 0xd3acbe8dA4920722285dEde491b18a2be82cd8C5.
+2025-09-03 23:19:59,133 - WARNING - Could not pair any functions for contract 0x04A01375612C3FCd25f0E1C5E5759795062c428F.
+2025-09-03 23:19:59,134 - WARNING - Could not pair any functions for contract 0xB69112985dCcE2D515fC51667b043421545d3dF0.
+2025-09-03 23:19:59,186 - WARNING - Could not pair any functions for contract 0xa90407a57eaf4BD68C15c3A1A8876fe5cE2340E2.
+2025-09-03 23:19:59,214 - WARNING - Could not pair any functions for contract 0xa7d679DaeF34A628c9971F5c6b1133e0FAb11207.
+2025-09-03 23:19:59,225 - WARNING - Could not pair any functions for contract 0xcd02928F3194b0e52b2FeA56ee78F3eBf0bb016c.
+2025-09-03 23:19:59,243 - WARNING - Could not pair any functions for contract 0x4C03BCAD293fb0562D26FAa7D90A0cb3Ea74c919.
+2025-09-03 23:19:59,258 - WARNING - Could not pair any functions for contract 0xA7980259c46Daf40C04BffA1Fb321013C3DeA213.
+2025-09-03 23:19:59,282 - WARNING - Could not pair any functions for contract 0x0E113A60b8C117B919604e54e1886f5e4C7E7144.
+2025-09-03 23:19:59,327 - WARNING - Could not pair any functions for contract 0x8e5848e649Da97c4380E495cbaa3614C05958EB1.
+2025-09-03 23:19:59,389 - WARNING - Could not pair any functions for contract 0x2B836568B9eFB8511328881FA578fA004B8E1998.
+2025-09-03 23:19:59,402 - WARNING - Could not find matching closing brace for function _approveDelegate starting at pos 46829.
+2025-09-03 23:19:59,428 - WARNING - Could not pair any functions for contract 0xbe638EA292D88400F8A4c78736abc184B1d7A097.
+2025-09-03 23:19:59,443 - WARNING - Could not pair any functions for contract 0x207c54174740cb971771167Ac203DdBdC29Bc23B.
+2025-09-03 23:19:59,474 - WARNING - Could not pair any functions for contract 0x4d696176d68BF163950e86Be1b2F4BeD49A479Cf.
+2025-09-03 23:19:59,501 - WARNING - Could not pair any functions for contract 0xE3ce576a0f655917aA77F255Fab9559a75FCd4F3.
+2025-09-03 23:19:59,631 - WARNING - Could not pair any functions for contract 0xca7f25fe6a966461588777F727b9acC8125E2d3E.
+2025-09-03 23:19:59,649 - WARNING - Could not pair any functions for contract 0x269211987Ca6E99D3A02DE07Ea3478BE9E675734.
+2025-09-03 23:19:59,725 - WARNING - Could not pair any functions for contract 0xd84f6BaA9A786082e2D28E00eD62Bde5028dF932.
+2025-09-03 23:19:59,773 - INFO - --- Process Complete ---
+2025-09-03 23:19:59,774 - INFO - Total contracts successfully processed and analyzed: 381
+2025-09-03 23:19:59,774 - INFO - Total function pairs found and saved: 3561
+2025-09-03 23:19:59,774 - INFO - Output saved to: final_function_dataset.jsonl

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x15C20cF168b7A84E9C56ADbf233b80Fc40090e7a",
+    "heimdall_input": "function setLimits(uint256 arg0) public payable {\n        require(arg0 == arg0);\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        limits = arg0;\n    }",
+    "llm_output": "pragma solidity ^0.8.0;\n\ncontract ExampleContract {\n    address public owner;\n    uint256 public limits;\n\n    constructor() {\n        owner = msg.sender;\n    }\n\n    function setLimits(uint256 newLimit) public payable {\n        require(newLimit == newLimit); // This check is redundant\n        require(msg.sender == owner, \"Ownable: caller is not the owner\");\n        limits = newLimit;\n    }\n}",
+    "ground_truth": "function setLimits(uint256 amount) public onlyOwner {\\r\\n        limits = amount;\\r\\n    }"
+}

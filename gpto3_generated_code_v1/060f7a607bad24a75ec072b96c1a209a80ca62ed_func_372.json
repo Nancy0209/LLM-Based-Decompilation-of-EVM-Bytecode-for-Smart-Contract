@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x060f7a607bAd24a75EC072b96C1a209A80ca62ed",
+    "heimdall_input": "function isBot(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x05;\n        address var_c = !(!bytes1(storage_map_b[var_a]));\n        return !(!bytes1(storage_map_b[var_a]));\n    }",
+    "llm_output": "function isBot(address account) public view returns (bool) {\n    // Original self-equality check (kept verbatim)\n    require(account == address(account));\n\n    // Decompiled artifacts preserved for fidelity\n    address _addrReference = account;   // corresponds to `var_a`\n    uint256 _slotMarker   = 0x05;       // corresponds to `var_b`\n\n    // Double-negation of the mapping value, simplified for Solidity syntax\n    bool _isFlagged = bytes1(botFlags[_addrReference]) != 0;  // corresponds to `var_c`\n\n    return _isFlagged;\n}",
+    "ground_truth": "function isBot(address a) public view returns (bool){\r\n      return bots[a];\r\n    }"
+}

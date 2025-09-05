@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x172F7a6F8C76321376cf077c4b68f6C0A0907d2f",
+    "heimdall_input": "function checkBot(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x0b;\n        address var_c = !(!bytes1(storage_map_i[var_a] / 0x01));\n        return !(!bytes1(storage_map_i[var_a] / 0x01));\n    }",
+    "llm_output": "function checkBot(address account) public view returns (bool) {\n    // This seemingly redundant check exists in the original bytecode.\n    require(account == address(account));\n\n    return isBot[account];\n}",
+    "ground_truth": "function checkBot(address account) public view returns (bool) {\r\n        return isBot[account];\r\n    }"
+}

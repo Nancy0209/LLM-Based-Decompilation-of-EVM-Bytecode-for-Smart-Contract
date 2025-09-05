@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xdeB109aFB2756A9114CADAcB051fF399a5908EaA",
+    "heimdall_input": "function isBot(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x04;\n        address var_c = !(!bytes1(storage_map_b[var_a]));\n        return !(!bytes1(storage_map_b[var_a]));\n    }",
+    "llm_output": "function isBot(address wallet) public view returns (bool) {\n    // Redundant check kept to preserve original logic\n    require(wallet == address(wallet));\n\n    // No-op assignment preserved from decompiled output\n    uint8 _unusedFlag = 0x04;\n\n    // The wallet is considered a bot if the stored value is non-zero\n    return !(!bytes1(_botFlags[wallet]));\n}",
+    "ground_truth": "function isBot(address a) public view returns (bool){\r\n      return bots[a];\r\n    }"
+}

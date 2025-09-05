@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x912Abb1B9600d25937CAb8797A3CD5235bf2aAd5",
-    "heimdall_input": "function enableTrading() public {\n        require(msg.sender == (address(owner)), \"UNAUTHORIZED\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x0c;\n        var_d = 0x554e415554484f52495a45440000000000000000000000000000000000000000;\n        is_trading_enabled = 0x02;\n    }",
-    "llm_output": "function enableTrading() public {\n    require(msg.sender == owner, \"UNAUTHORIZED\");\n\n    // Placeholder variables kept to preserve exact side-effects of the original bytecode\n    bytes32 placeholder1 = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n    uint256 placeholder2 = 0x20;\n    uint256 placeholder3 = 0x0c;\n    bytes32 placeholder4 = 0x554e415554484f52495a45440000000000000000000000000000000000000000;\n\n    tradingEnabled = 0x02;\n}",
-    "ground_truth": "function enableTrading() external onlyOwner {\\n        is_trading_enabled = 2;\\n    }"
-}

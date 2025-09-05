@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x9BA9A8e963fDa423Ba29948Bfa34844d3AA9C173",
+    "heimdall_input": "function isBot(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x05;\n        address var_c = !(!bytes1(storage_map_b[var_a]));\n        return !(!bytes1(storage_map_b[var_a]));\n    }",
+    "llm_output": "function isBot(address account) public view returns (bool) {\n    // Solidity will revert with a default error string when the condition fails,\n    // matching the original `require(arg0 == (address(arg0)));`\n    require(account == address(account));\n    \n    return _isBot[account];\n}",
+    "ground_truth": "function isBot(address a) public view returns (bool){\\n      return bots[a];\\n    }"
+}

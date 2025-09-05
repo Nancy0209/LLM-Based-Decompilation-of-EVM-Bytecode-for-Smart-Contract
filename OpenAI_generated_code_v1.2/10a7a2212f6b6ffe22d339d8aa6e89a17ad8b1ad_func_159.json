@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x10A7A2212f6b6ffE22d339D8Aa6e89a17ad8b1ad",
+    "heimdall_input": "function transferOwnership(address arg0) public pure {\n        require(arg0 == (address(arg0)));\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x1d;\n        var_e = 0x4e6f7420416c6c6f77205472616e73666572204f776e6572736869702e000000;\n    }",
+    "llm_output": "function transferOwnership(address newOwner) public pure {\n    require(newOwner == address(newOwner), \"Invalid address\");\n    revert(\"Not Allow Transfer Ownership.\");\n}",
+    "ground_truth": "function transferOwnership(address) public pure override {\n        revert(\"Not Allow Transfer Ownership.\");\n    }"
+}

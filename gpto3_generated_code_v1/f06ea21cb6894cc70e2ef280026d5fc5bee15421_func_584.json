@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xf06ea21cB6894CC70e2EF280026D5Fc5bEE15421",
+    "heimdall_input": "function changeMinimmumAmount(uint256 arg0) public payable {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        minimumDeposit = arg0;\n    }",
+    "llm_output": "function setMinimumDeposit(uint256 _newMinimumDeposit) external payable {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    minimumDeposit = _newMinimumDeposit;\n}",
+    "ground_truth": "function changeMinimmumAmount(uint256 amount) external onlyOwner{\r\n        minimumDeposit=amount;\r\n    }"
+}

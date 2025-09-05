@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x95f7bFda575e002777B856665bD36D954c3aaa59",
+    "heimdall_input": "function renounceOwnership() public {\n        require(address(msg.sender) == (address(getOwner / 0x01)), \"!OWNER\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x06;\n        var_e = 0x214f574e45520000000000000000000000000000000000000000000000000000;\n        getOwner = 0 | (uint96(getOwner));\n        uint256 var_a = 0;\n        emit OwnershipTransferred(0);\n    }",
+    "llm_output": "function renounceOwnership() external {\n    require(msg.sender == owner, \"!OWNER\");\n    owner = address(0);\n    emit OwnershipTransferred(address(0));\n}",
+    "ground_truth": "function renounceOwnership() public onlyOwner {\r\n        owner = address(0);\r\n        emit OwnershipTransferred(address(0));\r\n    }"
+}

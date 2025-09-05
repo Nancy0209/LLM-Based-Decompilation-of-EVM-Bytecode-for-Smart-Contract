@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xeE4121EC610aD03ad4b4b4151ccFB6999022Df86",
+    "heimdall_input": "function enableTrading() public {\n        require(address(_owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        swapEnabled = (0x01 * 0x0100) | (uint248(swapEnabled));\n        swapEnabled = (0x01 * 0x010000) | (uint248(swapEnabled));\n    }",
+    "llm_output": "function enableTrading() external {\n    require(msg.sender == _owner, \"Ownable: caller is not the owner\");\n\n    // Replicates the original bit-wise operations to ensure identical state changes\n    assembly {\n        let slot := swapEnabled.slot\n        let value := sload(slot)\n        value := or(value, 0x0100)      // swapEnabled = swapEnabled | 0x0100\n        value := or(value, 0x010000)    // swapEnabled = swapEnabled | 0x010000\n        sstore(slot, value)\n    }\n}",
+    "ground_truth": "function enableTrading() external onlyOwner {\\r\\n        tradingEnabled = true;\\r\\n        swapEnabled = true;\\r\\n    }"
+}

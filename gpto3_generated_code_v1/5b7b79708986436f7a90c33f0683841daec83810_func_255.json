@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x5B7b79708986436F7a90c33f0683841DaEC83810",
+    "heimdall_input": "function balanceOf(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x06;\n        address var_c = storage_map_b[var_a];\n        return storage_map_b[var_a];\n    }",
+    "llm_output": "function balanceOf(address account) public view returns (uint256) {\n    // This seemingly redundant check is preserved to maintain logical fidelity with the decompiled code\n    require(account == address(account));\n\n    address resolvedAccount = address(account);\n\n    // Placeholder variable replicated from decompiled artifact (not used elsewhere)\n    uint256 _placeholder = 0x06;\n\n    // Local copy of the balance (also preserved even though function ultimately returns directly from mapping)\n    uint256 balanceSnapshot = balances[resolvedAccount];\n\n    return balances[resolvedAccount];\n}",
+    "ground_truth": "function balanceOf(address account) public view returns (uint256) {\r\n        return _balances[account];\r\n    }"
+}

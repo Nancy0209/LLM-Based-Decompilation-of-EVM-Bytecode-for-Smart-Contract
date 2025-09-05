@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x110B3EbD95Ac61b8Db462b9d85F73de7Ea5BcF1e",
+    "heimdall_input": "function isBot(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x04;\n        address var_c = !(!bytes1(storage_map_b[var_a] / 0x01));\n        return !(!bytes1(storage_map_b[var_a] / 0x01));\n    }",
+    "llm_output": "function isBot(address account) public view returns (bool) {\n    // This seemingly redundant check exists in the original bytecode\n    require(account == address(account));\n\n    // Original code stored the input into a new variable; we mirror that here\n    address targetAccount = account;\n\n    // A no-op constant written to a local variable in the original bytecode\n    uint8 _ignoredConstant = 0x04;\n\n    // The bot flag is considered set when the stored value is non-zero\n    bool botFlag = _botFlags[targetAccount] != 0;\n\n    return botFlag;\n}",
+    "ground_truth": "function isBot(address a) public view returns (bool){\r\n      return bots[a];\r\n    }"
+}

@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x4c5CbB44F1F835E2BbE255d8dBFb91A364b0D36B",
-    "heimdall_input": "function tokenByIndex(uint256 arg0) public view returns (uint256) {\n        require(arg0 < totalSupply, \"ERC721A: global index out of bounds\");\n        uint256 var_a = arg0;\n        return arg0;\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x23;\n        var_d = 0x455243373231413a20676c6f62616c20696e646578206f7574206f6620626f75;\n        var_e = 0x6e64730000000000000000000000000000000000000000000000000000000000;\n    }",
-    "llm_output": "function tokenByIndex(uint256 index) public view returns (uint256) {\n    require(index < totalSupply(), \"ERC721A: global index out of bounds\");\n    return index;\n}",
-    "ground_truth": "function tokenByIndex(uint256 index) public view override returns (uint256) {\\r\\n    require(index < totalSupply(), \\\"ERC721A: global index out of bounds\\\");\\r\\n    return index;\\r\\n  }"
-}

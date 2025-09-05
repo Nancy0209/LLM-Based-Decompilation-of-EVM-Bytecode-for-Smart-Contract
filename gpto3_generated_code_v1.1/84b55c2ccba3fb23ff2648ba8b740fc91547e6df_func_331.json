@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x84B55c2CCbA3Fb23FF2648Ba8b740fC91547E6df",
+    "heimdall_input": "function updateFeeSell(uint256 arg0) public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_g = arg0;\n        require(!arg0 > 0x05);\n    }",
+    "llm_output": "function updateFeeSell(uint256 newSellTax) external {\n    // Ownership check (mirrors Ownable modifier without introducing new logic)\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n\n    // Update the sell-side tax\n    sellTax = newSellTax;\n\n    // Enforce the maximum allowed sell tax (must be \u2264 5)\n    require(newSellTax <= 5);\n}",
+    "ground_truth": "function updateFeeSell(uint256 newSellTax) external onlyOwner {\r\n        SellTax = newSellTax;\r\n        require(newSellTax <= 5);\r\n    }"
+}

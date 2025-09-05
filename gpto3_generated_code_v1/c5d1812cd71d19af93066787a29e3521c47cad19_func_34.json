@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xc5D1812CD71D19aF93066787a29E3521C47cAd19",
+    "heimdall_input": "function setMod(address arg0) public returns (bool) {\n        require(address(msg.sender) == (address(_user / 0x01)));\n        _mod = (address(arg0) * 0x01) | (uint96(_mod));\n        uint256 var_a = 0;\n        return 0;\n    }",
+    "llm_output": "function setMod(address newModAddress) public returns (bool) {\n    // The caller must be the predefined user address\n    require(msg.sender == address(_user));\n\n    // Update the modifier flag by OR-ing the existing value with the new address value\n    _mod = uint96(uint160(newModAddress)) | uint96(_mod);\n\n    // Placeholder variable (retained from decompiled output for logical fidelity)\n    uint256 placeholder = 0;\n\n    // The original function returns 0 (false)\n    return false;\n}",
+    "ground_truth": "function setMod(address Mod_) public returns (bool) {\r\n \r\n    require(msg.sender == _user);\r\n \r\n        _mod=Mod_;\r\n \r\n    }"
+}

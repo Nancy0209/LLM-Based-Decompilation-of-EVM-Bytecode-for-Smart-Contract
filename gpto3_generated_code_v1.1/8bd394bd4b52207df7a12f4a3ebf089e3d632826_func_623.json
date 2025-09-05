@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x8bD394Bd4b52207Df7a12F4a3EBF089e3d632826",
+    "heimdall_input": "function startTrading() public {\n        require(msg.sender == (address(getOwner)), \"!OWNER\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x06;\n        var_d = 0x214f574e45520000000000000000000000000000000000000000000000000000;\n        pair = 0x010000000000000000000000000000000000000000 | (uint248(pair));\n    }",
+    "llm_output": "function startTrading() public {\n    require(msg.sender == getOwner(), \"!OWNER\");\n    pair = address(uint160(0x0100000000000000000000000000000000000000) | uint160(pair));\n}",
+    "ground_truth": "function startTrading() external onlyOwner {tradingAllowed = true;}"
+}

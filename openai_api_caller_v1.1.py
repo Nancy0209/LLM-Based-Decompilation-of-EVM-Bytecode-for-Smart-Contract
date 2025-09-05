@@ -8,9 +8,9 @@ from tqdm import tqdm
 import sys
 
 # --- Configuration ---
-API_URL = "https://api.openai.com/v1/chat/completions"
+API_URL = "https://api.videocaptioner.cn/v1/chat/completions"
 # <<< IMPORTANT: Paste your secret OpenAI API Key here >>>
-API_KEY = "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"
+API_KEY = "sk-sQEX4ZfmDNDe0ybLp0RhXPkNaiQVtJ5bK0D7xFPYco2UZUlg"
 # Use the latest and most powerful model from OpenAI
 MODEL_NAME = "gpt-4o"
 # --- General Settings ---
@@ -21,7 +21,7 @@ INPUT_DATASET_FILE = 'val_dataset_v2.jsonl'
 OUTPUT_DIR = 'OpenAI_generated_code_v1.1'
 
 # API call settings
-API_CALL_DELAY = 1.0
+API_CALL_DELAY = 2.5
 API_TIMEOUT = 120
 
 # --- Logging Setup ---

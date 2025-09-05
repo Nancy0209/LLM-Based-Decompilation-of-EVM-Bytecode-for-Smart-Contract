@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x00BCB434254797479bade33e1eF0aEBDB3F27089",
+    "heimdall_input": "function openTrading() public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        uniswapV2Router = 0x010000000000000000000000000000000000000000 | (uint248(uniswapV2Router));\n    }",
+    "llm_output": "function openTrading() public {\n    // Only the contract owner can enable trading\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n\n    /*\n     * Replicates the original bit-wise operation found in the decompiled bytecode.\n     * It ORs the current router address with a constant \u201cflag\u201d value and then\n     * re-casts it back to the IRouter type.\n     */\n    uint256 flag = 0x010000000000000000000000000000000000000000;\n    uniswapV2Router = IRouter(\n        address(\n            uint160(\n                uint256(address(uniswapV2Router)) | flag\n            )\n        )\n    );\n}",
+    "ground_truth": "function openTrading() external onlyOwner {\r\n        isTradingEnabled = true;\r\n    }"
+}

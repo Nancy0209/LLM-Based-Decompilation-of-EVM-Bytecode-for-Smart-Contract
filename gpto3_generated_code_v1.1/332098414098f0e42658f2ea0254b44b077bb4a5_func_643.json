@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x332098414098f0E42658f2eA0254B44b077bb4A5",
+    "heimdall_input": "function isExcludedFromFees(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x19;\n        address var_c = !(!bytes1(storage_map_b[var_a] / 0x01));\n        return !(!bytes1(storage_map_b[var_a] / 0x01));\n    }",
+    "llm_output": "function isExcludedFromFees(address account) public view returns (bool) {\n    require(account == address(account));\n    return _isExcludedFromFees[account];\n}",
+    "ground_truth": "function isExcludedFromFees(address account) public view returns (bool) {\\n        return _isExcludedFromFees[account];\\n    }"
+}

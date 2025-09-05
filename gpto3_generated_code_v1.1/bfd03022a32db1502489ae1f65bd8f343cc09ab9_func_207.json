@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xbFD03022a32dB1502489AE1F65bd8f343CC09AB9",
+    "heimdall_input": "function isExcludedFromFees(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x19;\n        address var_c = !(!bytes1(storage_map_b[var_a] / 0x01));\n        return !(!bytes1(storage_map_b[var_a] / 0x01));\n    }",
+    "llm_output": "function isExcludedFromFees(address account) public view returns (bool) {\n    // Decompiler-inserted check \u2013 retains original (redundant) logic\n    require(account == address(account), \"Decompiler artifact\");\n\n    // No-op assignment kept to mirror decompiled byte-code flow\n    uint256 _placeholder = 0x19;\n\n    // Replicates `!(!bytes1(storage_map_b[var_a] / 0x01))`\n    bytes1 flag        = _isExcludedFromFees[account] ? bytes1(uint8(0x01)) : bytes1(uint8(0x00));\n    bool    _varC      = !(!flag);   // retains unused temp variable from decompile path\n\n    return _varC;\n}",
+    "ground_truth": "function isExcludedFromFees(address account) public view returns (bool) {\\r\\n        return _isExcludedFromFees[account];\\r\\n    }"
+}

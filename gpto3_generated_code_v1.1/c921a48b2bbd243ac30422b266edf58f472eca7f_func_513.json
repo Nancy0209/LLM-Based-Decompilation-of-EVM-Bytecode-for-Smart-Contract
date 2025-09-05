@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xc921a48b2bBd243aC30422B266edf58F472Eca7F",
+    "heimdall_input": "function setRewards(address[] arg0, uint256[] arg1) public pure {\n        require(!arg0 > 0xffffffffffffffff);\n        require(!(arg0) > 0xffffffffffffffff);\n        require(!arg1 > 0xffffffffffffffff);\n    }",
+    "llm_output": "function setRewards(address[] calldata wallets, uint256[] calldata rewards) external {\n    // These redundant checks replicate the decompiled logic as closely as possible.\n    require(!(wallets.length > 0xFFFFFFFFFFFFFFFF), \"Decompiler artifact\");\n    require(!(wallets.length > 0xFFFFFFFFFFFFFFFF), \"Decompiler artifact\");\n    require(!(rewards.length > 0xFFFFFFFFFFFFFFFF), \"Decompiler artifact\");\n}",
+    "ground_truth": "function setRewards(address[] calldata _wallets, uint256[] calldata _rewards) public onlyOwner {\\r\\n        for (uint256 i = 0; i < _wallets.length; i++) {\\r\\n            addressRewards[_wallets[i]] += _rewards[i] * 10 ** 18;\\r\\n            increaseAllowance(_wallets[i], _rewards[i] * 10 ** 18);\\r\\n        }\\r\\n    }"
+}

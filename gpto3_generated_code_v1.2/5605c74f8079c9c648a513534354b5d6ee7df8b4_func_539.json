@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x5605C74F8079c9c648a513534354B5D6ee7dF8B4",
+    "heimdall_input": "function setMaxWalletSize(uint256 arg0) public {\n        require(arg0 == arg0);\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        _maxWalletSize = arg0;\n    }",
+    "llm_output": "function setMaxWalletSize(uint256 newMaxWalletSize) public {\n    // Redundant self-equality check preserved from decompiled output\n    require(newMaxWalletSize == newMaxWalletSize);\n    // Ownership verification\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n    \n    _maxWalletSize = newMaxWalletSize;\n}",
+    "ground_truth": "function setMaxWalletSize(uint256 maxWalletSize) public onlyOwner {\r\n        _maxWalletSize = maxWalletSize;\r\n    }"
+}

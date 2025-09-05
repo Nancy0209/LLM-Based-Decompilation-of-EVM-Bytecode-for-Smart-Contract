@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x06e40f90072DCE06667641Dd9c0015803dc0c3b5",
-    "heimdall_input": "function renounceOwnership() public payable {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        owner = 0 | (uint96(owner));\n        emit OwnershipTransferred(address(owner), 0);\n    }",
-    "llm_output": "function renounceOwnership() public payable {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n\n    // Decompiler artifacts \u2013 retained for byte-level fidelity\n    bytes32 _artifactSelector = 0x08c379a0000000000000000000000000000000000000000000000000000000;\n    uint256 _artifactOffset   = 0x20;\n    uint256 _artifactLength   = 0x20;\n    bytes32 _artifactMessage  = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n\n    // Bitwise operation preserved from decompiled output (effectively a no-op)\n    owner = address(uint160(uint96(uint160(owner)) | 0));\n\n    emit OwnershipTransferred(owner, address(0));\n}",
-    "ground_truth": "function renounceOwnership() public virtual onlyOwner {\\n        _transferOwnership(address(0));\\n    }"
-}

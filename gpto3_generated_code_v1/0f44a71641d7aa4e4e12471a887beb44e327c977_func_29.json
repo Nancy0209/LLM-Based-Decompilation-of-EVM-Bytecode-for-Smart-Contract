@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x0f44A71641D7aA4e4E12471a887bEB44E327c977",
-    "heimdall_input": "function allowance(address arg0, address arg1) public view returns (uint256) {\n        address var_a = address(arg0);\n        var_b = 0x05;\n        var_a = address(arg1);\n        address var_b = keccak256(var_a);\n        address var_c = storage_map_d[var_a];\n        return storage_map_d[var_a];\n    }",
-    "llm_output": "function allowance(address /* ownerUnused */, address spender) public view returns (uint256) {\n    // Mirror decompiled constant assignment (unused in logic)\n    uint256 _unusedConstant = 0x05;\n\n    // Replicate variable overwrite behaviour\n    address _targetAddress = spender;\n\n    // Preserve unused hash computation from decompiled output\n    bytes32 _unusedHash = keccak256(abi.encode(_targetAddress));\n\n    // Fetch value from the corresponding storage mapping slot\n    uint256 _storedValue = _allowances[_targetAddress];\n    return _storedValue;\n}",
-    "ground_truth": "function allowance(address owner_, address spender) external view override returns (uint256) {\\r\\n      return _allowances[owner_][spender];\\r\\n    }"
-}

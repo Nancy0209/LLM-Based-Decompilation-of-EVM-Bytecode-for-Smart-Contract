@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x094f17A0D2C12d8AB36a5a27d14DbC47B9cFdC30",
+    "heimdall_input": "function openTrading() public {\n        require(!bytes1(store_a / 0x01000000000000000000000000000000000000000000));\n        require(0x9cb6da40d96aa44cc0314df6814033c3513e75a6 == msg.sender);\n        store_a = 0x01000000000000000000000000000000000000000000 | (uint248(store_a));\n    }",
+    "llm_output": "function openTrading() external {\n    // Ensure trading is not already open (bit-176 flag is clear)\n    require(bytes1(statusFlags / 0x01000000000000000000000000000000000000000000) == 0);\n    // Only the hard-coded authorized address can open trading\n    require(msg.sender == 0x9Cb6DA40d96aA44CC0314DF6814033C3513E75a6);\n    // Set the trading-open flag (bit-176)\n    statusFlags |= 0x01000000000000000000000000000000000000000000;\n}",
+    "ground_truth": "function openTrading() external {\r\n        require(!tradingOpen);\r\n        require(msg.sender == deployer);\r\n        tradingOpen = true;        \r\n    }"
+}

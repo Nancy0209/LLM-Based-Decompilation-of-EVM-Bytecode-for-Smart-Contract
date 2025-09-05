@@ -1,0 +1,16 @@
+{
+    "address": "0x870968933Cacf478A6760BE36bf42178f4Cfc0F2",
+    "tx_hash": "a00b602ddddf1821aaa7675f6d73136274a888f635863b8e293aac63d01edaf8",
+    "block_number": 18009488,
+    "timestamp": 1693181543,
+    "gas_used_in_creation": 71998,
+    "creation_bytecode": "60556032600b8282823980515f1a607314602657634e487b7160e01b5f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220a673bda523a7c9aea78ef56caccfa3f08c128805a91079f9085afb32d9abbf5164736f6c63430008140033",
+    "runtime_bytecode": "73870968933cacf478a6760be36bf42178f4cfc0f2301460806040525f80fdfea2646970667358221220a673bda523a7c9aea78ef56caccfa3f08c128805a91079f9085afb32d9abbf5164736f6c63430008140033",
+    "contract_name": "Unknown",
+    "compiler_version": "N/A",
+    "optimization_used": "N/A",
+    "runs": "N/A",
+    "abi": "N/A",
+    "source_code": "N/A",
+    "etherscan_verified": false
+}

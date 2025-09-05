@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x6ddfeC08B7597e9392abbC41CB8a74A0d59188C1",
+    "heimdall_input": "function checkUserPurchaseTime(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x0e;\n        address var_c = storage_map_b[var_a];\n        return storage_map_b[var_a];\n    }",
+    "llm_output": "function checkUserPurchaseTime(address _user) public view returns (uint256) {\n    require(_user == address(_user), \"Invalid address\");\n    return _userPurchaseTime[_user];\n}",
+    "ground_truth": "function checkUserPurchaseTime(address _user) external view returns (uint256) {\r\n        return purchaseTimestamp[_user];\r\n    }"
+}

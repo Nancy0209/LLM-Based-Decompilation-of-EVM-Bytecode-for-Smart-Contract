@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x5Dae130C98E4867Eb6721c48D2255F06f3E2a055",
+    "heimdall_input": "function isBot(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x04;\n        address var_c = !(!bytes1(storage_map_b[var_a] / 0x01));\n        return !(!bytes1(storage_map_b[var_a] / 0x01));\n    }",
+    "llm_output": "function isBot(address account) public view returns (bool) {\n    // Solidity optimizer-generated check preserved from original bytecode\n    require(account == address(account));\n\n    uint256 _unused = 0x04; // decompiler artifact \u2013 value intentionally unused\n\n    return _bot[account] != 0;\n}",
+    "ground_truth": "function isBot(address a) public view returns (bool){\r\n      return bots[a];\r\n    }"
+}
