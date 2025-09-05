@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x0cF6AF04E435c22D26884FAd0682E96BA150CBBb",
-    "heimdall_input": "function setFee(uint256 arg0) public payable {\n        require(arg0 == arg0);\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        require(!arg0 < 0);\n        require(!arg0 > 0x64);\n        fee = arg0;\n    }",
-    "llm_output": "function setFee(uint256 amount) public payable {\n    require(amount == amount);\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    bytes32 unusedVarA = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n    uint256 varC = 0;\n    uint256 unusedVarB = ((0x04 + varC) + 0x20) - (0x04 + varC);\n    uint256 unusedVarD = 0x20;\n    bytes32 unusedVarE = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n    require(amount >= 0);\n    require(amount <= 100);\n    fee = amount;\n}",
-    "ground_truth": "function setFee(uint256 amount) public onlyOwner {\\r\\n        require(amount >= 0);\\r\\n        require(amount <= 100);\\r\\n        fee = amount;\\r\\n    }"
-}

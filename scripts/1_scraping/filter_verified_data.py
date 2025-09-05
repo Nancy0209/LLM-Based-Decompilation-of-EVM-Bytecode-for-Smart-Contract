@@ -6,16 +6,18 @@ import logging
 from tqdm import tqdm
 
 # --- Configuration ---
-RAW_DATA_DIR = 'raw_contract_data'
-FINAL_VERIFIED_DATA_DIR = 'final_verified_contracts_dataset'
-FINAL_VERIFIED_ADDRESSES_LIST = 'final_verified_addresses.txt'
+RAW_DATA_DIR = 'data/raw_contract_data'
+FINAL_VERIFIED_DATA_DIR = 'data/final_verified_contracts_dataset'
+FINAL_VERIFIED_ADDRESSES_LIST = 'data/final_verified_addresses.txt'
 
+LOG_FILE = "results/logs/final_data_filter.log"
+os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
 # --- Logging Setup ---
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('final_data_filter.log', mode='w'),
+        logging.FileHandler(LOG_FILE, mode="w", encoding="utf-8"),
         logging.StreamHandler()
     ]
 )

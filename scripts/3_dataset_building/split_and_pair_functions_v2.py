@@ -7,11 +7,23 @@ from collections import defaultdict
 from tqdm import tqdm
 
 # --- Configuration ---
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[logging.FileHandler("function_splitting_pairing.log", mode='w'), logging.StreamHandler()])
-INPUT_ADDRESS_FILE = 'final_verified_addresses.txt'
-SOURCE_CODE_DIR = 'final_verified_contracts_dataset'
-DECOMPILED_DIR = 'heimdall_decompiled_output'
-OUTPUT_PAIRED_FILE = 'final_function_dataset_v2.jsonl'
+LOG_FILE = "results/logs/function_splitting_pairing_v2.log"
+os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler(LOG_FILE, mode="w", encoding="utf-8"),
+        logging.StreamHandler()
+    ]
+)
+
+
+INPUT_ADDRESS_FILE = 'data/final_verified_addresses.txt'
+SOURCE_CODE_DIR = 'data/final_verified_contracts_dataset'
+DECOMPILED_DIR = 'data/heimdall_decompiled_output'
+OUTPUT_PAIRED_FILE = 'data/final_function_dataset_v2.jsonl'
 
 # --- (Helper functions: find_matching_brace, parse_functions remain the same) ---
 def find_matching_brace(text, start_pos):

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xF6FF7F8635a951ecF4D68264b32FB3a4b5f9cf15",
+    "heimdall_input": "function updateDevWallet(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        emit devWalletUpdated(address(arg0), address(devWallet));\n        devWallet = (address(arg0)) | (uint96(devWallet));\n    }",
+    "llm_output": "function updateDevWallet(address newDevWallet) public {\n    require(newDevWallet != address(0), \"Invalid address\");\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    \n    emit devWalletUpdated(newDevWallet, devWallet);\n    devWallet = newDevWallet;\n}",
+    "ground_truth": "function updateDevWallet(address newWallet) external onlyOwner {\\r\\n        emit devWalletUpdated(newWallet, devWallet);\\r\\n        devWallet = newWallet;\\r\\n    }"
+}

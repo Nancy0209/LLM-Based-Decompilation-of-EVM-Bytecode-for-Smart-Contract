@@ -6,12 +6,12 @@ import logging
 
 # --- Configuration ---
 # The large, newly created dataset of function pairs.
-INPUT_FILE = 'final_function_dataset_v1.2_full_context.jsonl'
+INPUT_FILE = 'data/final_function_dataset_v3.jsonl'
 
 # Output files for the different sets.
-OUTPUT_TRAIN_FILE = 'train_dataset_v3.jsonl'
-OUTPUT_VAL_FILE = 'val_dataset_v3.jsonl'
-OUTPUT_TEST_FILE = 'test_dataset_v3.jsonl'
+OUTPUT_TRAIN_FILE = 'data/datasets/train_dataset_v3.jsonl'
+OUTPUT_VAL_FILE = 'data/datasets/val_dataset_v3.jsonl'
+OUTPUT_TEST_FILE = 'data/datasets/test_dataset_v3.jsonl'
 
 # Define the split ratios. They should sum to 1.0.
 TRAIN_RATIO = 0.60
@@ -19,14 +19,18 @@ VAL_RATIO = 0.25
 TEST_RATIO = 0.15
 
 # --- Logging Setup ---
+LOG_FILE = "results/logs/dataset_splitting_v3.log"
+os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
+    format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler('dataset_splitting.log', mode='w'),
+        logging.FileHandler(LOG_FILE, mode="w", encoding="utf-8"),
         logging.StreamHandler()
     ]
 )
+
 
 def split_dataset():
     """

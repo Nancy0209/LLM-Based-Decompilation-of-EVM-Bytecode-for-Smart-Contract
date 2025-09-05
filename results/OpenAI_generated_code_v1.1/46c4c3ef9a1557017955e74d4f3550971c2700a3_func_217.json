@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x46c4C3ef9A1557017955E74D4F3550971C2700A3",
-    "heimdall_input": "function setFees(uint256 arg0, uint256 arg1, uint256 arg2) public {\n        require(msg.sender == (address(getOwner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_f = arg1;\n        store_g = arg0;\n        store_h = arg2;\n    }",
-    "llm_output": "function setFees(uint256 buyFee, uint256 sellFee, uint256 transferFee) public {\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n    buyTax = buyFee;\n    sellTax = sellFee;\n    transferTax = transferFee;\n}",
-    "ground_truth": "function setFees(uint256 _percentonbuy, uint256 _percentonsell, uint256 _wallettransfer) external onlyOwner {\r\n        sellpercent = _percentonsell;\r\n        buypercent = _percentonbuy;\r\n        transferpercent = _wallettransfer;    \r\n          \r\n    }"
-}

@@ -1,0 +1,32 @@
+2025-09-05 21:22:16,717 - INFO - Solc version 0.8.10 not found. Installing...
+2025-09-05 21:22:16,718 - INFO - solc 0.8.10 already installed at: /home/zzk12/.solcx/solc-v0.8.10
+2025-09-05 21:22:16,718 - INFO - Solc version 0.8.10 installed successfully.
+2025-09-05 21:22:16,718 - INFO - Using solc version 0.8.10
+2025-09-05 21:22:16,721 - INFO - Switched to solc version 0.8.10
+2025-09-05 21:22:16,722 - INFO - Found 1 result files to evaluate in 'results/gpt4o_generated_code_v2'.
+2025-09-05 21:22:16,722 - INFO - Loading semantic similarity model: all-MiniLM-L6-v2...
+2025-09-05 21:22:16,773 - INFO - Use pytorch device_name: cuda:0
+2025-09-05 21:22:16,773 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-05 21:22:18,722 - INFO - Model loaded.
+2025-09-05 21:22:18,730 - ERROR - An unexpected error occurred during compilation: ParserError: Function, variable, struct or modifier declaration expected.
+ --> TmpContract.sol:7:1:
+  |
+7 | pragma solidity ^0.8.0;
+  | ^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"9182","formattedMessage":"ParserError: Function, variable, struct or modifier declaration expected.\n --> TmpContract.sol:7:1:\n  |\n7 | pragma solidity ^0.8.0;\n  | ^^^^^^\n\n","message":"Function, variable, struct or modifier declaration expected.","severity":"error","sourceLocation":{"end":124,"file":"TmpContract.sol","start":118},"type":"ParserError"}],"sources":{}}
+
+> stderr:
+2025-09-05 21:22:19,161 - INFO - 
+--- Evaluation Report ---
+2025-09-05 21:22:19,161 - INFO - Directory Evaluated: results/gpt4o_generated_code_v2
+2025-09-05 21:22:19,161 - INFO - -------------------------
+2025-09-05 21:22:19,161 - INFO - Recompilation Rate: 0.00% (0/1)
+2025-09-05 21:22:19,161 - INFO - Average BLEU Score: 2.29
+2025-09-05 21:22:19,161 - INFO - Average Edit Distance: 2752.00
+2025-09-05 21:22:19,161 - INFO - Average Semantic Similarity: 0.4408
+2025-09-05 21:22:19,161 - INFO - -------------------------

@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xEA96F358096DB436A74f5C974F59fdE3Bc5185e7",
-    "heimdall_input": "function totalSupply() public view {\n        var_a = 0x18;\n        var_b = 0xdead;\n        if (!(store_l - store_n) > store_l) {\n            var_b = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n            var_c = 0x11;\n        }\n    }",
-    "llm_output": "function totalSupply() public view returns (uint256) {\n    return _supplyTotal;\n}",
-    "ground_truth": "function totalSupply() public view override returns (uint256) {return _supplyTotal.sub(balanceOf(DEAD)).sub(balanceOf(address(0)));}"
-}

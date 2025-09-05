@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x6F277374E9329ff8a1DeE8e064929892b69C535C",
+    "heimdall_input": "function reduceFee(uint256 arg0) public {\n        require(address(msg.sender) == (address(transferDelayEnabled / 0x0100)));\n        require(arg0 > store_h);\n        require(!arg0 > store_h);\n        store_h = arg0;\n        store_p = arg0;\n    }",
+    "llm_output": "function reduceFee(uint256 newFee) public {\n    require(msg.sender == owner, \"Caller is not the owner\");\n    require(newFee > currentFee, \"New fee must be greater than the current fee\");\n    require(!(newFee > currentFee), \"Invalid fee comparison\"); // This will always fail\n    revert(\"Decompiler artifact\");\n}",
+    "ground_truth": "function reduceFee(uint256 _newFee) external{\r\n      require(_msgSender()==_taxWallet);\r\n      require(_newFee<=_finalBuyTax && _newFee<=_finalSellTax);\r\n      _finalBuyTax=_newFee;\r\n      _finalSellTax=_newFee;\r\n    }"
+}

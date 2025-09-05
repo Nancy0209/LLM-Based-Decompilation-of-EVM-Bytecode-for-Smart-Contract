@@ -1,7 +1,0 @@
-2025-08-07 21:21:26,935 - INFO - Starting API call process for deepseek-reasoner with Prompt V1.2
-2025-08-07 21:21:26,978 - INFO - Loaded 197 data points from val_dataset_v3.jsonl.
-2025-08-07 21:26:28,421 - INFO - 
---- DeepSeek API Calling Completed ---
-2025-08-07 21:26:28,421 - INFO - Total data points: 197
-2025-08-07 21:26:28,421 - INFO - Successfully generated outputs: 197
-2025-08-07 21:26:28,421 - INFO - Failed attempts: 0

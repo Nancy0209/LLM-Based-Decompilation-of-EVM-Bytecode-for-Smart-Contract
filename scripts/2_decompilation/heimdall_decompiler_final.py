@@ -12,21 +12,24 @@ import tempfile #
 #  ( 0x...address.json)
 #  filter_verified_data.py 
 # <<<  RAW_CONTRACT_DATA_DIR  >>>
-RAW_CONTRACT_DATA_DIR = 'final_verified_contracts_dataset' 
+RAW_CONTRACT_DATA_DIR = 'data/final_verified_contracts_dataset' 
 
 # Heimdall 
 # Heimdall  ([address]-decompiled.sol)
-HEIMDALL_OUTPUT_DIR = 'heimdall_decompiled_output' 
+HEIMDALL_OUTPUT_DIR = 'data/heimdall_decompiled_output' 
 
 # Heimdall 
 HEIMDALL_TIMEOUT = 900 # 15
+
+LOG_FILE = "results/logs/heimdall_decompilation_final.log"
+os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
 
 # ---  ---
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('heimdall_decompilation_final.log'), # 
+        logging.FileHandler(LOG_FILE, mode="w", encoding="utf-8"), # 
         logging.StreamHandler() # 
     ]
 )

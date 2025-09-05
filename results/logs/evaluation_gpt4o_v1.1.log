@@ -1,0 +1,2401 @@
+2025-09-05 21:21:49,270 - INFO - Solc version 0.8.10 not found. Installing...
+2025-09-05 21:21:49,271 - INFO - solc 0.8.10 already installed at: /home/zzk12/.solcx/solc-v0.8.10
+2025-09-05 21:21:49,271 - INFO - Solc version 0.8.10 installed successfully.
+2025-09-05 21:21:49,271 - INFO - Using solc version 0.8.10
+2025-09-05 21:21:49,274 - INFO - Switched to solc version 0.8.10
+2025-09-05 21:21:49,275 - INFO - Found 890 result files to evaluate in 'results/gpt4o_generated_code_v1.1'.
+2025-09-05 21:21:49,275 - INFO - Loading semantic similarity model: all-MiniLM-L6-v2...
+2025-09-05 21:21:49,327 - INFO - Use pytorch device_name: cuda:0
+2025-09-05 21:21:49,327 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-09-05 21:21:51,252 - INFO - Model loaded.
+2025-09-05 21:21:51,260 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:9:
+   |
+13 |     if (transferDelayEnabled) {
+   |         ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:14:32:
+   |
+14 |         require(block.number > lastTransferBlock[sender], "Transfer Delay enabled. Only one purchase per block allowed.");
+   |                                ^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:15:9:
+   |
+15 |         lastTransferBlock[sender] = block.number;
+   |         ^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:19:14:
+   |
+19 |     require(!isBot[sender], "Sender is flagged as a bot");
+   |              ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:20:14:
+   |
+20 |     require(!isBot[recipient], "Recipient is flagged as a bot");
+   |              ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:23:23:
+   |
+23 |     require(amount <= _maxTxAmount, "Exceeds the max transaction amount");
+   |                       ^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:26:35:
+   |
+26 |     uint256 taxAmount = (amount * taxRate) / 100;
+   |                                   ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:32:5:
+   |
+32 |     balances[sender] -= amount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:33:5:
+   |
+33 |     balances[recipient] += (amount - taxAmount);
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:34:5:
+   |
+34 |     balances[address(this)] += taxAmount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "transfer"?
+  --> TmpContract.sol:37:10:
+   |
+37 |     emit Transfer(sender, recipient, amount - taxAmount);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "transfer"?
+  --> TmpContract.sol:38:10:
+   |
+38 |     emit Transfer(sender, address(this), taxAmount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:9:\n   |\n13 |     if (transferDelayEnabled) {\n   |         ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":387,"file":"TmpContract.sol","start":367},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:14:32:\n   |\n14 |         require(block.number > lastTransferBlock[sender], \"Transfer Delay enabled. Only one purchase per block allowed.\");\n   |                                ^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":439,"file":"TmpContract.sol","start":422},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:15:9:\n   |\n15 |         lastTransferBlock[sender] = block.number;\n   |         ^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":539,"file":"TmpContract.sol","start":522},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:19:14:\n   |\n19 |     require(!isBot[sender], \"Sender is flagged as a bot\");\n   |              ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":636,"file":"TmpContract.sol","start":631},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:20:14:\n   |\n20 |     require(!isBot[recipient], \"Recipient is flagged as a bot\");\n   |              ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":695,"file":"TmpContract.sol","start":690},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:23:23:\n   |\n23 |     require(amount <= _maxTxAmount, \"Exceeds the max transaction amount\");\n   |                       ^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":845,"file":"TmpContract.sol","start":833},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:26:35:\n   |\n26 |     uint256 taxAmount = (amount * taxRate) / 100;\n   |                                   ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":956,"file":"TmpContract.sol","start":949},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:32:5:\n   |\n32 |     balances[sender] -= amount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1135,"file":"TmpContract.sol","start":1127},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:33:5:\n   |\n33 |     balances[recipient] += (amount - taxAmount);\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1167,"file":"TmpContract.sol","start":1159},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:34:5:\n   |\n34 |     balances[address(this)] += taxAmount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1216,"file":"TmpContract.sol","start":1208},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"transfer\"?\n  --> TmpContract.sol:37:10:\n   |\n37 |     emit Transfer(sender, recipient, amount - taxAmount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"transfer\"?","severity":"error","sourceLocation":{"end":1292,"file":"TmpContract.sol","start":1284},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"transfer\"?\n  --> TmpContract.sol:38:10:\n   |\n38 |     emit Transfer(sender, address(this), taxAmount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"transfer\"?","severity":"error","sourceLocation":{"end":1350,"file":"TmpContract.sol","start":1342},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:51,688 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:14:
+  |
+8 |     require(!tradingActive, "Cannot reenable trading");
+  |              ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     tradingActive = true;
+   |     ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:5:
+   |
+11 |     tradingActiveBlock = block.number;
+   |     ^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:12:5:
+   |
+12 |     blockForPenaltyEnd = block.number + deadBlocks;
+   |     ^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "enableTrading"?
+  --> TmpContract.sol:14:10:
+   |
+14 |     emit EnabledTrading();
+   |          ^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":169,"file":"TmpContract.sol","start":164},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:14:\n  |\n8 |     require(!tradingActive, \"Cannot reenable trading\");\n  |              ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":234,"file":"TmpContract.sol","start":221},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     tradingActive = true;\n   |     ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":282,"file":"TmpContract.sol","start":269},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:5:\n   |\n11 |     tradingActiveBlock = block.number;\n   |     ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":313,"file":"TmpContract.sol","start":295},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:12:5:\n   |\n12 |     blockForPenaltyEnd = block.number + deadBlocks;\n   |     ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":352,"file":"TmpContract.sol","start":334},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"enableTrading\"?\n  --> TmpContract.sol:14:10:\n   |\n14 |     emit EnabledTrading();\n   |          ^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"enableTrading\"?","severity":"error","sourceLocation":{"end":406,"file":"TmpContract.sol","start":392},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:51,719 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:5:
+  |
+9 |     _maxTxAmount = 100000000;
+  |     ^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     _maxWalletSize = 100000000;
+   |     ^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:5:
+   |
+11 |     transferDelayEnabled = false;
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:10:
+   |
+13 |     emit MaxTxAmountUpdated(100000000);
+   |          ^^^^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":150,"file":"TmpContract.sol","start":145},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:5:\n  |\n9 |     _maxTxAmount = 100000000;\n  |     ^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":210,"file":"TmpContract.sol","start":198},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     _maxWalletSize = 100000000;\n   |     ^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":242,"file":"TmpContract.sol","start":228},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:5:\n   |\n11 |     transferDelayEnabled = false;\n   |     ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":280,"file":"TmpContract.sol","start":260},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:10:\n   |\n13 |     emit MaxTxAmountUpdated(100000000);\n   |          ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":322,"file":"TmpContract.sol","start":304},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:51,747 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:13:
+   |
+13 |     require(balanceOf(sender) >= amount, "Insufficient balance");
+   |             ^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:16:5:
+   |
+16 |     balances[sender] -= amount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:19:13:
+   |
+19 |     require(balances[recipient] + amount >= balances[recipient], "SafeMath: addition overflow");
+   |             ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:19:45:
+   |
+19 |     require(balances[recipient] + amount >= balances[recipient], "SafeMath: addition overflow");
+   |                                             ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:20:5:
+   |
+20 |     balances[recipient] += amount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "transfer"?
+  --> TmpContract.sol:23:10:
+   |
+23 |     emit Transfer(sender, recipient, amount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:13:\n   |\n13 |     require(balanceOf(sender) >= amount, \"Insufficient balance\");\n   |             ^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":381,"file":"TmpContract.sol","start":372},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:16:5:\n   |\n16 |     balances[sender] -= amount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":470,"file":"TmpContract.sol","start":462},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:19:13:\n   |\n19 |     require(balances[recipient] + amount >= balances[recipient], \"SafeMath: addition overflow\");\n   |             ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":545,"file":"TmpContract.sol","start":537},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:19:45:\n   |\n19 |     require(balances[recipient] + amount >= balances[recipient], \"SafeMath: addition overflow\");\n   |                                             ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":577,"file":"TmpContract.sol","start":569},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:20:5:\n   |\n20 |     balances[recipient] += amount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":634,"file":"TmpContract.sol","start":626},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"transfer\"?\n  --> TmpContract.sol:23:10:\n   |\n23 |     emit Transfer(sender, recipient, amount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"transfer\"?","severity":"error","sourceLocation":{"end":702,"file":"TmpContract.sol","start":694},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:51,807 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:5:
+  |
+9 |     _maxTxAmount = 1000000000;
+  |     ^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     _maxWalletSize = 1000000000;
+   |     ^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:5:
+   |
+11 |     transferDelayEnabled = false;
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:10:
+   |
+13 |     emit MaxTxAmountUpdated(1000000000);
+   |          ^^^^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":150,"file":"TmpContract.sol","start":145},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:5:\n  |\n9 |     _maxTxAmount = 1000000000;\n  |     ^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":210,"file":"TmpContract.sol","start":198},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     _maxWalletSize = 1000000000;\n   |     ^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":243,"file":"TmpContract.sol","start":229},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:5:\n   |\n11 |     transferDelayEnabled = false;\n   |     ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":282,"file":"TmpContract.sol","start":262},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:10:\n   |\n13 |     emit MaxTxAmountUpdated(1000000000);\n   |          ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":324,"file":"TmpContract.sol","start":306},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:51,835 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     allowances[msg.sender][spender] = amount;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:10:
+   |
+11 |     emit Approval(msg.sender, spender, amount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     allowances[msg.sender][spender] = amount;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":328,"file":"TmpContract.sol","start":318},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:10:\n   |\n11 |     emit Approval(msg.sender, spender, amount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":377,"file":"TmpContract.sol","start":369},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:51,862 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:27:
+  |
+8 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:10:
+   |
+11 |     emit OwnershipTransferred(owner, newOwner);
+   |          ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:31:
+   |
+11 |     emit OwnershipTransferred(owner, newOwner);
+   |                               ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:12:5:
+   |
+12 |     owner = newOwner;
+   |     ^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:27:\n  |\n8 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":234,"file":"TmpContract.sol","start":229},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:10:\n   |\n11 |     emit OwnershipTransferred(owner, newOwner);\n   |          ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":386,"file":"TmpContract.sol","start":366},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:31:\n   |\n11 |     emit OwnershipTransferred(owner, newOwner);\n   |                               ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":392,"file":"TmpContract.sol","start":387},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:12:5:\n   |\n12 |     owner = newOwner;\n   |     ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":414,"file":"TmpContract.sol","start":409},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:51,888 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     allowances[msg.sender][spender] = amount;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:10:
+   |
+11 |     emit Approval(msg.sender, spender, amount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     allowances[msg.sender][spender] = amount;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":328,"file":"TmpContract.sol","start":318},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:10:\n   |\n11 |     emit Approval(msg.sender, spender, amount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":377,"file":"TmpContract.sol","start":369},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:51,915 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:10:
+   |
+11 |     emit ClearToken(tokenAddress, amount);
+   |          ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:27:10:
+   |
+27 |     emit ClearToken(tokenAddress, amount);
+   |          ^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:10:\n   |\n11 |     emit ClearToken(tokenAddress, amount);\n   |          ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":365,"file":"TmpContract.sol","start":355},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:27:10:\n   |\n27 |     emit ClearToken(tokenAddress, amount);\n   |          ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1230,"file":"TmpContract.sol","start":1220},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:51,941 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     allowances[msg.sender][spender] = amount;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:10:
+   |
+11 |     emit Approval(msg.sender, spender, amount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     allowances[msg.sender][spender] = amount;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":328,"file":"TmpContract.sol","start":318},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:10:\n   |\n11 |     emit Approval(msg.sender, spender, amount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":377,"file":"TmpContract.sol","start":369},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:51,966 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner(), "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:10:
+  |
+8 |     emit OwnershipTransferred(owner(), address(0));
+  |          ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:31:
+  |
+8 |     emit OwnershipTransferred(owner(), address(0));
+  |                               ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:5:
+  |
+9 |     _owner = address(0);
+  |     ^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":155,"file":"TmpContract.sol","start":150},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:10:\n  |\n8 |     emit OwnershipTransferred(owner(), address(0));\n  |          ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":225,"file":"TmpContract.sol","start":205},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:31:\n  |\n8 |     emit OwnershipTransferred(owner(), address(0));\n  |                               ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":231,"file":"TmpContract.sol","start":226},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:5:\n  |\n9 |     _owner = address(0);\n  |     ^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":258,"file":"TmpContract.sol","start":252},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:51,994 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:32:
+   |
+10 |     uint256 currentAllowance = allowances[sender][spender];
+   |                                ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:5:
+   |
+13 |     allowances[sender][spender] = currentAllowance + addedValue;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:15:10:
+   |
+15 |     emit Approval(sender, spender, allowances[sender][spender]);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:15:36:
+   |
+15 |     emit Approval(sender, spender, allowances[sender][spender]);
+   |                                    ^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:32:\n   |\n10 |     uint256 currentAllowance = allowances[sender][spender];\n   |                                ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":323,"file":"TmpContract.sol","start":313},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:5:\n   |\n13 |     allowances[sender][spender] = currentAllowance + addedValue;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":450,"file":"TmpContract.sol","start":440},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:15:10:\n   |\n15 |     emit Approval(sender, spender, allowances[sender][spender]);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":519,"file":"TmpContract.sol","start":511},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:15:36:\n   |\n15 |     emit Approval(sender, spender, allowances[sender][spender]);\n   |                                    ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":547,"file":"TmpContract.sol","start":537},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,017 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":149,"file":"TmpContract.sol","start":144},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,043 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:5:
+  |
+8 |     sellTax = newSellTax;
+  |     ^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":169,"file":"TmpContract.sol","start":164},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:5:\n  |\n8 |     sellTax = newSellTax;\n  |     ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":219,"file":"TmpContract.sol","start":212},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,070 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Unauthorized access");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:14:
+   |
+11 |     require(!swapEnabled[contractAddress], "Swap already enabled");
+   |              ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:5:
+   |
+13 |     uniswapV2Pair = address(uint160(uniswapV2Pair) | uint160(0x01000000000000000000000000000000000000000000));
+   |     ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:37:
+   |
+13 |     uniswapV2Pair = address(uint160(uniswapV2Pair) | uint160(0x01000000000000000000000000000000000000000000));
+   |                                     ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:25:57:
+   |
+25 |     (bool success, bytes memory wethResponse) = address(router).staticcall(abi.encodeWithSelector(wethCallData));
+   |                                                         ^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:38:21:
+   |
+38 |     require(address(router) != address(0), "Invalid router address");
+   |                     ^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:49:37:
+   |
+49 |     address routerAddress = address(router);
+   |                                     ^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:52:5:
+   |
+52 |     swapEnabled[contractAddress] = swapEnabled[contractAddress];
+   |     ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:52:36:
+   |
+52 |     swapEnabled[contractAddress] = swapEnabled[contractAddress];
+   |                                    ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:53:31:
+   |
+53 |     address approvalAddress = swapEnabled[contractAddress];
+   |                               ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:55:10:
+   |
+55 |     emit Approval(address(this), routerAddress, swapEnabled[contractAddress]);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:55:49:
+   |
+55 |     emit Approval(address(this), routerAddress, swapEnabled[contractAddress]);
+   |                                                 ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:58:31:
+   |
+58 |     address transferAddress = swapEnabled[contractAddress];
+   |                               ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:70:5:
+   |
+70 |     uniswapV2Pair = uint248(uniswapV2Pair);
+   |     ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:70:29:
+   |
+70 |     uniswapV2Pair = uint248(uniswapV2Pair);
+   |                             ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:73:71:
+   |
+73 |     (bool finalTransferSuccess, bytes memory finalTransferResponse) = owner.call{value: address(this).balance}("");
+   |                                                                       ^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Unauthorized access\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":148,"file":"TmpContract.sol","start":143},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:14:\n   |\n11 |     require(!swapEnabled[contractAddress], \"Swap already enabled\");\n   |              ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":271,"file":"TmpContract.sol","start":260},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:5:\n   |\n13 |     uniswapV2Pair = address(uint160(uniswapV2Pair) | uint160(0x01000000000000000000000000000000000000000000));\n   |     ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":333,"file":"TmpContract.sol","start":320},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:37:\n   |\n13 |     uniswapV2Pair = address(uint160(uniswapV2Pair) | uint160(0x01000000000000000000000000000000000000000000));\n   |                                     ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":365,"file":"TmpContract.sol","start":352},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:25:57:\n   |\n25 |     (bool success, bytes memory wethResponse) = address(router).staticcall(abi.encodeWithSelector(wethCallData));\n   |                                                         ^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":856,"file":"TmpContract.sol","start":850},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:38:21:\n   |\n38 |     require(address(router) != address(0), \"Invalid router address\");\n   |                     ^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1481,"file":"TmpContract.sol","start":1475},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:49:37:\n   |\n49 |     address routerAddress = address(router);\n   |                                     ^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2001,"file":"TmpContract.sol","start":1995},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:52:5:\n   |\n52 |     swapEnabled[contractAddress] = swapEnabled[contractAddress];\n   |     ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2089,"file":"TmpContract.sol","start":2078},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:52:36:\n   |\n52 |     swapEnabled[contractAddress] = swapEnabled[contractAddress];\n   |                                    ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2120,"file":"TmpContract.sol","start":2109},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:53:31:\n   |\n53 |     address approvalAddress = swapEnabled[contractAddress];\n   |                               ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2180,"file":"TmpContract.sol","start":2169},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:55:10:\n   |\n55 |     emit Approval(address(this), routerAddress, swapEnabled[contractAddress]);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2217,"file":"TmpContract.sol","start":2209},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:55:49:\n   |\n55 |     emit Approval(address(this), routerAddress, swapEnabled[contractAddress]);\n   |                                                 ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2259,"file":"TmpContract.sol","start":2248},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:58:31:\n   |\n58 |     address transferAddress = swapEnabled[contractAddress];\n   |                               ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2420,"file":"TmpContract.sol","start":2409},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:70:5:\n   |\n70 |     uniswapV2Pair = uint248(uniswapV2Pair);\n   |     ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2951,"file":"TmpContract.sol","start":2938},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:70:29:\n   |\n70 |     uniswapV2Pair = uint248(uniswapV2Pair);\n   |                             ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2975,"file":"TmpContract.sol","start":2962},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:73:71:\n   |\n73 |     (bool finalTransferSuccess, bytes memory finalTransferResponse) = owner.call{value: address(this).balance}(\"\");\n   |                                                                       ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":3124,"file":"TmpContract.sol","start":3119},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,103 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:12:5:
+   |
+12 |     allowances[address(this)][uniswapRouter] = maxApproval;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:10:
+   |
+13 |     emit Approval(address(this), uniswapRouter, maxApproval);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":149,"file":"TmpContract.sol","start":144},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:12:5:\n   |\n12 |     allowances[address(this)][uniswapRouter] = maxApproval;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":449,"file":"TmpContract.sol","start":439},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:10:\n   |\n13 |     emit Approval(address(this), uniswapRouter, maxApproval);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":512,"file":"TmpContract.sol","start":504},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,131 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     allowances[msg.sender][spender] = amount;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:10:
+   |
+11 |     emit Approval(msg.sender, spender, amount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     allowances[msg.sender][spender] = amount;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":328,"file":"TmpContract.sol","start":318},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:10:\n   |\n11 |     emit Approval(msg.sender, spender, amount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":377,"file":"TmpContract.sol","start":369},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,159 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:32:
+   |
+10 |     uint256 currentAllowance = allowances[sender][spender];
+   |                                ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:5:
+   |
+13 |     allowances[sender][spender] = currentAllowance + addedValue;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:15:10:
+   |
+15 |     emit Approval(sender, spender, allowances[sender][spender]);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:15:36:
+   |
+15 |     emit Approval(sender, spender, allowances[sender][spender]);
+   |                                    ^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:32:\n   |\n10 |     uint256 currentAllowance = allowances[sender][spender];\n   |                                ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":323,"file":"TmpContract.sol","start":313},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:5:\n   |\n13 |     allowances[sender][spender] = currentAllowance + addedValue;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":449,"file":"TmpContract.sol","start":439},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:15:10:\n   |\n15 |     emit Approval(sender, spender, allowances[sender][spender]);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":518,"file":"TmpContract.sol","start":510},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:15:36:\n   |\n15 |     emit Approval(sender, spender, allowances[sender][spender]);\n   |                                    ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":546,"file":"TmpContract.sol","start":536},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,197 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:29:
+   |
+11 |     uint256 senderBalance = balances[sender];
+   |                             ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:14:5:
+   |
+14 |     balances[sender] = senderBalance - amount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:15:5:
+   |
+15 |     balances[recipient] += amount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "transfer"?
+  --> TmpContract.sol:17:10:
+   |
+17 |     emit Transfer(sender, recipient, amount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:29:\n   |\n11 |     uint256 senderBalance = balances[sender];\n   |                             ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":358,"file":"TmpContract.sol","start":350},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:14:5:\n   |\n14 |     balances[sender] = senderBalance - amount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":454,"file":"TmpContract.sol","start":446},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:15:5:\n   |\n15 |     balances[recipient] += amount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":501,"file":"TmpContract.sol","start":493},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"transfer\"?\n  --> TmpContract.sol:17:10:\n   |\n17 |     emit Transfer(sender, recipient, amount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"transfer\"?","severity":"error","sourceLocation":{"end":542,"file":"TmpContract.sol","start":534},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,225 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner(), "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:5:
+  |
+8 |     buyTax = buyFee;
+  |     ^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:5:
+  |
+9 |     sellTax = sellFee;
+  |     ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     transferTax = transferFee;
+   |     ^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":197,"file":"TmpContract.sol","start":192},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:5:\n  |\n8 |     buyTax = buyFee;\n  |     ^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":248,"file":"TmpContract.sol","start":242},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:5:\n  |\n9 |     sellTax = sellFee;\n  |     ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":270,"file":"TmpContract.sol","start":263},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     transferTax = transferFee;\n   |     ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":297,"file":"TmpContract.sol","start":286},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,252 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:27:
+  |
+8 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:10:
+   |
+10 |     emit OwnershipTransferred(owner, newOwner);
+   |          ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:31:
+   |
+10 |     emit OwnershipTransferred(owner, newOwner);
+   |                               ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:5:
+   |
+11 |     owner = newOwner;
+   |     ^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:27:\n  |\n8 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":250,"file":"TmpContract.sol","start":245},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:10:\n   |\n10 |     emit OwnershipTransferred(owner, newOwner);\n   |          ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":319,"file":"TmpContract.sol","start":299},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:31:\n   |\n10 |     emit OwnershipTransferred(owner, newOwner);\n   |                               ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":325,"file":"TmpContract.sol","start":320},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:5:\n   |\n11 |     owner = newOwner;\n   |     ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":347,"file":"TmpContract.sol","start":342},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,274 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:21:14:
+   |
+21 |     require(!storage_map_b[sender], "Sender is blacklisted");
+   |              ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:24:23:
+   |
+24 |     require(amount <= storage_map_b[sender], "Insufficient balance");
+   |                       ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:27:5:
+   |
+27 |     storage_map_b[sender] -= amount;
+   |     ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:30:13:
+   |
+30 |     require(storage_map_b[recipient] + amount >= storage_map_b[recipient], "SafeMath: addition overflow");
+   |             ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:30:50:
+   |
+30 |     require(storage_map_b[recipient] + amount >= storage_map_b[recipient], "SafeMath: addition overflow");
+   |                                                  ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:33:5:
+   |
+33 |     storage_map_b[recipient] += amount;
+   |     ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:36:10:
+   |
+36 |     emit Transfer(sender, recipient, amount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:21:14:\n   |\n21 |     require(!storage_map_b[sender], \"Sender is blacklisted\");\n   |              ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":938,"file":"TmpContract.sol","start":925},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:24:23:\n   |\n24 |     require(amount <= storage_map_b[sender], \"Insufficient balance\");\n   |                       ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1076,"file":"TmpContract.sol","start":1063},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:27:5:\n   |\n27 |     storage_map_b[sender] -= amount;\n   |     ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1160,"file":"TmpContract.sol","start":1147},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:30:13:\n   |\n30 |     require(storage_map_b[recipient] + amount >= storage_map_b[recipient], \"SafeMath: addition overflow\");\n   |             ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1255,"file":"TmpContract.sol","start":1242},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:30:50:\n   |\n30 |     require(storage_map_b[recipient] + amount >= storage_map_b[recipient], \"SafeMath: addition overflow\");\n   |                                                  ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1292,"file":"TmpContract.sol","start":1279},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:33:5:\n   |\n33 |     storage_map_b[recipient] += amount;\n   |     ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1389,"file":"TmpContract.sol","start":1376},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:36:10:\n   |\n36 |     emit Transfer(sender, recipient, amount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1457,"file":"TmpContract.sol","start":1449},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,296 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:13:
+  |
+9 |     require(tradingActive, "Trading is not active");
+  |             ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:12:10:
+   |
+12 |     if (!_isExcludedMaxTransactionAmount[msg.sender]) {
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:27:
+   |
+13 |         require(amount <= maxTransactionAmount, "Transfer amount exceeds the maxTransactionAmount.");
+   |                           ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:17:10:
+   |
+17 |     if (!_isExcludedMaxTransactionAmount[recipient]) {
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:18:17:
+   |
+18 |         require(balanceOf(recipient) + amount <= maxWallet, "Recipient balance exceeds maxWallet.");
+   |                 ^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:18:50:
+   |
+18 |         require(balanceOf(recipient) + amount <= maxWallet, "Recipient balance exceeds maxWallet.");
+   |                                                  ^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:22:9:
+   |
+22 |     if (transferDelayEnabled) {
+   |         ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:23:32:
+   |
+23 |         require(block.number > lastTransferBlock[msg.sender], "Transfer Delay enabled. Only one transfer per block allowed.");
+   |                                ^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:24:9:
+   |
+24 |         lastTransferBlock[msg.sender] = block.number;
+   |         ^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:28:29:
+   |
+28 |     uint256 senderBalance = balanceOf(msg.sender);
+   |                             ^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:30:5:
+   |
+30 |     _balances[msg.sender] = senderBalance - amount;
+   |     ^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:33:5:
+   |
+33 |     _balances[recipient] += amount;
+   |     ^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "transfer"?
+  --> TmpContract.sol:35:10:
+   |
+35 |     emit Transfer(msg.sender, recipient, amount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:13:\n  |\n9 |     require(tradingActive, \"Trading is not active\");\n  |             ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":327,"file":"TmpContract.sol","start":314},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:12:10:\n   |\n12 |     if (!_isExcludedMaxTransactionAmount[msg.sender]) {\n   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":459,"file":"TmpContract.sol","start":428},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:27:\n   |\n13 |         require(amount <= maxTransactionAmount, \"Transfer amount exceeds the maxTransactionAmount.\");\n   |                           ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":521,"file":"TmpContract.sol","start":501},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:17:10:\n   |\n17 |     if (!_isExcludedMaxTransactionAmount[recipient]) {\n   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":685,"file":"TmpContract.sol","start":654},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:18:17:\n   |\n18 |         require(balanceOf(recipient) + amount <= maxWallet, \"Recipient balance exceeds maxWallet.\");\n   |                 ^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":725,"file":"TmpContract.sol","start":716},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:18:50:\n   |\n18 |         require(balanceOf(recipient) + amount <= maxWallet, \"Recipient balance exceeds maxWallet.\");\n   |                                                  ^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":758,"file":"TmpContract.sol","start":749},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:22:9:\n   |\n22 |     if (transferDelayEnabled) {\n   |         ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":879,"file":"TmpContract.sol","start":859},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:23:32:\n   |\n23 |         require(block.number > lastTransferBlock[msg.sender], \"Transfer Delay enabled. Only one transfer per block allowed.\");\n   |                                ^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":931,"file":"TmpContract.sol","start":914},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:24:9:\n   |\n24 |         lastTransferBlock[msg.sender] = block.number;\n   |         ^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1035,"file":"TmpContract.sol","start":1018},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:28:29:\n   |\n28 |     uint256 senderBalance = balanceOf(msg.sender);\n   |                             ^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1142,"file":"TmpContract.sol","start":1133},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:30:5:\n   |\n30 |     _balances[msg.sender] = senderBalance - amount;\n   |     ^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1249,"file":"TmpContract.sol","start":1240},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:33:5:\n   |\n33 |     _balances[recipient] += amount;\n   |     ^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1334,"file":"TmpContract.sol","start":1325},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"transfer\"?\n  --> TmpContract.sol:35:10:\n   |\n35 |     emit Transfer(msg.sender, recipient, amount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"transfer\"?","severity":"error","sourceLocation":{"end":1375,"file":"TmpContract.sol","start":1367},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,318 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:27:
+  |
+8 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:10:
+   |
+10 |     emit marketingWalletUpdated(newMarketingWallet, marketingWallet);
+   |          ^^^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:53:
+   |
+10 |     emit marketingWalletUpdated(newMarketingWallet, marketingWallet);
+   |                                                     ^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:5:
+   |
+11 |     marketingWallet = newMarketingWallet;
+   |     ^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:27:\n  |\n8 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":255,"file":"TmpContract.sol","start":250},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:10:\n   |\n10 |     emit marketingWalletUpdated(newMarketingWallet, marketingWallet);\n   |          ^^^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":326,"file":"TmpContract.sol","start":304},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:53:\n   |\n10 |     emit marketingWalletUpdated(newMarketingWallet, marketingWallet);\n   |                                                     ^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":362,"file":"TmpContract.sol","start":347},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:5:\n   |\n11 |     marketingWallet = newMarketingWallet;\n   |     ^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":384,"file":"TmpContract.sol","start":369},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,338 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:9:
+  |
+7 |     if (nameStorage != 0) {
+  |         ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:38:
+  |
+8 |         uint256 nameLength = uint256(nameStorage >> 1);
+  |                                      ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:14:36:
+   |
+14 |         bytes32 nameData = bytes32(nameStorage >> 1);
+   |                                    ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:16:13:
+   |
+16 |         if (nameStorage != 0) {
+   |             ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:28:49:
+   |
+28 |                     nameBytes[i] = bytes1(uint8(nameStorageMap[offset + i]));
+   |                                                 ^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:9:\n  |\n7 |     if (nameStorage != 0) {\n  |         ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":159,"file":"TmpContract.sol","start":148},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:38:\n  |\n8 |         uint256 nameLength = uint256(nameStorage >> 1);\n  |                                      ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":216,"file":"TmpContract.sol","start":205},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:14:36:\n   |\n14 |         bytes32 nameData = bytes32(nameStorage >> 1);\n   |                                    ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":416,"file":"TmpContract.sol","start":405},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:16:13:\n   |\n16 |         if (nameStorage != 0) {\n   |             ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":448,"file":"TmpContract.sol","start":437},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:28:49:\n   |\n28 |                     nameBytes[i] = bytes1(uint8(nameStorageMap[offset + i]));\n   |                                                 ^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":881,"file":"TmpContract.sol","start":867},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,359 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:12:
+  |
+8 |     return storage_map_b[account] != 0;
+  |            ^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:12:\n  |\n8 |     return storage_map_b[account] != 0;\n  |            ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":232,"file":"TmpContract.sol","start":219},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,379 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:12:13:
+   |
+12 |     require(allowances[allowanceKey] >= subtractedValue, "ERC20: decreased allowance below zero");
+   |             ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:14:5:
+   |
+14 |     allowances[allowanceKey] -= subtractedValue;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:16:10:
+   |
+16 |     emit Approval(owner, spender, allowances[allowanceKey]);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:16:35:
+   |
+16 |     emit Approval(owner, spender, allowances[allowanceKey]);
+   |                                   ^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:12:13:\n   |\n12 |     require(allowances[allowanceKey] >= subtractedValue, \"ERC20: decreased allowance below zero\");\n   |             ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":389,"file":"TmpContract.sol","start":379},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:14:5:\n   |\n14 |     allowances[allowanceKey] -= subtractedValue;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":485,"file":"TmpContract.sol","start":475},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:16:10:\n   |\n16 |     emit Approval(owner, spender, allowances[allowanceKey]);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":542,"file":"TmpContract.sol","start":534},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:16:35:\n   |\n16 |     emit Approval(owner, spender, allowances[allowanceKey]);\n   |                                   ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":569,"file":"TmpContract.sol","start":559},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,402 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier. Did you mean "balanceOf"?
+ --> TmpContract.sol:8:12:
+  |
+8 |     return balances[account];
+  |            ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"balanceOf\"?\n --> TmpContract.sol:8:12:\n  |\n8 |     return balances[account];\n  |            ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"balanceOf\"?","severity":"error","sourceLocation":{"end":234,"file":"TmpContract.sol","start":226},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,422 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier. Did you mean "balance"?
+  --> TmpContract.sol:10:23:
+   |
+10 |     uint256 balance = balances[sender];
+   |                       ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "balance"?
+  --> TmpContract.sol:13:5:
+   |
+13 |     balances[sender] -= amount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "balance"?
+  --> TmpContract.sol:14:5:
+   |
+14 |     balances[to] += amount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "transfer"?
+  --> TmpContract.sol:16:10:
+   |
+16 |     emit Transfer(sender, to, amount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"balance\"?\n  --> TmpContract.sol:10:23:\n   |\n10 |     uint256 balance = balances[sender];\n   |                       ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"balance\"?","severity":"error","sourceLocation":{"end":271,"file":"TmpContract.sol","start":263},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"balance\"?\n  --> TmpContract.sol:13:5:\n   |\n13 |     balances[sender] -= amount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"balance\"?","severity":"error","sourceLocation":{"end":368,"file":"TmpContract.sol","start":360},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"balance\"?\n  --> TmpContract.sol:14:5:\n   |\n14 |     balances[to] += amount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"balance\"?","severity":"error","sourceLocation":{"end":400,"file":"TmpContract.sol","start":392},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"transfer\"?\n  --> TmpContract.sol:16:10:\n   |\n16 |     emit Transfer(sender, to, amount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"transfer\"?","severity":"error","sourceLocation":{"end":434,"file":"TmpContract.sol","start":426},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,445 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:12:
+  |
+8 |     return storage_map_b[account] != 0;
+  |            ^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:12:\n  |\n8 |     return storage_map_b[account] != 0;\n  |            ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":232,"file":"TmpContract.sol","start":219},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,467 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier. Did you mean "newOwner"?
+ --> TmpContract.sol:8:27:
+  |
+8 |     require(msg.sender == getOwner(), "!OWNER");
+  |                           ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:10:
+   |
+10 |     emit OwnershipTransferred(getOwner(), newOwner);
+   |          ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "newOwner"?
+  --> TmpContract.sol:10:31:
+   |
+10 |     emit OwnershipTransferred(getOwner(), newOwner);
+   |                               ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "newOwner"?
+  --> TmpContract.sol:11:5:
+   |
+11 |     getOwner = newOwner;
+   |     ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"newOwner\"?\n --> TmpContract.sol:8:27:\n  |\n8 |     require(msg.sender == getOwner(), \"!OWNER\");\n  |                           ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"newOwner\"?","severity":"error","sourceLocation":{"end":238,"file":"TmpContract.sol","start":230},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:10:\n   |\n10 |     emit OwnershipTransferred(getOwner(), newOwner);\n   |          ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":283,"file":"TmpContract.sol","start":263},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"newOwner\"?\n  --> TmpContract.sol:10:31:\n   |\n10 |     emit OwnershipTransferred(getOwner(), newOwner);\n   |                               ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"newOwner\"?","severity":"error","sourceLocation":{"end":292,"file":"TmpContract.sol","start":284},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"newOwner\"?\n  --> TmpContract.sol:11:5:\n   |\n11 |     getOwner = newOwner;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"newOwner\"?","severity":"error","sourceLocation":{"end":319,"file":"TmpContract.sol","start":311},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,493 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:9:
+   |
+11 |     if (transferDelayEnabled) {
+   |         ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:12:17:
+   |
+12 |         require(lastTransferBlock[msg.sender] < block.number, "Transfer: only one transfer per block allowed");
+   |                 ^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:9:
+   |
+13 |         lastTransferBlock[msg.sender] = block.number;
+   |         ^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:17:23:
+   |
+17 |     require(amount <= _maxTxAmount, "Transfer: exceeds the maximum transaction amount");
+   |                       ^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:20:35:
+   |
+20 |     uint256 taxAmount = (amount * taxRate) / 100;
+   |                                   ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:27:5:
+   |
+27 |     balances[msg.sender] -= amount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:28:5:
+   |
+28 |     balances[recipient] += transferAmount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:29:5:
+   |
+29 |     balances[address(this)] += taxAmount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "transfer"?
+  --> TmpContract.sol:32:10:
+   |
+32 |     emit Transfer(msg.sender, recipient, transferAmount);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "transfer"?
+  --> TmpContract.sol:33:10:
+   |
+33 |     emit Transfer(msg.sender, address(this), taxAmount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:9:\n   |\n11 |     if (transferDelayEnabled) {\n   |         ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":368,"file":"TmpContract.sol","start":348},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:12:17:\n   |\n12 |         require(lastTransferBlock[msg.sender] < block.number, \"Transfer: only one transfer per block allowed\");\n   |                 ^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":405,"file":"TmpContract.sol","start":388},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:9:\n   |\n13 |         lastTransferBlock[msg.sender] = block.number;\n   |         ^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":509,"file":"TmpContract.sol","start":492},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:17:23:\n   |\n17 |     require(amount <= _maxTxAmount, \"Transfer: exceeds the maximum transaction amount\");\n   |                       ^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":619,"file":"TmpContract.sol","start":607},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:20:35:\n   |\n20 |     uint256 taxAmount = (amount * taxRate) / 100;\n   |                                   ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":744,"file":"TmpContract.sol","start":737},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:27:5:\n   |\n27 |     balances[msg.sender] -= amount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":976,"file":"TmpContract.sol","start":968},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:28:5:\n   |\n28 |     balances[recipient] += transferAmount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1012,"file":"TmpContract.sol","start":1004},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:29:5:\n   |\n29 |     balances[address(this)] += taxAmount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1055,"file":"TmpContract.sol","start":1047},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"transfer\"?\n  --> TmpContract.sol:32:10:\n   |\n32 |     emit Transfer(msg.sender, recipient, transferAmount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"transfer\"?","severity":"error","sourceLocation":{"end":1131,"file":"TmpContract.sol","start":1123},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"transfer\"?\n  --> TmpContract.sol:33:10:\n   |\n33 |     emit Transfer(msg.sender, address(this), taxAmount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"transfer\"?","severity":"error","sourceLocation":{"end":1189,"file":"TmpContract.sol","start":1181},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,519 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:14:
+  |
+8 |     require(!tradingOpen, "trading is already open");
+  |              ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     tradingOpen = true;
+   |     ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:10:
+   |
+11 |     emit Approval(address(this), 0x7a250d5630b4cf539739df2c5dacb4c659f2488d, 0x989680);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:14:20:
+   |
+14 |     address WETH = IUniswapV2Router02(uniswapV2Router).WETH();
+   |                    ^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:15:20:
+   |
+15 |     address pair = IUniswapV2Factory(IUniswapV2Router02(uniswapV2Router).factory()).createPair(address(this), WETH);
+   |                    ^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:15:38:
+   |
+15 |     address pair = IUniswapV2Factory(IUniswapV2Router02(uniswapV2Router).factory()).createPair(address(this), WETH);
+   |                                      ^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:18:13:
+   |
+18 |     require(IERC20(pair).approve(uniswapV2Router, type(uint256).max), "ERC20: approve to the zero address");
+   |             ^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":149,"file":"TmpContract.sol","start":144},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:14:\n  |\n8 |     require(!tradingOpen, \"trading is already open\");\n  |              ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":212,"file":"TmpContract.sol","start":201},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     tradingOpen = true;\n   |     ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":258,"file":"TmpContract.sol","start":247},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:10:\n   |\n11 |     emit Approval(address(this), 0x7a250d5630b4cf539739df2c5dacb4c659f2488d, 0x989680);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":284,"file":"TmpContract.sol","start":276},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:14:20:\n   |\n14 |     address WETH = IUniswapV2Router02(uniswapV2Router).WETH();\n   |                    ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":467,"file":"TmpContract.sol","start":449},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:15:20:\n   |\n15 |     address pair = IUniswapV2Factory(IUniswapV2Router02(uniswapV2Router).factory()).createPair(address(this), WETH);\n   |                    ^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":529,"file":"TmpContract.sol","start":512},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:15:38:\n   |\n15 |     address pair = IUniswapV2Factory(IUniswapV2Router02(uniswapV2Router).factory()).createPair(address(this), WETH);\n   |                                      ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":548,"file":"TmpContract.sol","start":530},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:18:13:\n   |\n18 |     require(IERC20(pair).approve(uniswapV2Router, type(uint256).max), \"ERC20: approve to the zero address\");\n   |             ^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":702,"file":"TmpContract.sol","start":696},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,549 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:13:
+  |
+8 |     require(allowances[msg.sender][spender] >= subtractedValue, "ERC20: decreased allowance below zero");
+  |             ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     allowances[msg.sender][spender] -= subtractedValue;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:10:
+   |
+11 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:40:
+   |
+11 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);
+   |                                        ^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:13:\n  |\n8 |     require(allowances[msg.sender][spender] >= subtractedValue, \"ERC20: decreased allowance below zero\");\n  |             ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":275,"file":"TmpContract.sol","start":265},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     allowances[msg.sender][spender] -= subtractedValue;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":374,"file":"TmpContract.sol","start":364},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:10:\n   |\n11 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":433,"file":"TmpContract.sol","start":425},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:40:\n   |\n11 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);\n   |                                        ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":465,"file":"TmpContract.sol","start":455},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,576 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":167,"file":"TmpContract.sol","start":162},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,600 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:27:
+  |
+8 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:5:
+  |
+9 |     maxWallet = newMaxWalletAmount;
+  |     ^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:27:\n  |\n8 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":247,"file":"TmpContract.sol","start":242},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:5:\n  |\n9 |     maxWallet = newMaxWalletAmount;\n  |     ^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":299,"file":"TmpContract.sol","start":290},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,630 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:32:
+   |
+10 |     uint256 currentAllowance = allowances[owner][spender];
+   |                                ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:5:
+   |
+13 |     allowances[owner][spender] = currentAllowance + addedValue;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:15:10:
+   |
+15 |     emit Approval(owner, spender, allowances[owner][spender]);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:15:35:
+   |
+15 |     emit Approval(owner, spender, allowances[owner][spender]);
+   |                                   ^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:32:\n   |\n10 |     uint256 currentAllowance = allowances[owner][spender];\n   |                                ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":322,"file":"TmpContract.sol","start":312},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:5:\n   |\n13 |     allowances[owner][spender] = currentAllowance + addedValue;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":447,"file":"TmpContract.sol","start":437},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:15:10:\n   |\n15 |     emit Approval(owner, spender, allowances[owner][spender]);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":515,"file":"TmpContract.sol","start":507},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:15:35:\n   |\n15 |     emit Approval(owner, spender, allowances[owner][spender]);\n   |                                   ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":542,"file":"TmpContract.sol","start":532},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,656 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:5:
+  |
+9 |     _maxTxAmount = 1000000000; // Set maximum transaction amount
+  |     ^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     _maxWalletSize = 1000000000; // Set maximum wallet size
+   |     ^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:12:10:
+   |
+12 |     emit MaxTxAmountUpdated(1000000000); // Emit event for updated max transaction amount
+   |          ^^^^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":150,"file":"TmpContract.sol","start":145},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:5:\n  |\n9 |     _maxTxAmount = 1000000000; // Set maximum transaction amount\n  |     ^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":206,"file":"TmpContract.sol","start":194},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     _maxWalletSize = 1000000000; // Set maximum wallet size\n   |     ^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":273,"file":"TmpContract.sol","start":259},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:12:10:\n   |\n12 |     emit MaxTxAmountUpdated(1000000000); // Emit event for updated max transaction amount\n   |          ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":343,"file":"TmpContract.sol","start":325},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,680 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:23:
+  |
+7 |     require(tokenId < totalSupply, "ERC721A: approved query for nonexistent token");
+  |                       ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:20:
+  |
+8 |     return address(_tokenApprovals[tokenId]);
+  |                    ^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:23:\n  |\n7 |     require(tokenId < totalSupply, \"ERC721A: approved query for nonexistent token\");\n  |                       ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":189,"file":"TmpContract.sol","start":178},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:20:\n  |\n8 |     return address(_tokenApprovals[tokenId]);\n  |                    ^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":275,"file":"TmpContract.sol","start":260},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,702 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner(), "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:5:
+  |
+8 |     _maxTxAmount = type(uint256).max;
+  |     ^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:5:
+  |
+9 |     _maxWalletAmount = type(uint256).max;
+  |     ^^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":150,"file":"TmpContract.sol","start":145},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:5:\n  |\n8 |     _maxTxAmount = type(uint256).max;\n  |     ^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":207,"file":"TmpContract.sol","start":195},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:5:\n  |\n9 |     _maxWalletAmount = type(uint256).max;\n  |     ^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":249,"file":"TmpContract.sol","start":233},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,725 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:5:
+  |
+9 |     allowances[owner][spender] = amount;
+  |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:10:
+   |
+10 |     emit Approval(owner, spender, amount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:5:\n  |\n9 |     allowances[owner][spender] = amount;\n  |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":269,"file":"TmpContract.sol","start":259},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:10:\n   |\n10 |     emit Approval(owner, spender, amount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":313,"file":"TmpContract.sol","start":305},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,758 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:5:
+  |
+9 |     _maxTxAmount = 0;
+  |     ^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     _maxWalletSize = 0;
+   |     ^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:12:10:
+   |
+12 |     emit MaxTxAmountUpdated(0);
+   |          ^^^^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":150,"file":"TmpContract.sol","start":145},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:5:\n  |\n9 |     _maxTxAmount = 0;\n  |     ^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":206,"file":"TmpContract.sol","start":194},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     _maxWalletSize = 0;\n   |     ^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":230,"file":"TmpContract.sol","start":216},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:12:10:\n   |\n12 |     emit MaxTxAmountUpdated(0);\n   |          ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":264,"file":"TmpContract.sol","start":246},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,781 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:9:
+  |
+7 |     if (symbolStorage) {
+  |         ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:15:
+  |
+8 |         if (!(symbolStorage) == ((symbolStorage >> 1) < 32)) {
+  |               ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:35:
+  |
+8 |         if (!(symbolStorage) == ((symbolStorage >> 1) < 32)) {
+  |                                   ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:27:
+   |
+11 |         uint256 length = (symbolStorage >> 1);
+   |                           ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:30:
+   |
+13 |         bytes32 symbolData = symbolStorage >> 1;
+   |                              ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:14:13:
+   |
+14 |         if (symbolStorage) {
+   |             ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:15:19:
+   |
+15 |             if (!(symbolStorage) == ((symbolStorage >> 1) < 32)) {
+   |                   ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:15:39:
+   |
+15 |             if (!(symbolStorage) == ((symbolStorage >> 1) < 32)) {
+   |                                       ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:21:43:
+   |
+21 |                     bytes32 storageData = storageMap[storageOffset];
+   |                                           ^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:9:\n  |\n7 |     if (symbolStorage) {\n  |         ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":163,"file":"TmpContract.sol","start":150},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:15:\n  |\n8 |         if (!(symbolStorage) == ((symbolStorage >> 1) < 32)) {\n  |               ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":194,"file":"TmpContract.sol","start":181},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:35:\n  |\n8 |         if (!(symbolStorage) == ((symbolStorage >> 1) < 32)) {\n  |                                   ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":214,"file":"TmpContract.sol","start":201},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:27:\n   |\n11 |         uint256 length = (symbolStorage >> 1);\n   |                           ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":322,"file":"TmpContract.sol","start":309},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:30:\n   |\n13 |         bytes32 symbolData = symbolStorage >> 1;\n   |                              ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":431,"file":"TmpContract.sol","start":418},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:14:13:\n   |\n14 |         if (symbolStorage) {\n   |             ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":463,"file":"TmpContract.sol","start":450},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:15:19:\n   |\n15 |             if (!(symbolStorage) == ((symbolStorage >> 1) < 32)) {\n   |                   ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":498,"file":"TmpContract.sol","start":485},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:15:39:\n   |\n15 |             if (!(symbolStorage) == ((symbolStorage >> 1) < 32)) {\n   |                                       ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":518,"file":"TmpContract.sol","start":505},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:21:43:\n   |\n21 |                     bytes32 storageData = storageMap[storageOffset];\n   |                                           ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":759,"file":"TmpContract.sol","start":749},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,815 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:5:
+  |
+8 |     owner = address(0);
+  |     ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:10:
+  |
+9 |     emit OwnershipTransferred(msg.sender, address(0));
+  |          ^^^^^^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":155,"file":"TmpContract.sol","start":150},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:5:\n  |\n8 |     owner = address(0);\n  |     ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":203,"file":"TmpContract.sol","start":198},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:10:\n  |\n9 |     emit OwnershipTransferred(msg.sender, address(0));\n  |          ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":247,"file":"TmpContract.sol","start":227},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,849 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:27:
+  |
+8 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:10:
+   |
+10 |     emit lotteryWalletUpdated(newLotteryWallet, DevFlakeEdenVertex);
+   |          ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:49:
+   |
+10 |     emit lotteryWalletUpdated(newLotteryWallet, DevFlakeEdenVertex);
+   |                                                 ^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:5:
+   |
+11 |     DevFlakeEdenVertex = newLotteryWallet;
+   |     ^^^^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:27:\n  |\n8 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":250,"file":"TmpContract.sol","start":245},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:10:\n   |\n10 |     emit lotteryWalletUpdated(newLotteryWallet, DevFlakeEdenVertex);\n   |          ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":319,"file":"TmpContract.sol","start":299},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:49:\n   |\n10 |     emit lotteryWalletUpdated(newLotteryWallet, DevFlakeEdenVertex);\n   |                                                 ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":356,"file":"TmpContract.sol","start":338},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:5:\n   |\n11 |     DevFlakeEdenVertex = newLotteryWallet;\n   |     ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":381,"file":"TmpContract.sol","start":363},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,873 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     allowances[msg.sender][spender] = amount;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:10:
+   |
+11 |     emit Approval(msg.sender, spender, amount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     allowances[msg.sender][spender] = amount;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":328,"file":"TmpContract.sol","start":318},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:10:\n   |\n11 |     emit Approval(msg.sender, spender, amount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":377,"file":"TmpContract.sol","start":369},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,896 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:5:
+  |
+8 |     salePhase = phase;
+  |     ^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":163,"file":"TmpContract.sol","start":158},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:5:\n  |\n8 |     salePhase = phase;\n  |     ^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":215,"file":"TmpContract.sol","start":206},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,920 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:10:
+  |
+8 |     emit OwnershipTransferred(owner, address(0));
+  |          ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:31:
+  |
+8 |     emit OwnershipTransferred(owner, address(0));
+  |                               ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:5:
+  |
+9 |     owner = address(0);
+  |     ^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":155,"file":"TmpContract.sol","start":150},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:10:\n  |\n8 |     emit OwnershipTransferred(owner, address(0));\n  |          ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":223,"file":"TmpContract.sol","start":203},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:31:\n  |\n8 |     emit OwnershipTransferred(owner, address(0));\n  |                               ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":229,"file":"TmpContract.sol","start":224},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:5:\n  |\n9 |     owner = address(0);\n  |     ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":253,"file":"TmpContract.sol","start":248},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,950 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:9:
+  |
+7 |     if (symbolStorage != 0) {
+  |         ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:26:
+  |
+8 |         uint256 length = symbolStorage >> 1;
+  |                          ^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:17:42:
+   |
+17 |             symbolData[i] = bytes1(uint8(symbolStorage >> (8 * (length - i - 1))));
+   |                                          ^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:9:\n  |\n7 |     if (symbolStorage != 0) {\n  |         ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":163,"file":"TmpContract.sol","start":150},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:26:\n  |\n8 |         uint256 length = symbolStorage >> 1;\n  |                          ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":210,"file":"TmpContract.sol","start":197},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:17:42:\n   |\n17 |             symbolData[i] = bytes1(uint8(symbolStorage >> (8 * (length - i - 1))));\n   |                                          ^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":510,"file":"TmpContract.sol","start":497},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:52,975 - ERROR - An unexpected error occurred during compilation: ParserError: Expected primary expression.
+  --> TmpContract.sol:25:40:
+   |
+25 |                         nameBytes[i] = byte(uint8(nameStorageMap[i]));
+   |                                        ^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"6933","formattedMessage":"ParserError: Expected primary expression.\n  --> TmpContract.sol:25:40:\n   |\n25 |                         nameBytes[i] = byte(uint8(nameStorageMap[i]));\n   |                                        ^^^^\n\n","message":"Expected primary expression.","severity":"error","sourceLocation":{"end":779,"file":"TmpContract.sol","start":775},"type":"ParserError"}],"sources":{}}
+
+> stderr:
+2025-09-05 21:21:53,033 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:35:
+  |
+7 |     require(msg.sender == address(transferDelayEnabled / 0x0100), "Unauthorized access");
+  |                                   ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:14:
+   |
+10 |     require(!isBot[contractAddress], "Contract is marked as bot");
+   |              ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:5:
+   |
+11 |     store_e = 0x01000000000000000000000000000000000000000000 | uint248(store_e);
+   |     ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:72:
+   |
+11 |     store_e = 0x01000000000000000000000000000000000000000000 | uint248(store_e);
+   |                                                                        ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:12:14:
+   |
+12 |     require(!isBot[contractAddress], "Contract is marked as bot");
+   |              ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:21:
+   |
+13 |     require(!bytes1(store_e / 0x010000000000000000000000000000000000000000), "Invalid state");
+   |                     ^^^^^^^
+
+
+DeclarationError: Undeclared identifier. "offset" is not (or not yet) visible at this point.
+  --> TmpContract.sol:15:22:
+   |
+15 |     uint256 offset = offset + 0x60;
+   |                      ^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:21:49:
+   |
+21 |     (bool success, bytes memory ret0) = address(store_d).staticcall(abi.encodeWithSelector(wethSelector, wethAddress));
+   |                                                 ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:29:21:
+   |
+29 |     require(address(store_d) != address(0), "ERC20: approve to the zero address");
+   |                     ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:37:36:
+   |
+37 |     address storeAddress = address(store_d);
+   |                                    ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:39:5:
+   |
+39 |     isBot[contractAddress] = isBot[contractAddress];
+   |     ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:39:30:
+   |
+39 |     isBot[contractAddress] = isBot[contractAddress];
+   |                              ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:40:31:
+   |
+40 |     address approvalAddress = isBot[contractAddress];
+   |                               ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:41:10:
+   |
+41 |     emit Approval(address(this), address(store_d), isBot[contractAddress]);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:41:42:
+   |
+41 |     emit Approval(address(this), address(store_d), isBot[contractAddress]);
+   |                                          ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:41:52:
+   |
+41 |     emit Approval(address(this), address(store_d), isBot[contractAddress]);
+   |                                                    ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:43:31:
+   |
+43 |     address transferAddress = isBot[contractAddress];
+   |                               ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:49:21:
+   |
+49 |     require(address(store_d).code.length > 0, "Invalid contract code");
+   |                     ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:50:57:
+   |
+50 |     (bool callSuccess, bytes memory callRet0) = address(store_d).call(abi.encodeWithSelector(transferSelector, transferAddress));
+   |                                                         ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:51:5:
+   |
+51 |     store_e = uint248(store_e);
+   |     ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:51:23:
+   |
+51 |     store_e = uint248(store_e);
+   |                       ^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:53:65:
+   |
+53 |     (bool transferSuccess, bytes memory transferRet0) = address(transferDelayEnabled / 0x0100).call{value: address(this).balance}("");
+   |                                                                 ^^^^^^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:35:\n  |\n7 |     require(msg.sender == address(transferDelayEnabled / 0x0100), \"Unauthorized access\");\n  |                                   ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":171,"file":"TmpContract.sol","start":151},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:14:\n   |\n10 |     require(!isBot[contractAddress], \"Contract is marked as bot\");\n   |              ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":293,"file":"TmpContract.sol","start":288},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:5:\n   |\n11 |     store_e = 0x01000000000000000000000000000000000000000000 | uint248(store_e);\n   |     ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":353,"file":"TmpContract.sol","start":346},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:72:\n   |\n11 |     store_e = 0x01000000000000000000000000000000000000000000 | uint248(store_e);\n   |                                                                        ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":420,"file":"TmpContract.sol","start":413},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:12:14:\n   |\n12 |     require(!isBot[contractAddress], \"Contract is marked as bot\");\n   |              ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":441,"file":"TmpContract.sol","start":436},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:21:\n   |\n13 |     require(!bytes1(store_e / 0x010000000000000000000000000000000000000000), \"Invalid state\");\n   |                     ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":517,"file":"TmpContract.sol","start":510},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. \"offset\" is not (or not yet) visible at this point.\n  --> TmpContract.sol:15:22:\n   |\n15 |     uint256 offset = offset + 0x60;\n   |                      ^^^^^^\n\n","message":"Undeclared identifier. \"offset\" is not (or not yet) visible at this point.","severity":"error","sourceLocation":{"end":629,"file":"TmpContract.sol","start":623},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:21:49:\n   |\n21 |     (bool success, bytes memory ret0) = address(store_d).staticcall(abi.encodeWithSelector(wethSelector, wethAddress));\n   |                                                 ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":938,"file":"TmpContract.sol","start":931},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:29:21:\n   |\n29 |     require(address(store_d) != address(0), \"ERC20: approve to the zero address\");\n   |                     ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":1507,"file":"TmpContract.sol","start":1500},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:37:36:\n   |\n37 |     address storeAddress = address(store_d);\n   |                                    ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2023,"file":"TmpContract.sol","start":2016},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:39:5:\n   |\n39 |     isBot[contractAddress] = isBot[contractAddress];\n   |     ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2109,"file":"TmpContract.sol","start":2104},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:39:30:\n   |\n39 |     isBot[contractAddress] = isBot[contractAddress];\n   |                              ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2134,"file":"TmpContract.sol","start":2129},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:40:31:\n   |\n40 |     address approvalAddress = isBot[contractAddress];\n   |                               ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2188,"file":"TmpContract.sol","start":2183},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:41:10:\n   |\n41 |     emit Approval(address(this), address(store_d), isBot[contractAddress]);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2224,"file":"TmpContract.sol","start":2216},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:41:42:\n   |\n41 |     emit Approval(address(this), address(store_d), isBot[contractAddress]);\n   |                                          ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2255,"file":"TmpContract.sol","start":2248},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:41:52:\n   |\n41 |     emit Approval(address(this), address(store_d), isBot[contractAddress]);\n   |                                                    ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2263,"file":"TmpContract.sol","start":2258},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:43:31:\n   |\n43 |     address transferAddress = isBot[contractAddress];\n   |                               ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2360,"file":"TmpContract.sol","start":2355},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:49:21:\n   |\n49 |     require(address(store_d).code.length > 0, \"Invalid contract code\");\n   |                     ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2595,"file":"TmpContract.sol","start":2588},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:50:57:\n   |\n50 |     (bool callSuccess, bytes memory callRet0) = address(store_d).call(abi.encodeWithSelector(transferSelector, transferAddress));\n   |                                                         ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2703,"file":"TmpContract.sol","start":2696},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:51:5:\n   |\n51 |     store_e = uint248(store_e);\n   |     ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2781,"file":"TmpContract.sol","start":2774},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:51:23:\n   |\n51 |     store_e = uint248(store_e);\n   |                       ^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2799,"file":"TmpContract.sol","start":2792},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:53:65:\n   |\n53 |     (bool transferSuccess, bytes memory transferRet0) = address(transferDelayEnabled / 0x0100).call{value: address(this).balance}(\"\");\n   |                                                                 ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":2947,"file":"TmpContract.sol","start":2927},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,090 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:13:
+  |
+8 |     return (storage_map[_address] & 0x01) != 0;
+  |             ^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:13:\n  |\n8 |     return (storage_map[_address] & 0x01) != 0;\n  |             ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":272,"file":"TmpContract.sol","start":261},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,115 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:27:
+  |
+8 |     require(msg.sender == owner(), "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:29:
+   |
+10 |     address previousOwner = owner();
+   |                             ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:5:
+   |
+11 |     owner = newOwner;
+   |     ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:10:
+   |
+13 |     emit OwnershipTransferred(previousOwner, newOwner);
+   |          ^^^^^^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:27:\n  |\n8 |     require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":250,"file":"TmpContract.sol","start":245},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:29:\n   |\n10 |     address previousOwner = owner();\n   |                             ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":329,"file":"TmpContract.sol","start":324},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:5:\n   |\n11 |     owner = newOwner;\n   |     ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":342,"file":"TmpContract.sol","start":337},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:10:\n   |\n13 |     emit OwnershipTransferred(previousOwner, newOwner);\n   |          ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":389,"file":"TmpContract.sol","start":369},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,141 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:5:
+  |
+8 |     owner = address(0);
+  |     ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:10:
+  |
+9 |     emit OwnershipTransferred(msg.sender, address(0));
+  |          ^^^^^^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":155,"file":"TmpContract.sol","start":150},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:5:\n  |\n8 |     owner = address(0);\n  |     ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":203,"file":"TmpContract.sol","start":198},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:10:\n  |\n9 |     emit OwnershipTransferred(msg.sender, address(0));\n  |          ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":247,"file":"TmpContract.sol","start":227},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,162 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:26:
+  |
+8 |     require(newAmount <= totalSupply / 100, "Swap amount cannot be higher than 1% of total supply.");
+  |                          ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:39:
+  |
+9 |     require(newAmount == (newAmount * totalSupply) / totalSupply || totalSupply == 0, "Invalid swap amount.");
+  |                                       ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:54:
+  |
+9 |     require(newAmount == (newAmount * totalSupply) / totalSupply || totalSupply == 0, "Invalid swap amount.");
+  |                                                      ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:69:
+  |
+9 |     require(newAmount == (newAmount * totalSupply) / totalSupply || totalSupply == 0, "Invalid swap amount.");
+  |                                                                     ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:5:
+   |
+11 |     swapTokensAtAmount = (newAmount * totalSupply) / 100;
+   |     ^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:39:
+   |
+11 |     swapTokensAtAmount = (newAmount * totalSupply) / 100;
+   |                                       ^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":194,"file":"TmpContract.sol","start":189},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:26:\n  |\n8 |     require(newAmount <= totalSupply / 100, \"Swap amount cannot be higher than 1% of total supply.\");\n  |                          ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":269,"file":"TmpContract.sol","start":258},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:39:\n  |\n9 |     require(newAmount == (newAmount * totalSupply) / totalSupply || totalSupply == 0, \"Invalid swap amount.\");\n  |                                       ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":384,"file":"TmpContract.sol","start":373},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:54:\n  |\n9 |     require(newAmount == (newAmount * totalSupply) / totalSupply || totalSupply == 0, \"Invalid swap amount.\");\n  |                                                      ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":399,"file":"TmpContract.sol","start":388},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:69:\n  |\n9 |     require(newAmount == (newAmount * totalSupply) / totalSupply || totalSupply == 0, \"Invalid swap amount.\");\n  |                                                                     ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":414,"file":"TmpContract.sol","start":403},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:5:\n   |\n11 |     swapTokensAtAmount = (newAmount * totalSupply) / 100;\n   |     ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":469,"file":"TmpContract.sol","start":451},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:39:\n   |\n11 |     swapTokensAtAmount = (newAmount * totalSupply) / 100;\n   |                                       ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":496,"file":"TmpContract.sol","start":485},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,184 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:5:
+  |
+8 |     maxTransactionAmount = totalSupply;
+  |     ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:28:
+  |
+8 |     maxTransactionAmount = totalSupply;
+  |                            ^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:5:
+  |
+9 |     maxWallet = totalSupply;
+  |     ^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:17:
+  |
+9 |     maxWallet = totalSupply;
+  |                 ^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":159,"file":"TmpContract.sol","start":154},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:5:\n  |\n8 |     maxTransactionAmount = totalSupply;\n  |     ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":222,"file":"TmpContract.sol","start":202},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:28:\n  |\n8 |     maxTransactionAmount = totalSupply;\n  |                            ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":236,"file":"TmpContract.sol","start":225},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:5:\n  |\n9 |     maxWallet = totalSupply;\n  |     ^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":251,"file":"TmpContract.sol","start":242},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:17:\n  |\n9 |     maxWallet = totalSupply;\n  |                 ^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":265,"file":"TmpContract.sol","start":254},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,206 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     allowances[msg.sender][spender] += addedValue;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:12:10:
+   |
+12 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:12:40:
+   |
+12 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);
+   |                                        ^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     allowances[msg.sender][spender] += addedValue;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":342,"file":"TmpContract.sol","start":332},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:12:10:\n   |\n12 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":397,"file":"TmpContract.sol","start":389},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:12:40:\n   |\n12 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);\n   |                                        ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":429,"file":"TmpContract.sol","start":419},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,229 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:5:
+  |
+8 |     allowances[msg.sender][spender] = amount;
+  |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:10:
+  |
+9 |     emit Approval(msg.sender, spender, amount);
+  |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:5:\n  |\n8 |     allowances[msg.sender][spender] = amount;\n  |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":248,"file":"TmpContract.sol","start":238},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:10:\n  |\n9 |     emit Approval(msg.sender, spender, amount);\n  |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":297,"file":"TmpContract.sol","start":289},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,253 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:13:
+   |
+11 |     require(balances[sender] >= amount, "ERC20: transfer amount exceeds balance");
+   |             ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:5:
+   |
+13 |     balances[sender] -= amount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:14:5:
+   |
+14 |     balances[to] += amount;
+   |     ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier. Did you mean "transfer"?
+  --> TmpContract.sol:16:10:
+   |
+16 |     emit Transfer(sender, to, amount);
+   |          ^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:13:\n   |\n11 |     require(balances[sender] >= amount, \"ERC20: transfer amount exceeds balance\");\n   |             ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":361,"file":"TmpContract.sol","start":353},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:5:\n   |\n13 |     balances[sender] -= amount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":441,"file":"TmpContract.sol","start":433},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:14:5:\n   |\n14 |     balances[to] += amount;\n   |     ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":473,"file":"TmpContract.sol","start":465},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier. Did you mean \"transfer\"?\n  --> TmpContract.sol:16:10:\n   |\n16 |     emit Transfer(sender, to, amount);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier. Did you mean \"transfer\"?","severity":"error","sourceLocation":{"end":511,"file":"TmpContract.sol","start":503},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,275 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:9:5:
+  |
+9 |     _maxTxAmount = 0x19133850;
+  |     ^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     _maxWalletSize = 0x19133850;
+   |     ^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:5:
+   |
+11 |     transferDelayEnabled = false;
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:10:
+   |
+13 |     emit MaxTxAmountUpdated(0x19133850);
+   |          ^^^^^^^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":150,"file":"TmpContract.sol","start":145},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:9:5:\n  |\n9 |     _maxTxAmount = 0x19133850;\n  |     ^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":210,"file":"TmpContract.sol","start":198},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     _maxWalletSize = 0x19133850;\n   |     ^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":243,"file":"TmpContract.sol","start":229},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:5:\n   |\n11 |     transferDelayEnabled = false;\n   |     ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":282,"file":"TmpContract.sol","start":262},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:10:\n   |\n13 |     emit MaxTxAmountUpdated(0x19133850);\n   |          ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":324,"file":"TmpContract.sol","start":306},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,305 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:27:
+  |
+8 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:5:
+   |
+11 |     coalStatus[account] = uint248(coalStatus[account]) & 0;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:35:
+   |
+11 |     coalStatus[account] = uint248(coalStatus[account]) & 0;
+   |                                   ^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:27:\n  |\n8 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":224,"file":"TmpContract.sol","start":219},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:5:\n   |\n11 |     coalStatus[account] = uint248(coalStatus[account]) & 0;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":329,"file":"TmpContract.sol","start":319},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:35:\n   |\n11 |     coalStatus[account] = uint248(coalStatus[account]) & 0;\n   |                                   ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":359,"file":"TmpContract.sol","start":349},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,337 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:32:
+  |
+8 |     require(subtractedValue <= allowances[msg.sender][spender], "ERC20: decreased allowance below zero");
+  |                                ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     allowances[msg.sender][spender] -= subtractedValue;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:10:
+   |
+11 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:40:
+   |
+11 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);
+   |                                        ^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:32:\n  |\n8 |     require(subtractedValue <= allowances[msg.sender][spender], \"ERC20: decreased allowance below zero\");\n  |                                ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":294,"file":"TmpContract.sol","start":284},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     allowances[msg.sender][spender] -= subtractedValue;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":374,"file":"TmpContract.sol","start":364},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:10:\n   |\n11 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":433,"file":"TmpContract.sol","start":425},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:40:\n   |\n11 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);\n   |                                        ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":465,"file":"TmpContract.sol","start":455},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,365 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:8:27:
+  |
+8 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:11:5:
+   |
+11 |     fee = newFee;
+   |     ^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:8:27:\n  |\n8 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":247,"file":"TmpContract.sol","start":242},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:11:5:\n   |\n11 |     fee = newFee;\n   |     ^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":404,"file":"TmpContract.sol","start":401},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,404 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     allowances[msg.sender][spender] += addedValue;
+   |     ^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:10:
+   |
+13 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);
+   |          ^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:40:
+   |
+13 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);
+   |                                        ^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     allowances[msg.sender][spender] += addedValue;\n   |     ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":287,"file":"TmpContract.sol","start":277},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:10:\n   |\n13 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);\n   |          ^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":369,"file":"TmpContract.sol","start":361},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:40:\n   |\n13 |     emit Approval(msg.sender, spender, allowances[msg.sender][spender]);\n   |                                        ^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":401,"file":"TmpContract.sol","start":391},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,428 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "OnlyOwner can call this");
+  |                           ^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"OnlyOwner can call this\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":155,"file":"TmpContract.sol","start":150},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:
+2025-09-05 21:21:53,450 - ERROR - An unexpected error occurred during compilation: DeclarationError: Undeclared identifier.
+ --> TmpContract.sol:7:27:
+  |
+7 |     require(msg.sender == owner, "Ownable: caller is not the owner");
+  |                           ^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:10:5:
+   |
+10 |     _maxTxAmount = 100000000; // Example value, replace with actual logic if needed
+   |     ^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:13:5:
+   |
+13 |     _maxWalletSize = 100000000; // Example value, replace with actual logic if needed
+   |     ^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:16:5:
+   |
+16 |     transferDelayEnabled = false;
+   |     ^^^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:19:10:
+   |
+19 |     emit MaxTxAmountUpdated(_maxTxAmount);
+   |          ^^^^^^^^^^^^^^^^^^
+
+
+DeclarationError: Undeclared identifier.
+  --> TmpContract.sol:19:29:
+   |
+19 |     emit MaxTxAmountUpdated(_maxTxAmount);
+   |                             ^^^^^^^^^^^^
+
+
+> command: `/home/zzk12/.solcx/solc-v0.8.10 --standard-json --allow-paths .`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n --> TmpContract.sol:7:27:\n  |\n7 |     require(msg.sender == owner, \"Ownable: caller is not the owner\");\n  |                           ^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":150,"file":"TmpContract.sol","start":145},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:10:5:\n   |\n10 |     _maxTxAmount = 100000000; // Example value, replace with actual logic if needed\n   |     ^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":246,"file":"TmpContract.sol","start":234},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:13:5:\n   |\n13 |     _maxWalletSize = 100000000; // Example value, replace with actual logic if needed\n   |     ^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":366,"file":"TmpContract.sol","start":352},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:16:5:\n   |\n16 |     transferDelayEnabled = false;\n   |     ^^^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":489,"file":"TmpContract.sol","start":469},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:19:10:\n   |\n19 |     emit MaxTxAmountUpdated(_maxTxAmount);\n   |          ^^^^^^^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":579,"file":"TmpContract.sol","start":561},"type":"DeclarationError"},{"component":"general","errorCode":"7576","formattedMessage":"DeclarationError: Undeclared identifier.\n  --> TmpContract.sol:19:29:\n   |\n19 |     emit MaxTxAmountUpdated(_maxTxAmount);\n   |                             ^^^^^^^^^^^^\n\n","message":"Undeclared identifier.","severity":"error","sourceLocation":{"end":592,"file":"TmpContract.sol","start":580},"type":"DeclarationError"}],"sources":{"TmpContract.sol":{"id":0}}}
+
+> stderr:

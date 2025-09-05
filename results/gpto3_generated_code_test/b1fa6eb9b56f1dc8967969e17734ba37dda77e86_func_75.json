@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xB1fA6eb9B56F1dC8967969e17734Ba37ddA77E86",
-    "heimdall_input": "function openTrading() public {\n        require(!bytes1(store_a / 0x01000000000000000000000000000000000000000000));\n        require(0x1859905bc160f5d575165318111aa1891cb4633e == msg.sender);\n        store_a = 0x01000000000000000000000000000000000000000000 | (uint248(store_a));\n    }",
-    "llm_output": "function openTrading() public {\n    require(!tradingOpen);\n    require(msg.sender == 0x1859905bc160f5d575165318111aa1891cb4633e);\n    tradingOpen = true;\n}",
-    "ground_truth": "function openTrading() external {\r\n        require(!tradingOpen);\r\n        require(msg.sender == deployer);\r\n        tradingOpen = true;        \r\n    }"
-}

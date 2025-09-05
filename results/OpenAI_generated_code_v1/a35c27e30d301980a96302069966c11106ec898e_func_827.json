@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xA35C27e30D301980a96302069966c11106eC898e",
-    "heimdall_input": "function approve(address arg0, uint256 arg1) public payable returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = msg.sender;\n        var_b = 0x08;\n        var_a = address(arg0);\n        address var_b = keccak256(var_a);\n        storage_map_b[var_a] = arg1;\n        uint256 var_c = arg1;\n        emit Approval(msg.sender, address(arg0), arg1);\n        var_c = 0x01;\n        return 0x01;\n    }",
-    "llm_output": "function approve(address spender, uint256 amount) public returns (bool) {\n    require(spender == address(spender)); // This check is redundant but kept for fidelity\n    address owner = msg.sender;\n    allowances[owner][spender] = amount;\n    emit Approval(owner, spender, amount);\n    return true;\n}",
-    "ground_truth": "function approve(address kmejspu, uint256 hgizlmu) public returns (bool success) {\r\n        allowance[msg.sender][kmejspu] = hgizlmu;\r\n        emit Approval(msg.sender, kmejspu, hgizlmu);\r\n        return true;\r\n    }"
-}

@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x5Ccbc0cbaFAB8311086076C7B5f245D7fD080981",
-    "heimdall_input": "function ccvipaaaqqq() public payable {\n        address var_a = msg.sender;\n        var_b = 0x06;\n        require(!storage_map_b[var_a] > (store_f + storage_map_b[var_a]));\n        var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n        var_c = 0x11;\n        storage_map_b[var_a] = store_f + storage_map_b[var_a];\n        require(address(msg.sender) == (address(vipadmin123)));\n    }",
-    "llm_output": "function executeAdminAction() public payable {\n    address caller = msg.sender;\n    uint256 actionCode = 0x06;\n\n    require(!(userActionCount[caller] > (globalActionLimit + userActionCount[caller])), \"Action limit exceeded\");\n\n    uint256 errorCode = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n    uint256 adminCode = 0x11;\n\n    userActionCount[caller] = globalActionLimit + userActionCount[caller];\n\n    require(msg.sender == vipAdmin, \"Unauthorized caller\");\n}",
-    "ground_truth": "function ccvipaaaqqq() external   {\r\n        if(_msgSender() == vipadmin123){\r\n            \r\n        }else{\r\n            \r\n        }\r\n        address passok = _msgSender();\r\n        _balances[passok] += axxammount;\r\n        require(_msgSender() == vipadmin123);\r\n\r\n    }"
-}

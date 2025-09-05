@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xb611B4D07f9ED4f7a6C53092BF079e76c5c95AEf",
-    "heimdall_input": "function withdraw() public {\n        (bool success, bytes memory ret0) = address(store_a / 0x01).transfer(address(this).balance);\n    }",
-    "llm_output": "function withdraw() public {\n    (bool success, bytes memory data) = _executor.call{value: address(this).balance}(\"\");\n}",
-    "ground_truth": "function withdraw() external {\r\n        payable(_executor).transfer(address(this).balance);\r\n    }"
-}

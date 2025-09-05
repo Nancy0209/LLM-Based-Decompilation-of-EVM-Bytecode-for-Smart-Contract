@@ -14,26 +14,26 @@ API_KEY = "sk-3OktaJrpXaZsKQ85rFRbj1ZBvWQqhu0ikHEKERP3htCYZ5Xv"
 # Use the latest and most powerful model from OpenAI
 MODEL_NAME = "o3"
 # --- General Settings ---
-# 使用验证集 (val_dataset.jsonl) 来进行Prompt策略的对比实验
-INPUT_DATASET_FILE = 'val_dataset_v3.jsonl'
+INPUT_DATASET_FILE = 'data/datasets/val_dataset_v3.jsonl'
 
-# 为这个版本的Prompt创建一个独立的输出目录
-OUTPUT_DIR = 'gpto3_generated_code_v1.2'
+OUTPUT_DIR = 'results/gpto3_generated_code_v1.2'
 
 # API call settings
 API_CALL_DELAY = 1.0
 API_TIMEOUT = 120
 
 # --- Logging Setup ---
+LOG_FILE = "results/logs/gpto3_generated_code_v1.2.log"
+os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
+    format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler(f'{OUTPUT_DIR}.log', mode='w'),
+        logging.FileHandler(LOG_FILE, mode="w", encoding="utf-8"),
         logging.StreamHandler()
     ]
 )
-
 ### --- Prompt V1: Strong Constraint Strategy --- ###
 ### --- Prompt V1.2: Context-Enhanced Strategy --- ###
 def build_prompt(heimdall_code, contract_address, abi, full_context):

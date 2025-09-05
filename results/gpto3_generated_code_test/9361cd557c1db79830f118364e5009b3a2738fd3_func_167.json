@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x9361CD557C1db79830F118364E5009B3A2738fD3",
-    "heimdall_input": "function transferOwnership(address arg0) public payable {\n        require(address(msg.sender) == (address(owner / 0x01)));\n        owner = (address(arg0) * 0x01) | (uint96(owner));\n        emit OwnershipTransferred(address(owner / 0x01), address(arg0));\n    }",
-    "llm_output": "function transferOwnership(address newOwner) public {\n    require(msg.sender == owner);\n    owner = newOwner;\n    emit OwnershipTransferred(msg.sender, newOwner);\n}",
-    "ground_truth": "function transferOwnership(address _newOwner) public onlyOwner {\r\n        owner = _newOwner;\r\n        emit OwnershipTransferred(owner, _newOwner);\r\n    }"
-}

@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x2FcB9FA9FeC15b2d86440d10b940BB9f2Bd6f770",
-    "heimdall_input": "function reduceFee(uint256 arg0, uint256 arg1) public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_h = arg0;\n        store_m = arg1;\n    }",
-    "llm_output": "function reduceFee(uint256 newBuyFee, uint256 newSellFee) public {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    buyFee = newBuyFee;\n    sellFee = newSellFee;\n}",
-    "ground_truth": "function reduceFee(uint256 _newBuyFee,uint256 _newSellFee) external onlyOwner{\r\n        _finalBuyTax=_newBuyFee;\r\n        _finalSellTax=_newSellFee;\r\n    }"
-}

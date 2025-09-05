@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x693E9C1e8935caf91F006bf5a2FF8a1aB2C569c7",
+    "heimdall_input": "function openTrading() public {\n        require(msg.sender == (address(getOwner)), \"!Owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x06;\n        var_d = 0x214f776e65720000000000000000000000000000000000000000000000000000;\n        launchedAt = block.number;\n        tradingOpen = 0x0100000000000000000000000000000000000000000000 | (uint248(tradingOpen));\n    }",
+    "llm_output": "function openTrading() public {\n    require(msg.sender == getOwner(), \"Caller is not the owner\");\n    launchedAt = block.number;\n    tradingOpen = true;\n}",
+    "ground_truth": "function openTrading() external onlyOwner {\r\n        launchedAt = block.number;\r\n        tradingOpen = true;\r\n    }"
+}

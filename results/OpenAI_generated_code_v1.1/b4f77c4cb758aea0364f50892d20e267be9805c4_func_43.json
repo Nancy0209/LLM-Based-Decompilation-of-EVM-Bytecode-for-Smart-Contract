@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xb4F77c4Cb758aeA0364f50892D20E267be9805c4",
-    "heimdall_input": "function getRelease(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(store_e)), \"Ownable: caller is not the Owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865204f776e6572;\n        address var_e = address(arg0);\n        var_f = 0x06;\n        address var_a = !(!bytes1(storage_map_f[var_e]));\n        return !(!bytes1(storage_map_f[var_e]));\n    }",
-    "llm_output": "function getRelease(address account) public view returns (bool) {\n    require(account == address(account));\n    require(msg.sender == owner, \"Ownable: caller is not the Owner\");\n    return storage_map_f[account] != 0;\n}",
-    "ground_truth": "function getRelease(address _address) external view onlyOwner returns (bool) {\r\n        return _release[_address];\r\n    }"
-}

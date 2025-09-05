@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xf06ea21cB6894CC70e2EF280026D5Fc5bEE15421",
-    "heimdall_input": "function changePercentages(uint256 arg0, uint256 arg1) public payable {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        var_e = 0x02;\n        isStakingAvilableh = arg0;\n        var_f = 0x1e;\n        isStakingAvilablei = arg1;\n    }",
-    "llm_output": "function changePercentages(uint256 _percentFor14Days, uint256 _percentFor30Days) external {\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n\n    // Update percentage allocations for the respective lockable day periods\n    allocation[14] = _percentFor14Days;\n    allocation[30] = _percentFor30Days;\n}",
-    "ground_truth": "function changePercentages(uint256 _14dayspercent,uint256 _30dayspercent) external onlyOwner{\r\n        allocation[14]=_14dayspercent;\r\n        allocation[30] = _30dayspercent;\r\n        \r\n    }"
-}

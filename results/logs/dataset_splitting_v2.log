@@ -1,0 +1,11 @@
+2025-09-05 21:07:22,091 - INFO - Starting dataset splitting for 'data/final_function_dataset_v2.jsonl'...
+2025-09-05 21:07:22,739 - INFO - Successfully loaded 3561 total samples.
+2025-09-05 21:07:22,742 - INFO - Dataset has been randomly shuffled.
+2025-09-05 21:07:22,907 - INFO - Wrote 2136 samples to data/datasets/train_dataset_v2.jsonl
+2025-09-05 21:07:22,985 - INFO - Wrote 890 samples to data/datasets/val_dataset_v2.jsonl
+2025-09-05 21:07:23,027 - INFO - Wrote 535 samples to data/datasets/test_dataset_v2.jsonl
+2025-09-05 21:07:23,028 - INFO - 
+--- Dataset Splitting Complete ---
+2025-09-05 21:07:23,028 - INFO - Training set size: 2136
+2025-09-05 21:07:23,028 - INFO - Validation set size: 890
+2025-09-05 21:07:23,028 - INFO - Test set size: 535

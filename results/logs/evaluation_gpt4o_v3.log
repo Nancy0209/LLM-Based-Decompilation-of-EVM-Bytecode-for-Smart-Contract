@@ -1,0 +1,6 @@
+2025-09-05 21:22:31,849 - INFO - Solc version 0.8.10 not found. Installing...
+2025-09-05 21:22:31,849 - INFO - solc 0.8.10 already installed at: /home/zzk12/.solcx/solc-v0.8.10
+2025-09-05 21:22:31,849 - INFO - Solc version 0.8.10 installed successfully.
+2025-09-05 21:22:31,850 - INFO - Using solc version 0.8.10
+2025-09-05 21:22:31,853 - INFO - Switched to solc version 0.8.10
+2025-09-05 21:22:31,853 - ERROR - Evaluation directory not found: results/gpt4o_generated_code_v3

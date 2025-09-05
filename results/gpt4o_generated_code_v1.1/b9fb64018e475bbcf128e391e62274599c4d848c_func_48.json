@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xB9FB64018E475BBCF128E391E62274599c4D848C",
+    "heimdall_input": "function balanceOf(address arg0) public view returns (uint64) {\n        require(arg0 == (address(arg0)));\n        require(address(arg0), CustomError_8f4eb604());\n        address var_a = address(arg0);\n        var_b = 0x05;\n        address var_c = uint64(storage_map_b[var_a]);\n        return uint64(storage_map_b[var_a]);\n        var_c = 0x8f4eb60400000000000000000000000000000000000000000000000000000000;\n    }",
+    "llm_output": "function balanceOf(address owner) public view returns (uint64) {\n    require(owner != address(0), BalanceQueryForZeroAddress());\n    return uint64(_balances[owner]);\n}",
+    "ground_truth": "function balanceOf(address owner) public view virtual override returns (uint256) {\\n        if (owner == address(0)) revert BalanceQueryForZeroAddress();\\n        return _packedAddressData[owner] & _BITMASK_ADDRESS_DATA_ENTRY;\\n    }"
+}

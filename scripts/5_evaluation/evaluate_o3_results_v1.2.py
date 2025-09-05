@@ -13,20 +13,22 @@ from Levenshtein import distance as levenshtein_distance
 from sentence_transformers import SentenceTransformer, util
 
 # --- Configuration ---
-EVALUATION_DIRECTORY = 'gpto3_generated_code_v1.2' # <<< 更改这里来评估 v2 或 v3
+EVALUATION_DIRECTORY = 'results/gpto3_generated_code_v1.2' # <<< 更改这里来评估 v2 或 v3
 SEMANTIC_MODEL_NAME = 'all-MiniLM-L6-v2'
 TARGET_SOLC_VERSION = '0.8.10' # The version we will use for compilation
 
 # --- Logging Setup ---
+LOG_FILE = "results/logs/evaluation_gpto3_v1.2.log"
+os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
+
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
+    format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler(f'evaluation_{EVALUATION_DIRECTORY}.log', mode='w'),
+        logging.FileHandler(LOG_FILE, mode="w", encoding="utf-8"),
         logging.StreamHandler()
     ]
 )
-
 def setup_solc_version(version: str):
     """
     Checks if the target solc version is installed and installs it if not.

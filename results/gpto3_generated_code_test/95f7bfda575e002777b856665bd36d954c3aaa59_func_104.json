@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x95f7bFda575e002777B856665bD36D954c3aaa59",
-    "heimdall_input": "function approveMax(address arg0) public returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(msg.sender);\n        var_b = 0x06;\n        var_a = address(arg0);\n        address var_b = keccak256(var_a);\n        storage_map_j[var_a] = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff;\n        var_c = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff;\n        emit Approval(address(msg.sender), address(arg0), 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff);\n        var_c = 0x01;\n        return 0x01;\n    }",
-    "llm_output": "function approveMax(address spender) public returns (bool) {\n    // Redundant but preserved check from decompiled code\n    require(spender == address(spender), \"approveMax: invalid address\");\n\n    _allowances[msg.sender][spender] = type(uint256).max;\n    emit Approval(msg.sender, spender, type(uint256).max);\n\n    return true;\n}",
-    "ground_truth": "function approveMax(address spender) external returns (bool) {\r\n        return approve(spender, type(uint256).max);\r\n    }"
-}

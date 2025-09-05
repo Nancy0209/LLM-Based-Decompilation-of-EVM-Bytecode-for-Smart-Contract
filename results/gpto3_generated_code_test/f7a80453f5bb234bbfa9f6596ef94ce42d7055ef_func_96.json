@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xf7A80453F5BB234Bbfa9f6596Ef94cE42D7055EF",
-    "heimdall_input": "function getPlayers() public view returns (bytes memory) {\n        uint256 var_a = var_a + (0x20 + (0x20 * store_m));\n        var_b = store_m;\n        if (!store_m) {\n            var_c = 0x02;\n            address var_d = address(storage_map_z[var_c]);\n            if ((0x20 + var_a) + (0x20 * store_m) > (0x20 + (0x20 + var_a))) {\n                var_d = 0x20;\n                uint256 var_e = var_a.length;\n                return abi.encodePacked(0x20, var_a.length);\n            }\n        }\n    }",
-    "llm_output": "function getPlayers() public view returns (address[] memory) {\n    return players;\n}",
-    "ground_truth": "function getPlayers() public view returns (address[] memory) {\\n        return players; //Return the players array\\n    }"
-}

@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 from collections import Counter
 
 # === Configuration ===
-TEST_DATASET_PATH = "test_dataset_v3.jsonl"  # Path to test dataset
-LLM_OUTPUT_DIR = "gpto3_generated_code_test"  # Directory containing LLM outputs
+TEST_DATASET_PATH = "data/datasets/test_dataset_v3.jsonl"  # Path to test dataset
+LLM_OUTPUT_DIR = "results/gpto3_generated_code_test"  # Directory containing LLM outputs
 SAMPLE_SIZE = 100
 
 # === Load test dataset ===

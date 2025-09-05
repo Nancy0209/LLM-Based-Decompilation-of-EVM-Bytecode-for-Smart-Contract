@@ -9,12 +9,11 @@ import logging #
 
 # ---  ---
 #  Etherscan API Key
-YOUR_ETHERSCAN_API_KEY = 'TS3GDH7BV6BXP7ZVBTS48GUCQZIVVVJFQP' # <<<  Etherscan API Key >>>
-
+YOUR_ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY", "")
 # 
-RAW_DATA_DIR = 'raw_contract_data' 
+RAW_DATA_DIR = 'data/raw_contract_data' 
 # 
-CONTRACT_ADDRESSES_FILE = 'contract_addresses_for_etherscan.txt' 
+CONTRACT_ADDRESSES_FILE = 'data/contract_addresses_for_etherscan.txt' 
 
 # Etherscan API  URL
 ETHERSCAN_API_BASE_URL = 'https://api.etherscan.io/api'
@@ -22,16 +21,18 @@ ETHERSCAN_API_BASE_URL = 'https://api.etherscan.io/api'
 # Etherscan API **** Etherscan 
 # API 5/  10/
 #  0.25 IP
-API_CALL_DELAY = 0.25 #  (Etherscan API)
+API_CALL_DELAY = 0.25 #  (Etherscan API)YOUR_ETHERSCAN_API_KEY = os.getenv("ETHERSCAN_API_KEY", "")
 API_TIMEOUT = 60 # Etherscan API 
 
 # ---  ---
+LOG_FILE = "results/logs/etherscan_enricher.log"
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('etherscan_enricher.log'), # 
-        logging.StreamHandler() # 
+        logging.FileHandler('LOG_FILE, encoding="utf-8"'), # 
+        logging.StreamHandler(sys.stdout) # 
     ]
 )
 

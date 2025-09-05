@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xB997F52A0cF32b5120eD31BEAbaeF3Af6256cb77",
+    "heimdall_input": "function _setColorAddr(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_k = (address(arg0) * 0x01) | (uint96(store_k));\n    }",
+    "llm_output": "function _setColorAddr(address _color_addr) public {\n    require(_color_addr == address(_color_addr), \"Invalid address\");\n    require(owner == msg.sender, \"Ownable: caller is not the owner\");\n    colorAddress = _color_addr;\n}",
+    "ground_truth": "function _setColorAddr(address _color_addr) public onlyOwner  {  \\n            color_addr = _color_addr;\\n        }"
+}

@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x4c5CbB44F1F835E2BbE255d8dBFb91A364b0D36B",
-    "heimdall_input": "function getApproved(uint256 arg0) public view returns (address) {\n        require(totalSupply > arg0, \"ERC721A: approved query for nonexistent token\");\n        uint256 var_a = arg0;\n        var_b = 0x05;\n        uint256 var_c = address(storage_map_b[var_a]);\n        return address(storage_map_b[var_a]);\n        var_c = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_d = 0x20;\n        var_e = 0x2d;\n        var_f = 0x455243373231413a20617070726f76656420717565727920666f72206e6f6e65;\n        var_g = 0x78697374656e7420746f6b656e00000000000000000000000000000000000000;\n    }",
-    "llm_output": "function getApproved(uint256 tokenId) public view returns (address) {\n    require(totalSupply > tokenId, \"ERC721A: approved query for nonexistent token\");\n    return address(tokenApprovals[tokenId]);\n}",
-    "ground_truth": "function getApproved(uint256 tokenId) public view override returns (address) {\\r\\n    require(_exists(tokenId), \\\"ERC721A: approved query for nonexistent token\\\");\\r\\n\\r\\n    return _tokenApprovals[tokenId];\\r\\n  }"
-}
