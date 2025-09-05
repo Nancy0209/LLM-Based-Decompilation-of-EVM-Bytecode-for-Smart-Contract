@@ -1,4 +1,3 @@
-```
 import web3
 from web3 import Web3, HTTPProvider
 import json
@@ -226,4 +225,3 @@ if __name__ == "__main__":
     logging.info(f"Raw contract data (JSON files) saved to '{OUTPUT_DATA_DIR}'")
     logging.info(f"Contract addresses for Etherscan lookup saved to '{CONTRACT_ADDRESSES_FILE}'")
     logging.info(f"Remember to proceed to Stage 2: Etherscan API Lookup and Data Enrichment.")
-```
