@@ -23,7 +23,7 @@ API_CALL_DELAY = 1.0
 API_TIMEOUT = 120
 
 # --- Logging Setup ---
-LOG_FILE = "results/logs/OpenAI_generated_code_v1.2.log"
+LOG_FILE = "results/logs/gpt4o_generated_code_v1.2.log"
 os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
 
 logging.basicConfig(
