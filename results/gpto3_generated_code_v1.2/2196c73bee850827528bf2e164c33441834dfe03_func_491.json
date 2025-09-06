@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x2196c73Bee850827528bf2e164c33441834dFe03",
+    "heimdall_input": "function balanceOf(address arg0) public view returns (uint64) {\n        require(arg0 == (address(arg0)));\n        require(address(arg0), CustomError_8f4eb604());\n        address var_a = address(arg0);\n        var_b = 0x05;\n        address var_c = uint64(storage_map_b[var_a]);\n        return uint64(storage_map_b[var_a]);\n        var_c = 0x8f4eb60400000000000000000000000000000000000000000000000000000000;\n    }",
+    "llm_output": "function balanceOf(address owner) public view returns (uint64) {\n    // Redundant self-check preserved from decompiled logic.\n    require(owner == address(owner));\n\n    // Revert with the same custom error used in the original bytecode.\n    if (owner == address(0)) revert BalanceQueryForZeroAddress();\n\n    // The packed address data stores the balance in the lower 64 bits.\n    return uint64(_packedAddressData[owner]);\n}",
+    "ground_truth": "function balanceOf(address owner) public view virtual override returns (uint256) {\r\n        if (owner == address(0)) revert BalanceQueryForZeroAddress();\r\n        return _packedAddressData[owner] & _BITMASK_ADDRESS_DATA_ENTRY;\r\n    }"
+}

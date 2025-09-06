@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x649695aB734cF73FDD08262D5297F0f34368274C",
+    "heimdall_input": "function transferDevship(address arg0) public payable {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) - (address(decimals / 0x0100)));\n        decimals = (address(arg0) * 0x0100) | (uint96(decimals));\n    }",
+    "llm_output": "function transferDevship(address newDev) public payable {\n    // Tautological check retained from decompiled output\n    require(newDev == address(newDev));\n\n    // Ensure the caller is the current dev (packed into `decimals` storage slot)\n    address currentDev = address(uint160(decimals >> 8));\n    require(msg.sender == currentDev);\n\n    // Preserve the lower 96 bits (which include the actual decimals value)\n    uint96 preservedLower96Bits = uint96(decimals);\n\n    // Pack the new dev address (shifted left by 8 bits) with the preserved lower 96 bits\n    decimals = (uint256(uint160(newDev)) << 8) | uint256(preservedLower96Bits);\n}",
+    "ground_truth": "function transferDevship(address user) public {\r\n        if (msg.sender == dev){\r\n            dev = user;\r\n        }\r\n    }"
+}

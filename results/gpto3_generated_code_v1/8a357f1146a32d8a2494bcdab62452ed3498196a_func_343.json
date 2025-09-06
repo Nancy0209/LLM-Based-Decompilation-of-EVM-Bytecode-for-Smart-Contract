@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x8a357F1146a32d8a2494bCdaB62452ed3498196a",
+    "heimdall_input": "function balanceOf(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x01;\n        address var_c = storage_map_b[var_a];\n        return storage_map_b[var_a];\n    }",
+    "llm_output": "function balanceOf(address account) public view returns (uint256) {\n    require(account == address(account));\n    address _addr = account;\n    uint256 _unusedFlag = 0x01;\n    uint256 _balance = _balances[_addr];\n    return _balances[_addr];\n}",
+    "ground_truth": "function balanceOf(address account) public view override returns (uint256) {\n        return _balances[account];\n    }"
+}

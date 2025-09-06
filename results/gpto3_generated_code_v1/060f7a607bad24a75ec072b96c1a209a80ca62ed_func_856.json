@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x060f7a607bAd24a75EC072b96C1a209A80ca62ed",
+    "heimdall_input": "function reduceFee(uint256 arg0) public {\n        require(address(msg.sender) == (address(transferDelayEnabled / 0x0100)));\n        require(arg0 > store_h);\n        require(!arg0 > store_h);\n        store_h = arg0;\n        store_p = arg0;\n    }",
+    "llm_output": "function updateFee(uint256 newFee) public {\n    require(\n        msg.sender == address(uint160(transferDelayEnabled / 0x0100)),\n        \"Unauthorized caller\"\n    );\n\n    require(newFee > feeThreshold, \"Fee must increase\");\n    require(!(newFee > feeThreshold), \"Fee must not increase\");\n\n    feeThreshold = newFee;\n    feeValue = newFee;\n}",
+    "ground_truth": "function reduceFee(uint256 _newFee) external{\r\n      require(_msgSender()==_taxWallet);\r\n      require(_newFee<=_finalBuyTax && _newFee<=_finalSellTax);\r\n      _finalBuyTax=_newFee;\r\n      _finalSellTax=_newFee;\r\n    }"
+}

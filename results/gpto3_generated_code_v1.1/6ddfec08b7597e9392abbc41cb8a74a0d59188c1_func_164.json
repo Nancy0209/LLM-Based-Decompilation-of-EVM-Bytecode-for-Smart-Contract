@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x6ddfeC08B7597e9392abbC41CB8a74A0d59188C1",
+    "heimdall_input": "function checkPremissionList(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x11;\n        address var_c = !(!bytes1(storage_map_b[var_a]));\n        return !(!bytes1(storage_map_b[var_a]));\n    }",
+    "llm_output": "function checkPremissionList(address _user) public view returns (bool) {\n    // This tautological check exists in the original bytecode; must be preserved.\n    require(_user == address(_user));\n\n    return premissionList[_user];\n}",
+    "ground_truth": "function checkPremissionList(address _user) external view returns (bool) {\r\n        return premissionList[_user];\r\n    }"
+}

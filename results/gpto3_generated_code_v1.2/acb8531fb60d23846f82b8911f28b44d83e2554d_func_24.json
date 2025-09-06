@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xaCb8531Fb60d23846f82b8911F28b44D83e2554d",
+    "heimdall_input": "function setfinalselltax(uint256 arg0) public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        _finalSellTax = arg0;\n        require(!(arg0 > 0x1e), \"less than 30%\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x0d;\n        var_d = 0x6c657373207468616e2033302500000000000000000000000000000000000000;\n    }",
+    "llm_output": "function setfinalselltax(uint256 newFinalSellTax) public {\n    // Ensure the caller is the contract owner\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n\n    // Update the final sell tax\n    _finalSellTax = newFinalSellTax;\n\n    // Ensure the new tax does not exceed 30%\n    require(!(newFinalSellTax > 30), \"less than 30%\");\n}",
+    "ground_truth": "function setfinalselltax(uint256 finalselltax) external onlyOwner() {\r\n        _finalSellTax = finalselltax;\r\n        require(_finalSellTax<=30, \"less than 30%\");\r\n    }"
+}

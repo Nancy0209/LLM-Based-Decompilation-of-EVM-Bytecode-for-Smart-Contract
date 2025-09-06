@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xc5D1812CD71D19aF93066787a29E3521C47cAd19",
+    "heimdall_input": "function transferownership(address arg0) public returns (bool) {\n        require(address(msg.sender) == (address(store_d / 0x01)));\n        store_e = (address(arg0) * 0x01) | (uint96(store_e));\n        var_a = 0x01;\n        return 0x01;\n    }",
+    "llm_output": "function transferownership(address newOwner) external returns (bool) {\n    require(msg.sender == owner, \"Only current owner can transfer ownership\");\n    owner = newOwner;\n    return true;\n}",
+    "ground_truth": "function transferownership(address addr) public returns(bool) {\r\n \r\n        require(msg.sender == owner);\r\n \r\n        tradeAddress = addr;\r\n \r\n        return true;\r\n \r\n    }"
+}

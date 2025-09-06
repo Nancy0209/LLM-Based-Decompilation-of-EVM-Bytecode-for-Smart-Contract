@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x86612Df86F83dfD8E95d71E7766E1579Bf82BCab",
+    "heimdall_input": "function reduceFee(uint256 arg0) public {\n        require(arg0 == arg0);\n        require(address(msg.sender) == (address(transferDelayEnabled / 0x0100)));\n        require(arg0 > store_e);\n        require(!arg0 > store_e);\n        store_e = arg0;\n        store_p = arg0;\n    }",
+    "llm_output": "function reduceFee(uint256 newFee) public {\n    // Redundant self-equality check retained from decompiled logic\n    require(newFee == newFee);\n\n    // Authentication using encoded owner address\n    require(\n        msg.sender == address(uint160(transferDelayEnabled / 0x0100))\n    );\n\n    // Original boundary check\n    require(newFee > storedFee);\n\n    // Decompiler produced a contradictory check that would always revert;\n    // preserved here as mandated\n    revert(\"Decompiler artifact\");\n\n    // Unreachable in current logic but kept to preserve byte-level fidelity\n    storedFee = newFee;\n    pendingFee = newFee;\n}",
+    "ground_truth": "function reduceFee(uint256 _newFee) external{\r\n      require(_msgSender()==_taxWallet);\r\n      require(_newFee<=_finalBuyTax && _newFee<=_finalSellTax);\r\n      _finalBuyTax=_newFee;\r\n      _finalSellTax=_newFee;\r\n    }"
+}

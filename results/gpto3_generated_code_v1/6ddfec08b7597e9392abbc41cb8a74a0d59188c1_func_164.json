@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x6ddfeC08B7597e9392abbC41CB8a74A0d59188C1",
+    "heimdall_input": "function checkPremissionList(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x11;\n        address var_c = !(!bytes1(storage_map_b[var_a]));\n        return !(!bytes1(storage_map_b[var_a]));\n    }",
+    "llm_output": "function isPermissioned(address account) public view returns (bool) {\n    // Retains the original redundant check from the decompiled code\n    require(account == address(account));\n\n    // Unused placeholder to mirror decompiled local variable assignment\n    bytes1 _placeholder = 0x11;\n\n    // Convert stored bytes1 flag to boolean\n    return _permissionList[account] != bytes1(0);\n}",
+    "ground_truth": "function checkPremissionList(address _user) external view returns (bool) {\r\n        return premissionList[_user];\r\n    }"
+}

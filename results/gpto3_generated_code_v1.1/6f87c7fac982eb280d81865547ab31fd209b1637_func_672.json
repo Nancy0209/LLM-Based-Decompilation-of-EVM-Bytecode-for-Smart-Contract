@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x6f87c7FAc982eB280d81865547aB31fD209b1637",
+    "heimdall_input": "function renounceBlacklist() public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        blacklistRenounced = 0x01000000 | (uint248(blacklistRenounced));\n    }",
+    "llm_output": "function renounceBlacklist() external {\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n    blacklistRenounced = true;\n}",
+    "ground_truth": "function renounceBlacklist() public onlyOwner {\\n        blacklistRenounced = true;\\n    }"
+}

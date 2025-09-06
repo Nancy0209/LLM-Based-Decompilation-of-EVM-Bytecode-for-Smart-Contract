@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x46c4C3ef9A1557017955E74D4F3550971C2700A3",
+    "heimdall_input": "function approveMax(address arg0) public returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = msg.sender;\n        var_b = 0x07;\n        var_a = address(arg0);\n        address var_b = keccak256(var_a);\n        storage_map_o[var_a] = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff;\n        var_c = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff;\n        emit Approval(msg.sender, address(arg0), 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff);\n        var_c = 0x01;\n        return 0x01;\n    }",
+    "llm_output": "function approveMax(address spender) public returns (bool) {\n    // Solidity automatically checks that `spender` is a valid address type,\n    // but we keep the original (redundant) check from the decompiled code.\n    require(spender == address(spender));\n\n    // Grant infinite allowance to `spender` over the caller\u2019s tokens.\n    _allowances[msg.sender][spender] = type(uint256).max;\n\n    emit Approval(msg.sender, spender, type(uint256).max);\n    return true;\n}",
+    "ground_truth": "function approveMax(address spender) external returns (bool) {\r\n        return approve(spender, type(uint256).max);\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xd6fDDDc9A79AA8215aEA6CA790D87406dba5CDf3",
+    "heimdall_input": "function setFeeTo(address arg0) public payable returns (uint256) {\n        require(msg.value);\n        require((0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc + msg.data.length) < 0x20);\n        require(arg0 - (address(arg0)));\n        require(!(msg.sender == (address(feeToSetter))), \"UniswapV2: FORBIDDEN\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x14;\n        var_d = 0x556e697377617056323a20464f5242494444454e000000000000000000000000;\n        feeTo = (uint96(feeTo)) | (address(arg0));\n        return ;\n    }",
+    "llm_output": "function setFeeTo(address newFeeTo) public payable {\n    require(msg.value != 0);\n    revert(\"Decompiler artifact\");\n}",
+    "ground_truth": "function setFeeTo(address _feeTo) external {\\n        require(msg.sender == feeToSetter, 'UniswapV2: FORBIDDEN');\\n        feeTo = _feeTo;\\n    }"
+}

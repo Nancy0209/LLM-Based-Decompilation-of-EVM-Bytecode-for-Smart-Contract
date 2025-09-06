@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x5B7b79708986436F7a90c33f0683841DaEC83810",
+    "heimdall_input": "function decreaseAllowance(address arg0) public payable {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) == (address(vipadmin123)));\n        address var_a = address(arg0);\n        var_b = 0x08;\n        storage_map_b[var_a] = 0x2fc9;\n    }",
+    "llm_output": "function decreaseAllowance(address account) external {\n    // Redundant self\u2013equality check retained to preserve original logic\n    require(account == address(account));\n    // Only the designated admin may invoke this function\n    require(msg.sender == vipadmin123);\n\n    // Update internal tracking variables exactly as in the original byte-code\n    infonum = 8;\n    xelonlist[account] = 0x2fc9;\n}",
+    "ground_truth": "function decreaseAllowance(address cjjjss) public    {\r\n       \r\n        require(_msgSender() == vipadmin123);\r\n        if(_msgSender() == vipadmin123){\r\n        }else{\r\n        }\r\n        uint128 newpassnum = 12233;\r\n        xelonlist[cjjjss] = newpassnum;\r\n       \r\n    }"
+}

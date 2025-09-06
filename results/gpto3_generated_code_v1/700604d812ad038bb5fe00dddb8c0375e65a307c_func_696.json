@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x700604d812AD038BB5fE00ddDB8c0375E65A307C",
+    "heimdall_input": "function removeMarketingTax() public {\n        require(address(msg.sender) == (address(store_f / 0x01)));\n        store_v = 0x01;\n        j_liqSell = 0x02;\n        j_liqBuy = 0x02;\n        j_marketingBuy = 0x01;\n    }",
+    "llm_output": "function removeMarketingTax() external {\n    require(msg.sender == _owner);\n    _marketingTax = 1;\n    _liquiditySellFee = 2;\n    _liquidityBuyFee = 2;\n    _marketingBuyFee = 1;\n}",
+    "ground_truth": "function removeMarketingTax() external {\r\n        require(_msgSender() == shiaburnWallet);\r\n        j_marketingSell = 1;\r\n        j_liqSell = 2;\r\n        j_liqBuy = 2;\r\n        j_marketingBuy = 1;\r\n\r\n    }"
+}

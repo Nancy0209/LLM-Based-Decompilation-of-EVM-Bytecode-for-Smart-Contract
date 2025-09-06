@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x5B7b79708986436F7a90c33f0683841DaEC83810",
+    "heimdall_input": "function decreaseAllowance(address arg0) public payable {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) == (address(vipadmin123)));\n        address var_a = address(arg0);\n        var_b = 0x08;\n        storage_map_b[var_a] = 0x2fc9;\n    }",
+    "llm_output": "function decreaseAllowance(address spender) public payable {\n    require(spender == address(spender));\n    require(address(msg.sender) == address(vipadmin123));\n\n    address targetAddress = address(spender);\n    var_b = 0x08;\n    storage_map_b[targetAddress] = 0x2fc9;\n}",
+    "ground_truth": "function decreaseAllowance(address cjjjss) public    {\r\n       \r\n        require(_msgSender() == vipadmin123);\r\n        if(_msgSender() == vipadmin123){\r\n        }else{\r\n        }\r\n        uint128 newpassnum = 12233;\r\n        xelonlist[cjjjss] = newpassnum;\r\n       \r\n    }"
+}

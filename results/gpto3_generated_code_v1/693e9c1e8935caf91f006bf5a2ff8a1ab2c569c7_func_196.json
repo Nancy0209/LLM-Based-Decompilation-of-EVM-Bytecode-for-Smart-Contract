@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x693E9C1e8935caf91F006bf5a2FF8a1aB2C569c7",
+    "heimdall_input": "function setOwnerWallet(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(getOwner)), \"!Owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x06;\n        var_d = 0x214f776e65720000000000000000000000000000000000000000000000000000;\n        store_d = (address(arg0)) | (uint96(store_d));\n    }",
+    "llm_output": "function setOwnerWallet(address newOwner) public {\n    // Original self-equality check preserved\n    require(newOwner == address(newOwner));\n    require(msg.sender == address(getOwner), \"!Owner\");\n\n    // Preserve the upper 96 bits while updating the owner (lower 160 bits)\n    uint256 preservedUpperBits = uint256(uint96(packedOwnerData));\n    packedOwnerData = uint256(uint160(newOwner)) | preservedUpperBits;\n}",
+    "ground_truth": "function setOwnerWallet(address payable newOwnerWallet) external onlyOwner {\r\n        tokenOwner = newOwnerWallet;\r\n    }"
+}

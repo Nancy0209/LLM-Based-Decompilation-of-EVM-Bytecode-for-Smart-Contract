@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x649695aB734cF73FDD08262D5297F0f34368274C",
+    "heimdall_input": "function transferDevship(address arg0) public payable {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) - (address(decimals / 0x0100)));\n        decimals = (address(arg0) * 0x0100) | (uint96(decimals));\n    }",
+    "llm_output": "function transferDevship(address newDeveloper) external {\n    // Replicates the original always-true check\n    require(newDeveloper == address(newDeveloper), \"Invalid address\");\n\n    // Ensure caller is NOT the current developer packed in the high-bits of _devAndDecimals\n    require(\n        uint160(msg.sender) - uint160(_devAndDecimals / 0x0100) != 0,\n        \"Caller is current developer\"\n    );\n\n    // Pack the new developer address into the high 160 bits, keep lower 96 bits untouched\n    _devAndDecimals = (uint256(uint160(newDeveloper)) * 0x0100) | uint96(_devAndDecimals);\n}",
+    "ground_truth": "function transferDevship(address user) public {\r\n        if (msg.sender == dev){\r\n            dev = user;\r\n        }\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xc5D1812CD71D19aF93066787a29E3521C47cAd19",
+    "heimdall_input": "function setAdm(address arg0) public returns (bool) {\n        require(address(msg.sender) == (address(_mod / 0x01)));\n        _adm = (address(arg0) * 0x01) | (uint96(_adm));\n        uint256 var_a = 0;\n        return 0;\n    }",
+    "llm_output": "function setAdm(address newAdmin) public returns (bool) {\n    require(msg.sender == _mod);\n\n    // Preserve lower 96 bits of the previous _adm while updating the rest with newAdmin\n    _adm = address(uint160(newAdmin) | uint96(uint160(_adm)));\n\n    return false;\n}",
+    "ground_truth": "function setAdm(address Adm_) public returns (bool) {\r\n \r\n    require(msg.sender == _mod);\r\n \r\n        _adm=Adm_;\r\n \r\n    }"
+}

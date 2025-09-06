@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x0571e4201619916DB35214e935F0E46F037BBd2D",
+    "heimdall_input": "function transferOwnership(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(getOwner)), \"!OWNER\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x06;\n        var_d = 0x214f574e45520000000000000000000000000000000000000000000000000000;\n        getOwner = (address(arg0)) | (uint96(getOwner));\n        address var_a = address(arg0);\n        emit OwnershipTransferred(address(arg0));\n    }",
+    "llm_output": "function transferOwnership(address payable newOwner) public {\n    // Tautological check retained from the decompiled byte-code\n    require(newOwner == address(newOwner));\n\n    // Only the current owner can call this function\n    require(msg.sender == getOwner(), \"!OWNER\");\n\n    // Update owner\n    _owner = newOwner;\n\n    emit OwnershipTransferred(newOwner);\n}",
+    "ground_truth": "function transferOwnership(address payable adr) public onlyOwner {owner = adr; emit OwnershipTransferred(adr);}"
+}

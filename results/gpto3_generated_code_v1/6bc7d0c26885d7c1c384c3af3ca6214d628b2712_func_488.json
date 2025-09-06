@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x6BC7d0c26885D7c1C384c3aF3CA6214D628B2712",
+    "heimdall_input": "function updateMaxSwap(uint256 arg0) public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        require((arg0 == ((arg0 * 0x0de0b6b3a7640000) / 0x0de0b6b3a7640000)) | !0x0de0b6b3a7640000);\n        var_e = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n        var_f = 0x11;\n        maxSwapAmount = arg0 * 0x0de0b6b3a7640000;\n    }",
+    "llm_output": "function updateMaxSwap(uint256 newMaxSwap) public {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    require(\n        newMaxSwap == (newMaxSwap * 1e18) / 1e18 || 1e18 == 0,\n        \"SafeMath: multiplication overflow\"\n    );\n\n    maxSwapAmount = newMaxSwap * 1e18;\n}",
+    "ground_truth": "function updateMaxSwap(uint256 newAmount) external onlyOwner {\\n        maxSwapAmount = newAmount * (10 ** 18);\\n    }"
+}

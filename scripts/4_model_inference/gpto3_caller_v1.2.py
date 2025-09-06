@@ -10,7 +10,7 @@ import sys
 # --- Configuration ---
 API_URL = "https://api.videocaptioner.cn/v1/chat/completions"
 # <<< IMPORTANT: Paste your secret OpenAI API Key here >>>
-API_KEY = "sk-3OktaJrpXaZsKQ85rFRbj1ZBvWQqhu0ikHEKERP3htCYZ5Xv"
+API_KEY = "sk-9t6vPfoSZfORhHnpG4Y6mB9UN2IC8SQ8KpABD09OnOg1YlRz"
 # Use the latest and most powerful model from OpenAI
 MODEL_NAME = "o3"
 # --- General Settings ---

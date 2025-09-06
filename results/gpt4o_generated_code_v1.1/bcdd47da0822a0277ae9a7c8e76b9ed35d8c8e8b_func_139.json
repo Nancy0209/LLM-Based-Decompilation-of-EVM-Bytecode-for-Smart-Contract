@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xbcdd47DA0822A0277Ae9A7c8E76B9Ed35d8c8e8B",
+    "heimdall_input": "function howOfenYouUseEtherumMainNet(uint8 arg0) public pure {\n        require(arg0 == (bytes1(arg0)));\n        bool var_a = bytes1(arg0);\n        emit HowOfenYouUseEtherumMainNet(bytes1(arg0));\n    }",
+    "llm_output": "function howOfenYouUseEtherumMainNet(uint8 number0To255_TheHigherTheNumberTheMoreFrequentlyUsed) public pure {\n    require(number0To255_TheHigherTheNumberTheMoreFrequentlyUsed == uint8(number0To255_TheHigherTheNumberTheMoreFrequentlyUsed));\n    emit HowOfenYouUseEtherumMainNet(number0To255_TheHigherTheNumberTheMoreFrequentlyUsed);\n}",
+    "ground_truth": "function howOfenYouUseEtherumMainNet(uint8 number0To255_TheHigherTheNumberTheMoreFrequentlyUsed) public {\r\n    emit HowOfenYouUseEtherumMainNet(number0To255_TheHigherTheNumberTheMoreFrequentlyUsed);\r\n  }"
+}

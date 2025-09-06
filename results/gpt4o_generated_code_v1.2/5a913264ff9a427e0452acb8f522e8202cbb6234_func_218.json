@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x5a913264FF9a427e0452acB8f522E8202CBB6234",
+    "heimdall_input": "function addDestination(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        address var_e = address(arg0);\n        var_f = 0xcf;\n        storage_map_f[var_e] = 0x01 | (uint248(storage_map_f[var_e]));\n    }",
+    "llm_output": "function addDestination(address destination) public {\n    require(destination == address(destination), \"Invalid address\");\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    validDestination[destination] = true;\n}",
+    "ground_truth": "function addDestination(address addr) external onlyOwner {\\n        validDestination[addr] = true;\\n    }"
+}

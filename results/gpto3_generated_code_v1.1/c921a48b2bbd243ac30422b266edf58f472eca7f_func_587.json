@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xc921a48b2bBd243aC30422B266edf58F472Eca7F",
+    "heimdall_input": "function setRewardsWallet(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_h = (address(arg0)) | (uint96(store_h));\n    }",
+    "llm_output": "function setRewardsWallet(address newRewardsWallet) external {\n    // Redundant check retained from original bytecode\n    require(newRewardsWallet == address(newRewardsWallet));\n\n    // Ownership check (mirrors original logic)\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n\n    // Replicates `(address(arg0)) | (uint96(store_h))`\n    uint160 lower96BitsPreserved = uint160(uint96(uint160(rewardsWallet)));\n    rewardsWallet = address(uint160(newRewardsWallet) | lower96BitsPreserved);\n}",
+    "ground_truth": "function setRewardsWallet(address _wallet) public onlyOwner {\\r\\n        rewardsWallet = _wallet;\\r\\n    }"
+}

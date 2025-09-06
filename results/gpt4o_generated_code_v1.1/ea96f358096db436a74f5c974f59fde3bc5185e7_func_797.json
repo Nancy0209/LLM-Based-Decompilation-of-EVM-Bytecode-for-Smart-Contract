@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xEA96F358096DB436A74f5C974F59fdE3Bc5185e7",
+    "heimdall_input": "function enableTrading() public {\n        require(msg.sender == (address(getOwner)), \"Ownable: Caller is not owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x1c;\n        var_d = 0x4f776e61626c653a2043616c6c6572206973206e6f74206f776e657200000000;\n        uniPairAddy = 0x010000000000000000000000000000000000000000 | (uint248(uniPairAddy));\n    }",
+    "llm_output": "function enableTrading() public {\n    require(msg.sender == getOwner(), \"Ownable: Caller is not owner\");\n    revert(\"Ownable: Caller is not owner\");\n}",
+    "ground_truth": "function enableTrading() external onlyOwner {enabledTrading = true;}"
+}

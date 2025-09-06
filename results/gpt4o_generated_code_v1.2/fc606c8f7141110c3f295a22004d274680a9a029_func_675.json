@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xfc606C8F7141110c3f295a22004D274680A9A029",
+    "heimdall_input": "function getTotalReferred(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x06;\n        address var_c = storage_map_a[var_a];\n        return storage_map_a[var_a];\n    }",
+    "llm_output": "function getTotalReferred(address _address) public view returns (uint256) {\n    require(_address == address(_address), \"Invalid address\");\n    return bonds[_address].ethAmount;\n}",
+    "ground_truth": "function getTotalReferred(address _address) public view returns (uint256) {\r\n        return totalReferred[_address];\r\n    }"
+}

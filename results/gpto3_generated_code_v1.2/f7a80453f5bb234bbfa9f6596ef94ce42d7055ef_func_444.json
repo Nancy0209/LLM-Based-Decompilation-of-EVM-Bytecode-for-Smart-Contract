@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xf7A80453F5BB234Bbfa9f6596Ef94cE42D7055EF",
+    "heimdall_input": "function getTokenCostInfo(uint256 arg0) public view returns (uint256) {\n        require(arg0 < store_e);\n        var_a = 0x0b;\n        uint256 var_b = storage_map_l[(arg0 * 0x02) + keccak256(var_a)];\n        return storage_map_l[(arg0 * 0x02) + keccak256(var_a)];\n        var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n        var_c = 0x32;\n    }",
+    "llm_output": "function getTokenCostInfo(uint256 _pid) public view returns (uint256) {\n    require(_pid < AllowedCrypto.length);\n    return AllowedCrypto[_pid].costvalue;\n}",
+    "ground_truth": "function getTokenCostInfo(uint256 _pid) public view returns (uint256){\\n        TokenInfo storage tokens = AllowedCrypto[_pid];\\n        IERC20 paytoken;\\n        paytoken = tokens.paytoken;\\n        uint256 cost;\\n        cost = tokens.costvalue;\\n        return cost;\\n    }"
+}

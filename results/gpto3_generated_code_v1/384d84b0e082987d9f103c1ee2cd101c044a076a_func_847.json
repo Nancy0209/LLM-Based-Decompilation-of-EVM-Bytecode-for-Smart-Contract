@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x384D84b0E082987D9f103c1ee2cD101C044a076a",
+    "heimdall_input": "function approve(address arg0, uint256 arg1) public returns (bool) {\n        address var_a = address(msg.sender);\n        var_b = 0x01;\n        var_a = address(arg0);\n        address var_b = keccak256(var_a);\n        storage_map_c[var_a] = arg1;\n        uint256 var_c = arg1;\n        emit Approval(address(msg.sender), address(arg0), arg1);\n        var_c = 0x01;\n        return 0x01;\n    }",
+    "llm_output": "function approve(address spender, uint256 amount) public returns (bool) {\n    _allowances[msg.sender][spender] = amount;\n    emit Approval(msg.sender, spender, amount);\n    return true;\n}",
+    "ground_truth": "function approve(address _spender, uint256 _value) returns (bool success) {\r\n        allowed[msg.sender][_spender] = _value;\r\n        Approval(msg.sender, _spender, _value);\r\n        return true;\r\n    }"
+}

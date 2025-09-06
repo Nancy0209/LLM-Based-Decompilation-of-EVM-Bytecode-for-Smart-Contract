@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xF4DEF1F694801EaBF6f4B4b8b0209E617Bb224e8",
+    "heimdall_input": "function manualsend() public {\n        require(address(msg.sender) == (address(store_p)));\n        require(address(msg.sender) == (address(store_q)));\n        (bool success, bytes memory ret0) = address(store_q).transfer(address(this).balance);\n    }",
+    "llm_output": "function releaseAllEther() external {\n    require(msg.sender == admin);\n    require(msg.sender == vault);\n    vault.transfer(address(this).balance);\n}",
+    "ground_truth": "function manualsend() external {\r\n        require(_msgSender() == _developmentAddress || _msgSender() == _marketingAddress);\r\n        uint256 contractETHBalance = address(this).balance;\r\n        sendETHToFee(contractETHBalance);\r\n    }"
+}

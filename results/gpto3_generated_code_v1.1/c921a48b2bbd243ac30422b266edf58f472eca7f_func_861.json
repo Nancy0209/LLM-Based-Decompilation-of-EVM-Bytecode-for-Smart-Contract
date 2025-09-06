@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xc921a48b2bBd243aC30422B266edf58F472Eca7F",
+    "heimdall_input": "function setPair(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        pair = (address(arg0)) | (uint96(pair));\n    }",
+    "llm_output": "function setPair(address pairAddress) public {\n    require(pairAddress == address(pairAddress));\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n\n    // Preserve the lower 96 bits of the existing storage slot (if any packing is used)\n    uint96 preservedBits = uint96(uint160(pair));\n\n    // Combine the preserved bits with the new pair address\n    pair = address(uint160(pairAddress) | uint160(preservedBits));\n}",
+    "ground_truth": "function setPair(address pairAddress) external onlyOwner {\\r\\n        pair = pairAddress;\\r\\n}"
+}

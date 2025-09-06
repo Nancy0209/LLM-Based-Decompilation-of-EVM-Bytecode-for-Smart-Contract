@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xFF5C43C4fADdF9A03BEdE1D0b276E7eC996504a1",
+    "heimdall_input": "function unblockBot(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        address var_e = address(arg0);\n        var_f = 0x10;\n        storage_map_c[var_e] = uint248(storage_map_c[var_e]);\n    }",
+    "llm_output": "function unblockBot(address notbot) external onlyOwner {\n    // Redundant check preserved for logical fidelity with decompiled code\n    require(notbot == address(notbot));\n\n    // Writing the existing value back to storage, exactly as in the decompiled logic\n    bots[notbot] = bots[notbot];\n}",
+    "ground_truth": "function unblockBot(address notbot) public onlyOwner {\r\n        bots[notbot] = false;\r\n    }"
+}

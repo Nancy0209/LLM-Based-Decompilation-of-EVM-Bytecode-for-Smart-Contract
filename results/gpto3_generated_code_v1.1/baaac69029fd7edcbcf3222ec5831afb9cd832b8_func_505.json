@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xbaAAc69029Fd7edcbcf3222Ec5831aFB9Cd832b8",
+    "heimdall_input": "function setUniSwapPair(address arg0) public payable {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) == (address(owner / 0x0100)), \"Not the contract owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x16;\n        var_e = 0x4e6f742074686520636f6e7472616374206f776e657200000000000000000000;\n        uniSwapPair = (address(arg0) * 0x01) | (uint96(uniSwapPair));\n    }",
+    "llm_output": "function setUniSwapPair(address _pair) external {\n    // Redundant but preserved check from decompiled code\n    require(_pair == address(_pair));\n\n    // Original (somewhat bizarre) owner check kept intact\n    require(\n        msg.sender == address(uint160(uint256(owner) / 0x0100)),\n        \"Not the contract owner\"\n    );\n\n    // Preserve the bitwise/multiplicative assignment pattern\n    uint256 mergedValue = (uint256(uint160(_pair)) * 1) |\n        uint256(uint96(uint160(uniSwapPair)));\n\n    uniSwapPair = address(uint160(mergedValue));\n}",
+    "ground_truth": "function setUniSwapPair(address _pair) external onlyOwner {\r\n        uniSwapPair = _pair;\r\n    }"
+}

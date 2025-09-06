@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x49e5FEE649E311efc2Cfb0f1f47e82CD90bECA13",
+    "heimdall_input": "function isBot(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x04;\n        address var_c = !(!bytes1(storage_map_b[var_a] / 0x01));\n        return !(!bytes1(storage_map_b[var_a] / 0x01));\n    }",
+    "llm_output": "function isBot(address account) public view returns (bool) {\n    // Original (tautological) check preserved for logical fidelity\n    require(account == address(account));\n\n    // A non-zero stored value represents `true`\n    return _botStatus[account] != 0;\n}",
+    "ground_truth": "function isBot(address a) public view returns (bool){\r\n      return bots[a];\r\n    }"
+}

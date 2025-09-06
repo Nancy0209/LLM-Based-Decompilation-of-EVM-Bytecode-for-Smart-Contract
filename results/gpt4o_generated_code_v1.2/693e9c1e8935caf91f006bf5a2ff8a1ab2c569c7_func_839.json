@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x693E9C1e8935caf91F006bf5a2FF8a1aB2C569c7",
+    "heimdall_input": "function changeMagaPrinterGas(uint256 arg0) public {\n        require(msg.sender == (address(getOwner)), \"!Owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x06;\n        var_d = 0x214f776e65720000000000000000000000000000000000000000000000000000;\n        magaPrinterGas = arg0;\n    }",
+    "llm_output": "function changeMagaPrinterGas(uint256 newGas) public {\n    require(msg.sender == getOwner(), \"!Owner\");\n    magaPrinterGas = newGas;\n}",
+    "ground_truth": "function changeMagaPrinterGas(uint256 newGas) external onlyOwner {\r\n        magaPrinterGas = newGas;\r\n    }"
+}

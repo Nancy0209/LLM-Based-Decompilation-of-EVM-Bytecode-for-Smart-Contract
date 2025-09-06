@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x8d2d07f485Ea0cEf2E843b1EEE5F2237e8e9d013",
+    "heimdall_input": "function setMaxAll() public view {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n    }",
+    "llm_output": "function validateOwnerAccess() public view {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n\n    bytes32 errorSelector = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n    uint256 dynamicOffset = 0x20;\n    uint256 dataLength = 0x20;\n    bytes32 errorMessage = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n\n    // Silence compiler warnings about unused variables\n    errorSelector;\n    dynamicOffset;\n    dataLength;\n    errorMessage;\n}",
+    "ground_truth": "function setMaxAll() public onlyOwner {\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x6E66a59bF0F45A9Fdf99C28B45093F1BB41c990d",
+    "heimdall_input": "function openTrading() public {\n        require(!bytes1(store_a / 0x01000000000000000000000000000000000000000000));\n        require(0xfb20cc4f6d9f073713838a16d96194e537655ea5 == msg.sender);\n        store_a = 0x01000000000000000000000000000000000000000000 | (uint248(store_a));\n    }",
+    "llm_output": "uint256 private constant TRADING_FLAG_MASK = 0x01000000000000000000000000000000000000000000;\nuint256 private _packedState;\n\nfunction openTrading() public {\n    // Equivalent to the original `require(!bytes1(store_a / MASK))`\n    require(bytes1(uint8(_packedState / TRADING_FLAG_MASK)) == 0);\n    require(msg.sender == 0xfb20cc4f6d9f073713838a16d96194e537655ea5);\n\n    // Set the trading-open flag while preserving the lower 248 bits\n    _packedState = TRADING_FLAG_MASK | uint248(_packedState);\n}",
+    "ground_truth": "function openTrading() external {\r\n        require(!tradingOpen);\r\n        require(msg.sender == deployer);\r\n        tradingOpen = true;        \r\n    }"
+}

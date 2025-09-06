@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xfc606C8F7141110c3f295a22004D274680A9A029",
+    "heimdall_input": "function changeOwner(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        owner = (address(arg0)) | (uint96(owner));\n    }",
+    "llm_output": "function changeOwner(address _owner) public {\n    require(_owner == address(_owner), \"Invalid address\");\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    owner = _owner;\n}",
+    "ground_truth": "function changeOwner(address _owner) public onlyOwner {\r\n        owner = _owner;\r\n    }"
+}

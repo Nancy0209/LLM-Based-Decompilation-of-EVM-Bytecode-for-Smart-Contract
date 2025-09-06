@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x73adcB9F7B46BF6E6f1D027BB13eAAfa158A8A09",
+    "heimdall_input": "function index() public payable returns (uint256) {\n        var_a = 0x2986c0e500000000000000000000000000000000000000000000000000000000;\n        (bool success, bytes memory ret0) = address(0x0a2746d0fe88eeb9538183408295c061593e478e).index(var_b); // staticcall\n        uint256 var_c = var_c + (uint248(ret0.length + 0x1f));\n        require(!((var_c + ret0.length) - var_c) < 0x20);\n        require(var_d == (var_d));\n        var_e = var_d;\n        return var_d;\n    }",
+    "llm_output": "function index() public view returns (uint256 index_) {\n    bytes4 selector = bytes4(keccak256(\"index()\"));\n    (bool success, bytes memory data) = address(0x0a2746d0fe88eeb9538183408295c061593e478e).staticcall(abi.encodeWithSelector(selector));\n    require(success, \"Static call failed\");\n    require(data.length >= 32, \"Invalid data length\");\n    index_ = abi.decode(data, (uint256));\n    return index_;\n}",
+    "ground_truth": "function index() public view returns (uint256 index_) {\r\n        return sGRP.index();\r\n    }"
+}

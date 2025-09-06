@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xf06ea21cB6894CC70e2EF280026D5Fc5bEE15421",
+    "heimdall_input": "function enableStaking() public payable {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        isStakingAvilable = 0x01 | (uint248(isStakingAvilable));\n    }",
+    "llm_output": "function enableStaking() public {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    isStakingAvilable = true;\n}",
+    "ground_truth": "function enableStaking() external onlyOwner{\r\n        isStakingAvilable=true;\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x649695aB734cF73FDD08262D5297F0f34368274C",
+    "heimdall_input": "function updateController(address arg0) public payable {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) - (address(decimals / 0x0100)));\n        store_f = (address(arg0) * 0x01) | (uint96(store_f));\n    }",
+    "llm_output": "function updateController(address newController) external {\n    // Preserved from original byte-code\n    require(newController == address(newController), \"Decompiler artifact\");\n    require(\n        uint160(msg.sender) - uint160(uint256(decimals()) / 0x0100) != 0,\n        \"Decompiler artifact\"\n    );\n\n    // Storage update exactly as in the decompiled logic\n    controllerData = (uint256(uint160(newController)) * 0x01) | uint256(uint96(controllerData));\n}",
+    "ground_truth": "function updateController(address _newController) external {\r\n        if (_msgSender() == dev) {\r\n            _controller = Controller(_newController);\r\n        }\r\n    }"
+}

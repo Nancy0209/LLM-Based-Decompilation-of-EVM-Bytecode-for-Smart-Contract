@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xB9FB64018E475BBCF128E391E62274599c4D848C",
+    "heimdall_input": "function emitBatchMetadataUpdate(uint256 arg0, uint256 arg1) public view {\n        require(0 - (address(msg.sender) == (address(owner)) | (msg.sender == address(this))), CustomError_5fc483c5());\n        var_a = 0x5fc483c500000000000000000000000000000000000000000000000000000000;\n        uint256 var_a = arg0;\n        uint256 var_b = arg1;\n        emit BatchMetadataUpdate(arg0, arg1);\n    }",
+    "llm_output": "function emitBatchMetadataUpdate(uint256 fromTokenId, uint256 toTokenId) public {\n    if (msg.sender != owner && msg.sender != address(this)) {\n        revert OnlyOwner();\n    }\n    emit BatchMetadataUpdate(fromTokenId, toTokenId);\n}",
+    "ground_truth": "function emitBatchMetadataUpdate(uint256 fromTokenId, uint256 toTokenId)\\n        external\\n    {\\n        // Ensure the sender is only the owner or contract itself.\\n        _onlyOwnerOrSelf();\\n\\n        // Emit an event with the update.\\n        emit BatchMetadataUpdate(fromTokenId, toTokenId);\\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x842FD31eAd327AE42D19B7BFbdB045d3A219c662",
+    "heimdall_input": "function balanceOf(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x05;\n        address var_c = storage_map_e[var_a];\n        return storage_map_e[var_a];\n    }",
+    "llm_output": "function balanceOf(address account) public view returns (uint256) {\n    // This tautological check was present in the decompiled code; keep it unchanged\n    require(account == address(account));\n\n    // Preserves the original unused constant assignment\n    uint256 _unused = 0x05;\n\n    // Retrieve the stored balance\n    uint256 balance = _balances[account];\n\n    return balance;\n}",
+    "ground_truth": "function balanceOf(address account) public view override returns (uint256) {\r\n        return balance[account];\r\n    }"
+}

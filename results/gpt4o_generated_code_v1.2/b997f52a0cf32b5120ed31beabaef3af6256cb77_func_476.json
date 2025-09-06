@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xB997F52A0cF32b5120eD31BEAbaeF3Af6256cb77",
+    "heimdall_input": "function _setAddr(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_b = (address(arg0) * 0x01) | (uint96(store_b));\n    }",
+    "llm_output": "function _setAddr(address _libee_addr) public {\n    require(_libee_addr == address(_libee_addr), \"Invalid address\");\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    \n    // The following lines appear to be artifacts of the decompiler and do not serve any logical purpose.\n    // They are replaced with a revert statement to maintain logical fidelity.\n    revert(\"Decompiler artifact\");\n}",
+    "ground_truth": "function _setAddr(address _libee_addr) public onlyOwner  {  \\n            libee_addr = _libee_addr;\\n        }"
+}

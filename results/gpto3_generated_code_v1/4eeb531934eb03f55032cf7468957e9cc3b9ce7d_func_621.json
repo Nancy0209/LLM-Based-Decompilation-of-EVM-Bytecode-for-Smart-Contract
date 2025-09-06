@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x4EEB531934eb03F55032CF7468957e9cc3b9Ce7d",
+    "heimdall_input": "function authorize(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(getOwner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        address var_e = address(arg0);\n        var_f = 0x01;\n        storage_map_s[var_e] = var_f | (uint248(storage_map_s[var_e]));\n    }",
+    "llm_output": "function authorize(address account) public {\n    // Redundant self-equality check (retained to preserve original logic)\n    require(account == address(account));\n\n    // Ownership check\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n\n    // Set the lowest-order authorization flag, keeping only the lower 248 bits\n    _authorizationFlags[account] = uint256(\n        uint248(_authorizationFlags[account]) | uint248(1)\n    );\n}",
+    "ground_truth": "function authorize(address adr) public onlyOwner {\r\n        authorizations[adr] = true;\r\n    }"
+}

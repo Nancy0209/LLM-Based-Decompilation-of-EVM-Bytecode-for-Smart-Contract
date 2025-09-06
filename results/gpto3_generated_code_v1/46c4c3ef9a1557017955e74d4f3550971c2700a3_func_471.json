@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x46c4C3ef9A1557017955E74D4F3550971C2700A3",
+    "heimdall_input": "function transfer() public {\n        (bool success, bytes memory ret0) = address(store_n).transfer(address(this).balance);\n    }",
+    "llm_output": "function forwardBalance() external {\n    (bool success, ) = payable(treasury).call{value: address(this).balance}(\"\");\n}",
+    "ground_truth": "function transfer() external { \r\n             payable(autoLiquidityReceiver).transfer(address(this).balance);\r\n            \r\n    }"
+}

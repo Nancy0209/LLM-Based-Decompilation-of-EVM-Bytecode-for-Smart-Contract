@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x31d3341342D2A7a68EDDF5759C820eFD568D91dA",
+    "heimdall_input": "function ownerOf(uint256 arg0) public view returns (address) {\n        uint256 var_a = arg0;\n        var_b = 0x02;\n        require(address(storage_map_b[var_a]), \"ERC721: owner query for nonexistent token\");\n        uint256 var_c = address(storage_map_b[var_a]);\n        return address(storage_map_b[var_a]);\n        var_c = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_d = 0x20;\n        var_e = 0x29;\n        var_f = 0x4552433732313a206f776e657220717565727920666f72206e6f6e6578697374;\n        var_g = 0x656e7420746f6b656e0000000000000000000000000000000000000000000000;\n    }",
+    "llm_output": "function ownerOf(uint256 tokenId) public view returns (address) {\n    require(_owners[tokenId] != address(0), \"ERC721: owner query for nonexistent token\");\n    return _owners[tokenId];\n}",
+    "ground_truth": "function ownerOf(uint256 tokenId) public view virtual override returns (address) {\\n        address owner = _owners[tokenId];\\n        require(owner != address(0), \\\"ERC721: owner query for nonexistent token\\\");\\n        return owner;\\n    }"
+}

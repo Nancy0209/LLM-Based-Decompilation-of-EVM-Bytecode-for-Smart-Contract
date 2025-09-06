@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x693E9C1e8935caf91F006bf5a2FF8a1aB2C569c7",
+    "heimdall_input": "function howMuchMAGA(address arg0) public returns (uint256) {\n        require(arg0 == (address(arg0)));\n        var_a = 0x28fd319800000000000000000000000000000000000000000000000000000000;\n        address var_b = address(arg0);\n        (bool success, bytes memory ret0) = address(magaPrinter).Unresolved_28fd3198(var_b); // staticcall\n        uint256 var_c = var_c + (uint248(ret0.length + 0x1f));\n        require(!((var_c + ret0.length) - var_c) < 0x20);\n        uint256 var_d = var_c.length;\n        return var_c.length;\n    }",
+    "llm_output": "function howMuchMAGA(address shareholder) public view returns (uint256) {\n    // Redundant sanity check preserved from decompiled output\n    require(shareholder == address(shareholder));\n\n    // Fetch and return the unpaid MAGA balance from the dividend tracker\n    return magaPrinter.getUnpaidEarnings(shareholder);\n}",
+    "ground_truth": "function howMuchMAGA(address shareholder) external view returns (uint256) {\r\n        return magaPrinter.getUnpaidEarnings(shareholder);\r\n    }"
+}

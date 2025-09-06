@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xF6FF7F8635a951ecF4D68264b32FB3a4b5f9cf15",
+    "heimdall_input": "function enableTrading() public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        tradingActive = 0x010100 | (uint240(tradingActive));\n        lastLpBurnTime = block.timestamp;\n        lastLpBurnTimea = block.number;\n    }",
+    "llm_output": "function enableTrading() public {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    tradingActive = true;\n    lastLpBurnTime = block.timestamp;\n    lastLpBurnTimea = block.number;\n}",
+    "ground_truth": "function enableTrading() external onlyOwner {\\r\\n        tradingActive = true;\\r\\n        swapEnabled = true;\\r\\n        lastLpBurnTime = block.timestamp;\\r\\n        launchedAt = block.number;\\r\\n    }"
+}

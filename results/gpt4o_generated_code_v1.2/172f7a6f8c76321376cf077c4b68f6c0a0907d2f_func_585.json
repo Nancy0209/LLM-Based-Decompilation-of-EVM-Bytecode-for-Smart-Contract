@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x172F7a6F8C76321376cf077c4b68f6C0A0907d2f",
+    "heimdall_input": "function getTotalDividends() public returns (uint256) {\n        var_a = 0x997664d700000000000000000000000000000000000000000000000000000000;\n        (bool success, bytes memory ret0) = address(blacklistEnabled / 0x01).totalDividends(var_b); // staticcall\n        uint256 var_c = var_c + (uint248(ret0.length + 0x1f));\n        require(!((var_c + ret0.length) - var_c) < 0x20);\n        require(var_d == (var_d));\n        var_e = var_d;\n        return var_d;\n    }",
+    "llm_output": "function getTotalDividends() public view returns (uint256) {\n    // Placeholder for a static call to an external contract\n    bytes4 selector = 0x997664d7; // Function selector for `totalDividends()`\n    (bool success, bytes memory returnData) = address(blacklistEnabled ? 1 : 0).staticcall(abi.encodeWithSelector(selector));\n    \n    // Ensure the call was successful\n    require(success, \"Static call to totalDividends failed\");\n\n    // Decode the returned data\n    require(returnData.length >= 32, \"Invalid return data length\");\n    uint256 totalDividends = abi.decode(returnData, (uint256));\n\n    return totalDividends;\n}",
+    "ground_truth": "function getTotalDividends() external view returns (uint256) {\r\n        return distributor.totalDividends();\r\n    }"
+}

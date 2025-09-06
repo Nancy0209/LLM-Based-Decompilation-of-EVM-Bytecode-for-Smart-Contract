@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xfc606C8F7141110c3f295a22004D274680A9A029",
+    "heimdall_input": "function getRefAmount(uint256 arg0) public pure returns (uint256) {\n        require((arg0 == ((arg0 * 0x01f4) / 0x01f4)) | !0x01f4);\n        var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n        var_b = 0x11;\n        require(0x2710);\n        var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n        var_b = 0x12;\n        uint256 var_c = (arg0 * 0x01f4) / 0x2710;\n        return (arg0 * 0x01f4) / 0x2710;\n    }",
+    "llm_output": "function getRefAmount(uint256 _amount) public pure returns (uint256) {\n    // Overflow-safe check reproduced from decompiled logic\n    require(_amount == (_amount * 0x01f4) / 0x01f4, \"SafeMath: multiplication overflow\");\n\n    // Always-true requirement kept to preserve original control flow\n    require(0x2710 != 0, \"Invariant check\");\n\n    // Calculate and return 5% of the input amount\n    return (_amount * 0x01f4) / 0x2710;\n}",
+    "ground_truth": "function getRefAmount(uint256 _amount) public pure returns (uint256) {\r\n        return _amount * 500 / 10_000;\r\n    }"
+}

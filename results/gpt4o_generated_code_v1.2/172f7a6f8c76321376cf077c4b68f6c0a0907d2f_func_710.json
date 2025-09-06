@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x172F7a6F8C76321376cf077c4b68f6C0A0907d2f",
+    "heimdall_input": "function manualSend() public {\n        require(address(msg.sender) == (address(getOwner / 0x01)), \"!Owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x06;\n        var_e = 0x214f776e65720000000000000000000000000000000000000000000000000000;\n        (bool success, bytes memory ret0) = address(marketingWallet / 0x01).transfer(address(this).balance);\n    }",
+    "llm_output": "function manualSend() public {\n    require(msg.sender == getOwner(), \"Caller is not the owner\");\n    address marketingWalletAddress = marketingWallet;\n    uint256 contractBalance = address(this).balance;\n    (bool success, ) = marketingWalletAddress.call{value: contractBalance}(\"\");\n    require(success, \"Transfer to marketing wallet failed\");\n}",
+    "ground_truth": "function manualSend() external onlyOwner {\r\n        uint256 contractETHBalance = address(this).balance;\r\n        payable(marketingWallet).transfer(contractETHBalance);\r\n    }"
+}

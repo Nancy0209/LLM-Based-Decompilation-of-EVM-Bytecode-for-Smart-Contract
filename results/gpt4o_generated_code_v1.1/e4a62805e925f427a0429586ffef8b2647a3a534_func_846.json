@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xe4a62805E925F427A0429586fFEf8b2647a3a534",
+    "heimdall_input": "function changeFees(uint256 arg0, uint256 arg1) public {\n        require(msg.sender + 0xffffffffffffffffffffffff8e7daff51818c6cc5f28b174dda1b9a7aeaafefd);\n        store_d = arg0;\n        store_c = arg1;\n    }",
+    "llm_output": "function changeFees(uint256 _buyFee, uint256 _sellFee) public {\n    require(msg.sender == 0x8e7daff51818c6cc5f28b174dda1b9a7aeaafefd, \"Unauthorized caller\");\n    buyFee = _buyFee;\n    sellFee = _sellFee;\n}",
+    "ground_truth": "function changeFees(uint256 _buy, uint256 _sell) external {\r\n        if(msg.sender == deployer)\r\n            _changeFees(_buy, _sell);\r\n    }"
+}

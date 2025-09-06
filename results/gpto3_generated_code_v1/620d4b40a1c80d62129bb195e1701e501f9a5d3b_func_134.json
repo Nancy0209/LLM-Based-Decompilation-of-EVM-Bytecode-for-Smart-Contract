@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x620d4B40A1c80D62129bb195e1701e501F9a5d3b",
+    "heimdall_input": "function balanceOf(address arg0) public view returns (uint64) {\n        require(arg0 == (address(arg0)));\n        require(address(arg0), CustomError_8f4eb604());\n        address var_a = address(arg0);\n        var_b = 0x05;\n        address var_c = uint64(storage_map_n[var_a]);\n        return uint64(storage_map_n[var_a]);\n        var_c = 0x8f4eb60400000000000000000000000000000000000000000000000000000000;\n    }",
+    "llm_output": "function balanceOf(address account) public view returns (uint64) {\n    // Maintains the original, though redundant, equality check\n    require(account == address(account), \"Invariant check failed\");\n\n    // Reproduces the custom-error guard from the decompiled code\n    if (account == address(0)) revert ZeroAddress();\n\n    uint8 _unused = 0x05; // Preserves a no-op write present in the decompiled output\n\n    uint64 balance = _balances[account];\n    return balance;\n}",
+    "ground_truth": "function balanceOf(address owner) public view virtual override returns (uint256) {\\n        if (owner == address(0)) revert BalanceQueryForZeroAddress();\\n        return _packedAddressData[owner] & _BITMASK_ADDRESS_DATA_ENTRY;\\n    }"
+}

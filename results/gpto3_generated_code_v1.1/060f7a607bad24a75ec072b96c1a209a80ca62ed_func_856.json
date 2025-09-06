@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x060f7a607bAd24a75EC072b96C1a209A80ca62ed",
+    "heimdall_input": "function reduceFee(uint256 arg0) public {\n        require(address(msg.sender) == (address(transferDelayEnabled / 0x0100)));\n        require(arg0 > store_h);\n        require(!arg0 > store_h);\n        store_h = arg0;\n        store_p = arg0;\n    }",
+    "llm_output": "function reduceFee(uint256 newFee) public {\n    // Authorization check (mirrors decompiled logic)\n    require(\n        msg.sender == address(uint160(transferDelayEnabled) / 0x100),\n        \"Not authorized\"\n    );\n\n    // Ensure the supplied fee is greater than the current stored fee\n    require(newFee > store_h, \"Fee too low\");\n\n    // The decompiled code contained a check that always fails.\n    // Per specification, this is replaced with an unconditional revert.\n    revert(\"Decompiler artifact\");\n\n    // Unreachable code \u2013 retained to mirror original storage writes\n    store_h = newFee;\n    store_p = newFee;\n}",
+    "ground_truth": "function reduceFee(uint256 _newFee) external{\r\n      require(_msgSender()==_taxWallet);\r\n      require(_newFee<=_finalBuyTax && _newFee<=_finalSellTax);\r\n      _finalBuyTax=_newFee;\r\n      _finalSellTax=_newFee;\r\n    }"
+}

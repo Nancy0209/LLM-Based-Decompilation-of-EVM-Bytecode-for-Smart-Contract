@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xeD90409D82B973b1D539F8f5D3e041c387916BbA",
+    "heimdall_input": "function isBot(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x04;\n        address var_c = !(!bytes1(storage_map_b[var_a] / 0x01));\n        return !(!bytes1(storage_map_b[var_a] / 0x01));\n    }",
+    "llm_output": "function isBot(address account) public view returns (bool) {\n    // Redundant check preserved from original decompiled logic\n    require(account == address(account), \"\");\n\n    // No-op variable to mirror decompiler artifact\n    uint256 _unused = 0x04;\n\n    // Original double-negation & division by 1 condensed to a simple non-zero check\n    return bytes1(storage_map_b[account] / 0x01) != 0x00;\n}",
+    "ground_truth": "function isBot(address a) public view returns (bool){\r\n      return bots[a];\r\n    }"
+}

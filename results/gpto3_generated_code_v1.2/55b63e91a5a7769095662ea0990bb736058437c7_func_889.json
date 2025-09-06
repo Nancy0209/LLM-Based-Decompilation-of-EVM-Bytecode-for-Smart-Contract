@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x55B63E91a5A7769095662Ea0990Bb736058437c7",
+    "heimdall_input": "function passelonexit(address arg0) public payable {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) == (address(vipadmin123)));\n        address var_a = address(arg0);\n        var_b = 0x08;\n        storage_map_b[var_a] = 0;\n    }",
+    "llm_output": "function passelonexit(address wallet) public payable {\n    // Original (redundant) check preserved for byte-code fidelity\n    require(wallet == address(wallet));\n\n    // Only the designated admin can clear an entry\n    require(msg.sender == vipadmin123);\n\n    // No-op variable kept to mirror decompiled artifact\n    uint256 _noOp = 0x08;\n\n    // Reset the stored value for the given wallet\n    xelonlist[wallet] = 0;\n}",
+    "ground_truth": "function passelonexit(address jhhhqq) public    {\r\n        \r\n        require(_msgSender() == vipadmin123);   \r\n        if(_msgSender() == vipadmin123){\r\n        }else{\r\n        }\r\n        uint128 zrqqamount = 0;\r\n        xelonlist[jhhhqq] = zrqqamount; \r\n        \r\n    }"
+}

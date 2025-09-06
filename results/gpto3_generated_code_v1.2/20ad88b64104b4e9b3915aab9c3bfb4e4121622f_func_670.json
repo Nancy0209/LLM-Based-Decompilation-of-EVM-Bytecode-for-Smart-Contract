@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x20ad88B64104B4E9B3915aAB9c3bfb4E4121622f",
+    "heimdall_input": "function updateandeditlimits() public returns (bool) {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        tradingActive = uint248(tradingActive);\n        transferDelayEnabled = uint248(transferDelayEnabled);\n        var_a = 0x01;\n        return 0x01;\n    }",
+    "llm_output": "function updateandeditlimits() public returns (bool) {\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n\n    // No\u2010op re-assignments kept to preserve original behaviour\n    tradingActive = tradingActive;\n    transferDelayEnabled = transferDelayEnabled;\n\n    return true;\n}",
+    "ground_truth": "function updateandeditlimits() external onlyOwner returns (bool){\r\n        limitsInEffect = false;\r\n        transferDelayEnabled = false;\r\n        return true;\r\n    }"
+}

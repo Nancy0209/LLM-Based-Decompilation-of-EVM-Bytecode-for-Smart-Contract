@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x9BF903014c2dbD36f8818eBfc7D840B2cDB6A25b",
+    "heimdall_input": "function updateDevWallet(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        emit devWalletUpdated(address(arg0), address(devWallet));\n        devWallet = (address(arg0)) | (uint96(devWallet));\n    }",
+    "llm_output": "function updateDevWallet(address newDevWallet) external {\n    // Silly self-comparison check preserved from the decompiled byte-code\n    require(newDevWallet == address(newDevWallet));\n\n    // Ownership check (cannot be removed / modified)\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n\n    // Emit the event before changing state to match on-chain order\n    emit devWalletUpdated(newDevWallet, devWallet);\n\n    // Update stored dev wallet\n    devWallet = newDevWallet;\n}",
+    "ground_truth": "function updateDevWallet(address newWallet) external onlyOwner {\r\n        emit devWalletUpdated(newWallet, devWallet);\r\n        devWallet = newWallet;\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x959Cab41Be70E2c8B29A15f45C088C2101620149",
+    "heimdall_input": "function balanceOf(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x06;\n        address var_c = storage_map_b[var_a];\n        return storage_map_b[var_a];\n    }",
+    "llm_output": "function balanceOf(address account) public view returns (uint256) {\n    // This seemingly redundant check is preserved to maintain byte-for-byte logic fidelity\n    require(account == address(account));\n\n    address addr = account;          // alias for clarity; matches original variable usage\n    uint256 unusedFlag = 0x06;       // dummy assignment kept from decompiled artifact to avoid logic removal\n    unusedFlag;                      // reference to suppress compiler \u201cunused variable\u201d warning\n\n    return _balances[addr];\n}",
+    "ground_truth": "function balanceOf(address account) public view returns (uint256) {\r\n        return _balances[account];\r\n    }"
+}

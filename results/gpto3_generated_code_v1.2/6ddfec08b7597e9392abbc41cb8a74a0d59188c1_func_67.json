@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x6ddfeC08B7597e9392abbC41CB8a74A0d59188C1",
+    "heimdall_input": "function switchOrigin(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) == (address(store_c)), \"Caller is not the original caller\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x21;\n        var_d = 0x43616c6c6572206973206e6f7420746865206f726967696e616c2063616c6c65;\n        var_e = 0x7200000000000000000000000000000000000000000000000000000000000000;\n        store_c = (address(arg0)) | (uint96(store_c));\n    }",
+    "llm_output": "function switchOrigin(address newOrigin) external {\n    // Redundant self-equality check kept to mirror original logic\n    require(newOrigin == address(newOrigin));\n\n    // Only the current \u201corigin\u201d address is allowed to switch the origin\n    require(msg.sender == _origin, \"Caller is not the original caller\");\n\n    // Update origin while preserving any upper-slot packed data\n    _origin = newOrigin;\n}",
+    "ground_truth": "function switchOrigin(address _newOne) external {\r\n        SecureCalls.checkCaller(msg.sender, _origin);\r\n        _origin = _newOne;\r\n    }"
+}
