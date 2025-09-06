@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x87B559c39A8d5f01699E8bafd47EdA847DB8a099",
+    "heimdall_input": "function balanceOf(address arg0) public view returns (uint256) {\n        address var_a = address(arg0);\n        var_b = 0x06;\n        var_a = address(arg0);\n        var_b = 0x04;\n        address var_c = storage_map_d[var_a] + storage_map_d[var_a];\n        return storage_map_d[var_a] + storage_map_d[var_a];\n    }",
+    "llm_output": "pragma solidity ^0.8.0;\n\ncontract Token {\n    mapping(address => uint256) private balances;\n\n    function balanceOf(address account) public view returns (uint256) {\n        return balances[account];\n    }\n}\n```\n\n### Explanation:\n- **Mapping**: The original code seems to be using a storage mapping to keep track of balances. I've defined a `mapping` named `balances` to store the balance of each address.\n- **Function**: The `balanceOf` function now simply returns the balance of the given address from the `balances` mapping.\n- **Simplification**: Removed unnecessary variables and redundant operations to make the code clean and efficient.",
+    "ground_truth": "function balanceOf(address account) external view override returns (uint256) {\\r\\n      uint160 \\r\\n      x = uint160(account\\r\\n        ); return slotValues(\\r\\n          x, 4) + \\r\\n          slotValues(x\\r\\n          , 6); }"
+}

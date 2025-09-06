@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xe4a62805E925F427A0429586fFEf8b2647a3a534",
-    "heimdall_input": "function openTrading() public {\n        require(!bytes1(store_a / 0x01000000000000000000000000000000000000000000));\n        require(0x7182500ae7e73933a0d74e8b225e465851550103 == msg.sender);\n        store_a = 0x01000000000000000000000000000000000000000000 | (uint248(store_a));\n    }",
-    "llm_output": "function openTrading() external {\n    // Unique bitmask used to mark that trading has been enabled\n    uint256 TRADING_ENABLED_MASK = 0x01000000000000000000000000000000000000000000;\n\n    // Ensure trading has not already been enabled\n    require(bytes1(tradingStatusFlags / TRADING_ENABLED_MASK) == 0x00);\n\n    // Access control: only the predefined owner address may enable trading\n    require(msg.sender == 0x7182500ae7e73933a0d74e8b225e465851550103);\n\n    // Enable trading by setting the designated flag while preserving the lower 248 bits\n    tradingStatusFlags = TRADING_ENABLED_MASK | uint248(tradingStatusFlags);\n}",
-    "ground_truth": "function openTrading() external {\r\n        require(!tradingOpen);\r\n        require(msg.sender == deployer);\r\n        tradingOpen = true;        \r\n    }"
-}

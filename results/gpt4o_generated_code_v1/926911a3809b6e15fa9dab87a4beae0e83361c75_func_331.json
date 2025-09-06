@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x926911A3809B6e15FA9dab87A4beAE0E83361C75",
+    "heimdall_input": "function removeLimits() public returns (bool) {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        tradingActive = uint248(tradingActive);\n        var_a = 0x01;\n        return 0x01;\n    }",
+    "llm_output": "function removeLimits() public returns (bool) {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    \n    // Placeholder variables from decompiled code, likely unused\n    bytes32 errorSelector = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n    uint256 errorOffset = 0x20;\n    uint256 errorLength = 0x20;\n    bytes32 errorMessage = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n\n    // Reset tradingActive to its current value (no-op)\n    tradingActive = uint248(tradingActive);\n\n    // Return true\n    return true;\n}",
+    "ground_truth": "function removeLimits() external onlyOwner returns (bool){\r\n        limitsInEffect = false;\r\n        return true;\r\n    }"
+}

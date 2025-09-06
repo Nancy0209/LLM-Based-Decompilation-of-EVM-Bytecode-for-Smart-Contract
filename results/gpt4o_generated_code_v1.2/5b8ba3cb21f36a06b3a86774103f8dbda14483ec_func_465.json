@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x5B8BA3cb21F36a06b3a86774103F8dBDa14483EC",
-    "heimdall_input": "function withdrawStuckEther() public payable {\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        (bool success, bytes memory ret0) = address(owner / 0x01).transfer(address(this).balance);\n    }",
-    "llm_output": "function withdrawStuckEther() public payable {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    payable(owner).transfer(address(this).balance);\n}",
-    "ground_truth": "function withdrawStuckEther() external onlyOwner {\r\n        payable(owner()).transfer(address(this).balance);\r\n    }"
-}

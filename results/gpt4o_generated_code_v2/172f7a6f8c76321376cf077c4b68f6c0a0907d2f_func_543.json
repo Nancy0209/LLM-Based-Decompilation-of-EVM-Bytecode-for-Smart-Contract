@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x172F7a6F8C76321376cf077c4b68f6C0A0907d2f",
+    "heimdall_input": "function isOwner(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = !(!(address(arg0)) == (address(getOwner / 0x01)));\n        return !(!(address(arg0)) == (address(getOwner / 0x01)));\n    }",
+    "llm_output": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract Ownership {\n    address private owner;\n\n    constructor() {\n        owner = msg.sender; // Set the contract deployer as the initial owner\n    }\n\n    /**\n     * @dev Returns true if the given address is the owner of the contract.\n     * @param addr The address to check.\n     * @return True if the address is the owner, false otherwise.\n     */\n    function isOwner(address addr) public view returns (bool) {\n        return addr == owner;\n    }\n\n    /**\n     * @dev Returns the current owner of the contract.\n     * @return The address of the owner.\n     */\n    function getOwner() public view returns (address) {\n        return owner;\n    }\n}",
+    "ground_truth": "function isOwner(address account) public view returns (bool) {\r\n        return account == owner;\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x4cA919d9EBE767dC6429f911651321feA44cbe94",
+    "heimdall_input": "function balanceOf(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x01;\n        address var_c = storage_map_b[var_a];\n        return storage_map_b[var_a];\n    }",
+    "llm_output": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract TokenBalance {\n    // Mapping to store balances of addresses\n    mapping(address => uint256) private balances;\n\n    /**\n     * @dev Returns the balance of the specified address.\n     * @param account The address to query the balance of.\n     * @return The balance of the given address.\n     */\n    function balanceOf(address account) public view returns (uint256) {\n        require(account != address(0), \"Invalid address\");\n        return balances[account];\n    }\n}",
+    "ground_truth": "function balanceOf(address account) public view override returns (uint256) {\r\n        return _balances[account];\r\n    }"
+}

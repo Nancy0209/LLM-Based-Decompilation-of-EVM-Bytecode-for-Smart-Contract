@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xEaE65155951A1B2D3Ca8C6fc19194583233B57f4",
-    "heimdall_input": "function removelimits() public {\n        store_k = 0x0b0000000000000000000000000000000000000000 | (uint192(store_k));\n    }",
-    "llm_output": "function removelimits() public {\n    _limitsState = 0x0b0000000000000000000000000000000000000000 | uint192(_limitsState);\n}",
-    "ground_truth": "function removelimits() external virtual{\r\n        maker = 11;\r\n    }"
-}

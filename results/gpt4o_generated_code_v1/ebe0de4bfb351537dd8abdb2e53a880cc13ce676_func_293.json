@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xEBe0De4bfB351537dd8Abdb2e53a880Cc13ce676",
-    "heimdall_input": "function manualSend() public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        require(!address(this).balance);\n        (bool success, bytes memory ret0) = address(store_k).transfer(address(this).balance);\n    }",
-    "llm_output": "pragma solidity ^0.8.0;\n\ncontract MyContract {\n    address public owner;\n    address public store_k;\n\n    function manualSend() public {\n        require(msg.sender == owner, \"Ownable: caller is not the owner\");\n        require(address(this).balance == 0, \"Contract balance is not zero\");\n        (bool success, ) = store_k.call{value: address(this).balance}(\"\");\n        require(success, \"Transfer failed\");\n    }\n}",
-    "ground_truth": "function manualSend() external onlyOwner {\r\n        uint256 ethBalance=address(this).balance;\r\n        if(ethBalance>0){\r\n          sendETHToFee(ethBalance);\r\n        }\r\n    }"
-}

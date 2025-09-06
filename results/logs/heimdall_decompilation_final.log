@@ -1,12 +1,12 @@
-2025-09-05 21:04:11,678 - INFO - Starting Heimdall decompilation process (using local bytecode files).
-2025-09-05 21:04:11,684 - INFO - Found 572 JSON files in data/final_verified_contracts_dataset to process with Heimdall.
-2025-09-05 21:04:11,709 - INFO - 
+2025-09-06 00:04:06,872 - INFO - Starting Heimdall decompilation process (using local bytecode files).
+2025-09-06 00:04:06,875 - INFO - Found 572 JSON files in data/final_verified_contracts_dataset to process with Heimdall.
+2025-09-06 00:04:06,906 - INFO - 
 --- Heimdall Decompilation Completed ---
-2025-09-05 21:04:11,710 - INFO - Total JSON files processed in data/final_verified_contracts_dataset: 572
-2025-09-05 21:04:11,710 - INFO - Successfully decompiled by Heimdall: 0
-2025-09-05 21:04:11,710 - INFO - Failed Heimdall decompilation: 0
-2025-09-05 21:04:11,710 - INFO - Skipped contracts (already processed or not verified): 572
-2025-09-05 21:04:11,710 - INFO - 
+2025-09-06 00:04:06,906 - INFO - Total JSON files processed in data/final_verified_contracts_dataset: 572
+2025-09-06 00:04:06,906 - INFO - Successfully decompiled by Heimdall: 0
+2025-09-06 00:04:06,906 - INFO - Failed Heimdall decompilation: 0
+2025-09-06 00:04:06,906 - INFO - Skipped contracts (already processed or not verified): 572
+2025-09-06 00:04:06,906 - INFO - 
 --- Phase 3 (Heimdall Decompilation) Completed ---
-2025-09-05 21:04:11,710 - INFO - Heimdall decompiled output saved to 'data/heimdall_decompiled_output'
-2025-09-05 21:04:11,710 - INFO - Next step: Phase 4 (Function Splitting, Matching, and Dataset Building).
+2025-09-06 00:04:06,906 - INFO - Heimdall decompiled output saved to 'data/heimdall_decompiled_output'
+2025-09-06 00:04:06,906 - INFO - Next step: Phase 4 (Function Splitting, Matching, and Dataset Building).

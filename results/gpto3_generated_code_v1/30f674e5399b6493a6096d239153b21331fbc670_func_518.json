@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x30F674e5399B6493A6096d239153b21331fbC670",
-    "heimdall_input": "function manualsend() public {\n        require(address(msg.sender) == (address(store_u)));\n        require(address(msg.sender) == (address(store_v)));\n        (bool success, bytes memory ret0) = address(store_v).transfer(address(this).balance);\n        if (ret0.length == 0) {\n            uint256 var_a = var_a + (uint248(ret0.length + 0x3f));\n            uint256 var_b = ret0.length;\n        }\n    }",
-    "llm_output": "function manualSend() public {\n    require(msg.sender == authorizedCaller);\n    require(msg.sender == payoutAddress);\n\n    (bool success, bytes memory response) = payable(payoutAddress).call{value: address(this).balance}(\"\");\n    // The `success` variable is intentionally left unused to preserve original logic.\n\n    if (response.length == 0) {\n        counter += uint248(response.length + 0x3f);\n        uint256 unusedResponseLength = response.length;\n    }\n}",
-    "ground_truth": "function manualsend() external {\r\n        require(\r\n            _msgSender() == developmentWallet ||\r\n                _msgSender() == marketingWallet\r\n        );\r\n        bool success;\r\n        (success, ) = address(marketingWallet).call{\r\n            value: address(this).balance\r\n        }(\"\");\r\n    }"
-}

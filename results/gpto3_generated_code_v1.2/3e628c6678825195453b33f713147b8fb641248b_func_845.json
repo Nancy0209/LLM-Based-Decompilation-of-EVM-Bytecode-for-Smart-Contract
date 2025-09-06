@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x3e628c6678825195453B33f713147B8fb641248b",
-    "heimdall_input": "function withdrawStuckETH() public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        (bool success, bytes memory ret0) = address(msg.sender).transfer(address(this).balance);\n        if (ret0.length == 0) {\n            uint256 var_e = var_e + (uint248(ret0.length + 0x3f));\n            uint256 var_a = ret0.length;\n        }\n    }",
-    "llm_output": "function withdrawStuckETH() public {\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n\n    (bool success, bytes memory returnedData) = payable(msg.sender).call{value: address(this).balance}(\"\");\n    // Suppress compiler warning for unused variable to keep logic identical\n    success;\n\n    if (returnedData.length == 0) {\n        // Decompiler artifact \u2013 intentionally left blank to preserve original control flow\n    }\n}",
-    "ground_truth": "function withdrawStuckETH() external onlyOwner {\r\n        bool success;\r\n        (success,) = address(msg.sender).call{value: address(this).balance}(\"\");\r\n    }"
-}

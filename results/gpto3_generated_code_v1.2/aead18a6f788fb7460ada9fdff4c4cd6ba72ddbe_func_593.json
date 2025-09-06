@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xaEAD18A6f788fb7460aDA9fDFf4C4Cd6Ba72dDBE",
-    "heimdall_input": "function getAllRegisteredContractsOfType(uint256 arg0) public view returns (bytes memory) {\n        uint256 var_a = arg0;\n        var_b = 0x69;\n        uint256 var_c = 0x20 + (var_c + (0x20 * storage_map_b[var_a]));\n        uint256 var_d = storage_map_b[var_a];\n        require(!storage_map_b[var_a]);\n        var_a = keccak256(var_a);\n        uint256 var_e = address(storage_map_b[var_a]);\n        require((var_c + 0x20) + (0x20 * storage_map_b[var_a]) > (0x20 + (var_c + 0x20)));\n        var_e = 0x20;\n        uint256 var_f = var_c.length;\n        return abi.encodePacked(0x20, var_c.length);\n    }",
-    "llm_output": "function getAllRegisteredContractsOfType(uint256 typeId)\n    public\n    view\n    returns (address[] memory contracts)\n{\n    contracts = _registeredContractsByType[typeId];\n}",
-    "ground_truth": "function getAllRegisteredContractsOfType(uint256 _type) public view returns (address[] memory) {\\n        return registeredOfType[_type];\\n    }"
-}

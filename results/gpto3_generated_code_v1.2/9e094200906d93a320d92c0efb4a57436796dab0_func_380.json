@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x9E094200906d93a320D92C0eFb4a57436796DAb0",
-    "heimdall_input": "function balanceOfBatch(address[] arg0, uint256[] arg1) public pure {\n        require(!arg0 > 0xffffffffffffffff);\n        require(!(arg0) > 0xffffffffffffffff);\n        require(!arg1 > 0xffffffffffffffff);\n    }",
-    "llm_output": "function balanceOfBatch(address[] calldata owners, uint256[] calldata ids) public pure returns (uint256[] memory) {\n    revert(\"Decompiler artifact\");\n}",
-    "ground_truth": "function balanceOfBatch(address[] calldata owners, uint256[] calldata ids)\\n        public\\n        view\\n        virtual\\n        returns (uint256[] memory balances)\\n    {\\n        require(owners.length == ids.length, \\\"LENGTH_MISMATCH\\\");\\n\\n        balances = new uint256[](owners.length);\\n\\n        // Unchecked because the only math done is incrementing\\n        // the array index counter which cannot possibly overflow.\\n        unchecked {\\n            for (uint256 i = 0; i < owners.length; ++i) {\\n                balances[i] = balanceOf[owners[i]][ids[i]];\\n            }\\n        }\\n    }"
-}

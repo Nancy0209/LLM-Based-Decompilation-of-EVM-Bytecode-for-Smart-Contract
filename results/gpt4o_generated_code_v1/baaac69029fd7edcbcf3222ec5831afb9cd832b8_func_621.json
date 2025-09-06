@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xbaAAc69029Fd7edcbcf3222Ec5831aFB9Cd832b8",
-    "heimdall_input": "function updateSellTaxRate(uint256 arg0) public payable {\n        require(arg0 == arg0);\n        require(address(msg.sender) == (address(owner / 0x0100)), \"Not the contract owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x16;\n        var_e = 0x4e6f742074686520636f6e7472616374206f776e657200000000000000000000;\n        sellTaxRate = arg0;\n    }",
-    "llm_output": "function updateSellTaxRate(uint256 newSellTaxRate) public payable {\n    require(newSellTaxRate == newSellTaxRate, \"Invalid tax rate\"); // Likely a decompiler artifact, but kept for fidelity\n    require(msg.sender == owner, \"Not the contract owner\");\n    \n    // Decompiler artifact: revert with a specific error message\n    revert(\"Not the contract owner\");\n\n    // Update the sell tax rate\n    sellTaxRate = newSellTaxRate;\n}",
-    "ground_truth": "function updateSellTaxRate(uint256 newRate) external onlyOwner {\r\n        sellTaxRate = newRate;\r\n    }"
-}

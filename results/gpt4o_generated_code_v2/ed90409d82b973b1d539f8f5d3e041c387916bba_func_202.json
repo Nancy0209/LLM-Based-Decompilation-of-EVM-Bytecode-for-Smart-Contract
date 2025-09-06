@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xeD90409D82B973b1D539F8f5D3e041c387916BbA",
+    "heimdall_input": "function isBot(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x04;\n        address var_c = !(!bytes1(storage_map_b[var_a] / 0x01));\n        return !(!bytes1(storage_map_b[var_a] / 0x01));\n    }",
+    "llm_output": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract BotChecker {\n    // Mapping to store bot status for addresses\n    mapping(address => uint8) private botStatus;\n\n    /**\n     * @dev Checks if the given address is marked as a bot.\n     * @param account The address to check.\n     * @return True if the address is marked as a bot, false otherwise.\n     */\n    function isBot(address account) public view returns (bool) {\n        require(account != address(0), \"Invalid address\");\n        return botStatus[account] > 0;\n    }\n}",
+    "ground_truth": "function isBot(address a) public view returns (bool){\r\n      return bots[a];\r\n    }"
+}

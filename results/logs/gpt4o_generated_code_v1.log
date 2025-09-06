@@ -1,2 +1,8 @@
-2025-09-05 21:08:14,655 - INFO - Starting API call process for gpt-4o with Prompt V1.
-2025-09-05 21:08:14,668 - INFO - Loaded 890 data points from data/datasets/val_dataset_v1.jsonl.
+2025-09-06 00:08:35,179 - INFO - Starting API call process for gpt-4o with Prompt V1.
+2025-09-06 00:08:35,180 - INFO - Created output directory: results/gpt4o_generated_code_v1
+2025-09-06 00:08:35,189 - INFO - Loaded 890 data points from data/datasets/val_dataset_v1.jsonl.
+2025-09-06 01:32:20,122 - INFO - 
+--- OpenAi API Calling Completed ---
+2025-09-06 01:32:20,125 - INFO - Total data points: 890
+2025-09-06 01:32:20,125 - INFO - Successfully generated outputs: 890
+2025-09-06 01:32:20,125 - INFO - Failed attempts: 0

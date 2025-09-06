@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xc89FB1a9e0817a046a6E1ff4E065A4e837Ba50C2",
+    "heimdall_input": "function balanceOf(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x01;\n        address var_c = storage_map_b[var_a];\n        return storage_map_b[var_a];\n    }",
+    "llm_output": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract Token {\n    mapping(address => uint256) private balances;\n\n    function balanceOf(address account) public view returns (uint256) {\n        require(account != address(0), \"Invalid address\");\n        return balances[account];\n    }\n}\n```\n\n### Explanation:\n- **Contract Name**: I named the contract `Token` to reflect a typical use case for a balance mapping.\n- **Mapping**: Changed `storage_map_b` to `balances` for clarity.\n- **Function Name**: `balanceOf` is a standard name for retrieving the balance of an account.\n- **Require Statement**: Simplified the require statement to check for a non-zero address, which is a common practice to prevent errors.\n- **Return Statement**: Directly returns the balance from the `balances` mapping.",
+    "ground_truth": "function balanceOf(address account) public view override returns (uint256) {\r\n        return _balances[account];\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x9BF903014c2dbD36f8818eBfc7D840B2cDB6A25b",
+    "heimdall_input": "function isExcludedFromFees(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x22;\n        address var_c = !(!bytes1(storage_map_e[var_a]));\n        return !(!bytes1(storage_map_e[var_a]));\n    }",
+    "llm_output": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract FeeExclusion {\n    // Mapping to track addresses excluded from fees\n    mapping(address => bool) private excludedFromFees;\n\n    /**\n     * @dev Checks if an address is excluded from fees.\n     * @param account The address to check.\n     * @return True if the address is excluded from fees, false otherwise.\n     */\n    function isExcludedFromFees(address account) public view returns (bool) {\n        require(account != address(0), \"Invalid address\");\n        return excludedFromFees[account];\n    }\n}",
+    "ground_truth": "function isExcludedFromFees(address account) public view returns (bool) {\r\n        return _isExcludedFromFees[account];\r\n    }"
+}

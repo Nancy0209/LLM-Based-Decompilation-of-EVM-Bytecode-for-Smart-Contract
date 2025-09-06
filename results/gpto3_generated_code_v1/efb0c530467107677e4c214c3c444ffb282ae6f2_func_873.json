@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xEFB0c530467107677E4C214c3C444fFb282AE6F2",
-    "heimdall_input": "function getBalance() public view returns (uint256) {\n        uint256 var_a = address(this).balance;\n        return address(this).balance;\n    }",
-    "llm_output": "function getBalance() public view returns (uint256 contractBalance) {\n    contractBalance = address(this).balance;\n}",
-    "ground_truth": "function getBalance() public view returns (uint256) {\\n        return address(this).balance; //Return the contract balance\\n    }"
-}

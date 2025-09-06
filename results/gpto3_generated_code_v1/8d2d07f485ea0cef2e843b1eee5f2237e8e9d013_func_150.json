@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x8d2d07f485Ea0cEf2E843b1EEE5F2237e8e9d013",
-    "heimdall_input": "function balanceOf(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        uint256 var_b = 0;\n        address var_c = storage_map_n[var_a];\n        return storage_map_n[var_a];\n    }",
-    "llm_output": "function balanceOf(address owner) public view returns (uint256) {\n    // Retains identity check present in decompiled code\n    require(owner == address(owner));\n\n    address account = owner;      // Alias to mirror original local assignment\n    uint256 unusedLocal = 0;      // Preserve unused variable from decompiled output\n\n    uint256 balance = _balances[account];  // Local copy as in decompiled logic\n    return _balances[account];\n}",
-    "ground_truth": "function balanceOf(address account) public view virtual override returns (uint256) {\r\n        return _balances[account];\r\n    }"
-}

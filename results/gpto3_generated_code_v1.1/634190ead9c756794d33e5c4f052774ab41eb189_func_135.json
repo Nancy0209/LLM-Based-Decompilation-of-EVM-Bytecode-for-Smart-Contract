@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x634190EAD9c756794D33e5C4F052774Ab41EB189",
-    "heimdall_input": "function balanceOf(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x01;\n        address var_c = storage_map_h[var_a];\n        return storage_map_h[var_a];\n    }",
-    "llm_output": "function balanceOf(address account) public view returns (uint256) {\n    // Redundant check preserved from decompiled output\n    require(account == address(account), \"Redundant self-address check\");\n\n    return _balances[account];\n}",
-    "ground_truth": "function balanceOf(address account) public view override returns (uint256) {\\r\\n        return _balances[account];\\r\\n    }"
-}

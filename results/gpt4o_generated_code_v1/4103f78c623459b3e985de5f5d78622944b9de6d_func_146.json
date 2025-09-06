@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x4103F78C623459b3e985dE5F5d78622944B9dE6D",
-    "heimdall_input": "function setMinSwapTokensThreshold(uint256 arg0) public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        _swapTokensAtAmount = arg0;\n    }",
-    "llm_output": "function setMinSwapTokensThreshold(uint256 newThreshold) public {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    _swapTokensAtAmount = newThreshold;\n}",
-    "ground_truth": "function setMinSwapTokensThreshold(uint256 swapTokensAtAmount) public onlyOwner {\r\n        _swapTokensAtAmount = swapTokensAtAmount;\r\n    }"
-}

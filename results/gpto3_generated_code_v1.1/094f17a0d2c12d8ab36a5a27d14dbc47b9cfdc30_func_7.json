@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x094f17A0D2C12d8AB36a5a27d14DbC47B9cFdC30",
-    "heimdall_input": "function openTrading() public {\n        require(!bytes1(store_a / 0x01000000000000000000000000000000000000000000));\n        require(0x9cb6da40d96aa44cc0314df6814033c3513e75a6 == msg.sender);\n        store_a = 0x01000000000000000000000000000000000000000000 | (uint248(store_a));\n    }",
-    "llm_output": "function openTrading() public {\n    // Ensure trading is not already enabled\n    require((store_a / 0x01000000000000000000000000000000000000000000) == 0);\n\n    // Restrict this action to the hard-coded controller address\n    require(msg.sender == 0x9cb6dA40D96aA44cC0314dF6814033C3513E75A6);\n\n    // Set the trading-enabled flag\n    store_a = uint248(store_a) | 0x01000000000000000000000000000000000000000000;\n}",
-    "ground_truth": "function openTrading() external {\r\n        require(!tradingOpen);\r\n        require(msg.sender == deployer);\r\n        tradingOpen = true;        \r\n    }"
-}

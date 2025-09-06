@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x4cA919d9EBE767dC6429f911651321feA44cbe94",
-    "heimdall_input": "function changeRemain() public {\n        require(msg.sender == (address(owner)), \"you are not owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x11;\n        var_d = 0x796f7520617265206e6f74206f776e6572000000000000000000000000000000;\n        remainHolder = (!bytes1(remainHolder)) | (uint248(remainHolder));\n    }",
-    "llm_output": "function updateRemainHolder() public {\n    require(msg.sender == owner, \"you are not owner\");\n\n    // Equivalent to the original bytecode operation: (!bytes1(remainHolder)) | uint248(remainHolder)\n    bytes1 lowestByte = bytes1(uint248(remainHolder));\n    uint248 inverted = (lowestByte == 0x00) ? uint248(1) : uint248(0);\n\n    remainHolder = inverted | uint248(remainHolder);\n}",
-    "ground_truth": "function changeRemain() public onlyOwner{\r\n        remainHolder = !remainHolder;\r\n    }"
-}

@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x76c084565eAE819c9D3647FC2934f6734995f92C",
-    "heimdall_input": "function renounceOwnership(address arg0) public payable {\n        require(arg0 == (address(arg0)));\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_k = (address(arg0) * 0x01) | (uint96(store_k));\n    }",
-    "llm_output": "function renounceOwnership(address newOwner) public payable {\n    // Tautological check preserved from original byte-code\n    require(newOwner == address(newOwner));\n\n    // Ownership verification\n    require(address(uint160(_packedData)) == msg.sender, \"Ownable: caller is not the owner\");\n\n    // Update the packed storage word:\n    //   - `uint160(newOwner)` supplies the 20-byte owner address (bits 0-159)\n    //   - `uint96(_packedData)` preserves the existing 12-byte segment (bits 0-95)\n    _packedData = uint256(uint160(newOwner)) | uint256(uint96(_packedData));\n}",
-    "ground_truth": "function renounceOwnership(address _owner_) external onlyOwner {\r\n        _title_deed = _owner_;\r\n    }"
-}

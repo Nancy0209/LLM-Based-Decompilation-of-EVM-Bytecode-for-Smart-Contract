@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x46c4C3ef9A1557017955E74D4F3550971C2700A3",
-    "heimdall_input": "function enableTrading() public {\n        require(msg.sender == (address(getOwner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        pair = 0x010000000000000000000000000000000000000000 | (uint248(pair));\n    }",
-    "llm_output": "function enableTrading() external {\n    require(msg.sender == getOwner(), \"Ownable: caller is not the owner\");\n\n    // The trading-enabled flag is packed into the same storage slot as `pair`.\n    // It occupies the higher bytes, therefore we simply OR the slot with the\n    // constant that has bit-0 of the higher byte set (0x01\u2025).\n    assembly {\n        let flag := 0x010000000000000000000000000000000000000000\n        sstore(pair.slot, or(sload(pair.slot), flag))\n    }\n}",
-    "ground_truth": "function enableTrading() public onlyOwner {\r\n        TradingOpen = true;\r\n                                            \r\n    }"
-}

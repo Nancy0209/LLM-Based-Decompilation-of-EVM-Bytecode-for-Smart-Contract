@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x636aD441CdA1EC74BC059A23615b9D9c3464d9e3",
-    "heimdall_input": "function setMarketingWalletAddress(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        marketingWalletAddress = (uint96(marketingWalletAddress)) | (0x0100 * (address(arg0)));\n    }",
-    "llm_output": "function setMarketingWalletAddress(address newAddress) public {\n    // Redundant check preserved from decompiled code\n    require(newAddress == address(newAddress));\n\n    // Ownership check (as in original logic)\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n\n    // Update marketing wallet address\n    marketingWalletAddress = payable(newAddress);\n}",
-    "ground_truth": "function setMarketingWalletAddress(address newAddress) external onlyOwner() {\r\n        marketingWalletAddress = payable(newAddress);\r\n    }"
-}

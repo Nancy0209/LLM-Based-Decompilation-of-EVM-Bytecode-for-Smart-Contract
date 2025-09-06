@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x842FD31eAd327AE42D19B7BFbdB045d3A219c662",
-    "heimdall_input": "function recoverEther() public {\n        require(0xf6f50011df50e1180dc78f4a8237f293f30a3b27 == msg.sender);\n        (bool success, bytes memory ret0) = address(0xf6f50011df50e1180dc78f4a8237f293f30a3b27).transfer(address(this).balance);\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x2a;\n        var_d = 0x4f6e6c79206f726967696e616c206f776e65722063616e2063616c6c20746869;\n        var_e = 0x732066756e6374696f6e00000000000000000000000000000000000000000000;\n    }",
-    "llm_output": "function recoverEther() external {\n    address originalOwner = 0xf6F50011dF50e1180dC78F4A8237F293f30A3B27;\n    require(msg.sender == originalOwner, \"Only original owner can call this function\");\n    payable(originalOwner).transfer(address(this).balance);\n}",
-    "ground_truth": "function recoverEther() external {\r\n        require(msg.sender == originalOwner, \"Only original owner can call this function\");\r\n        uint256 fullAmount = address(this).balance;\r\n        payable(originalOwner).transfer(fullAmount);\r\n    }"
-}

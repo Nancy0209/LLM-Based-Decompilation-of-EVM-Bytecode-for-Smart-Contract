@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x0571e4201619916DB35214e935F0E46F037BBd2D",
+    "heimdall_input": "function startTrading() public {\n        require(msg.sender == (address(getOwner)), \"!OWNER\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x06;\n        var_d = 0x214f574e45520000000000000000000000000000000000000000000000000000;\n        pair = 0x010000000000000000000000000000000000000000 | (uint248(pair));\n    }",
+    "llm_output": "function startTrading() public {\n    require(msg.sender == getOwner(), \"Unauthorized: Caller is not the owner\");\n    \n    bytes4 errorSelector = 0x08c379a0; // Standard Solidity error selector\n    uint256 errorOffset = 0x20;       // Offset for error data\n    uint256 errorLength = 0x06;       // Length of error message\n    bytes32 errorMessage = 0x214f574e45520000000000000000000000000000000000000000000000000000; // Encoded error message \"OWNER\"\n    \n    pair = 0x010000000000000000000000000000000000000000 | uint248(pair);\n}",
+    "ground_truth": "function startTrading() external onlyOwner {tradingAllowed = true;}"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xf7A80453F5BB234Bbfa9f6596Ef94cE42D7055EF",
+    "heimdall_input": "function getBalance() public view returns (uint256) {\n        uint256 var_a = address(this).balance;\n        return address(this).balance;\n    }",
+    "llm_output": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract BalanceChecker {\n    // Function to get the contract's current balance\n    function getBalance() public view returns (uint256) {\n        return address(this).balance;\n    }\n}",
+    "ground_truth": "function getBalance() public view returns (uint256) {\\n        return address(this).balance; //Return the contract balance\\n    }"
+}

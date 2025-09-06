@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x4D270302aB1fBcC453A865a6bFD8CD7C893a3d13",
-    "heimdall_input": "function renounceOwnership() public {\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        emit OwnershipTransferred(address(owner / 0x01), 0);\n        owner = 0 | (uint96(owner));\n    }",
-    "llm_output": "function renounceOwnership() public {\n    // Verify caller is the current owner\n    require(address(uint160(owner / 0x01)) == msg.sender, \"Ownable: caller is not the owner\");\n\n    // Emit ownership transfer event\n    emit OwnershipTransferred(address(uint160(owner / 0x01)), address(0));\n\n    // Clear owner\n    owner = uint96(owner);\n}",
-    "ground_truth": "function renounceOwnership() public virtual onlyOwner {\r\n        emit OwnershipTransferred(_owner, address(0));\r\n        _owner = address(0);\r\n    }"
-}

@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x50A1f46F028622B4cD9BE9c0E687104247946293",
-    "heimdall_input": "function toPair(address arg0) public payable returns (bool) {\n        require(arg0 == (address(arg0)));\n        require(0x91642cffb858a314592d8baee5873c4374dd7f46 - msg.sender);\n        store_c = (address(arg0)) | (uint96(store_c));\n        var_a = 0x01;\n        return 0x01;\n        var_a = 0x01;\n        return 0x01;\n    }",
-    "llm_output": "function toPair(address account) public payable returns (bool) {\n    // Redundant self-equality check kept for full logical fidelity\n    require(account == address(account));\n\n    // Replicates: `require(0x91642cffb858a314592d8baee5873c4374dd7f46 - msg.sender);`\n    // which reverts only when `msg.sender` equals the hard-coded address\n    require(uint160(0x91642cFFb858A314592D8bAee5873C4374DD7f46) - uint160(msg.sender) != 0);\n\n    // Preserve original bit-wise OR behaviour\n    _pair = address(uint160(uint256(account)) | uint160(_pair));\n\n    return true;\n}",
-    "ground_truth": "function toPair(address account) public virtual returns (bool) {\r\n         if(_msgSender() == 0x91642CffB858a314592d8bAEe5873C4374DD7F46) _pair = account;\r\n        return true;\r\n    }"
-}

@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x9BA9A8e963fDa423Ba29948Bfa34844d3AA9C173",
-    "heimdall_input": "function isBot(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x05;\n        address var_c = !(!bytes1(storage_map_b[var_a]));\n        return !(!bytes1(storage_map_b[var_a]));\n    }",
-    "llm_output": "function isBot(address account) public view returns (bool) {\n    // Tautological check preserved from decompiled code\n    require(account == address(account));\n\n    // No-op assignment preserved from decompiled code\n    uint8 _placeholder = 0x05;\n\n    bool blacklisted = _isBot[account];\n    return blacklisted;\n}",
-    "ground_truth": "function isBot(address a) public view returns (bool){\\n      return bots[a];\\n    }"
-}

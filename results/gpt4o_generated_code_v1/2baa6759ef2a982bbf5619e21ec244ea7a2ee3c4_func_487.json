@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x2bAa6759eF2a982BBf5619E21eC244eA7a2Ee3C4",
+    "heimdall_input": "function initToken(address arg0) public payable {\n        require(arg0 == (address(arg0)));\n        require(address(owner / 0x01) == (address(msg.sender)), \"only owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x0a;\n        var_e = 0x6f6e6c79206f776e657200000000000000000000000000000000000000000000;\n        token3 = (address(arg0) * 0x01) | (uint96(token3));\n    }",
+    "llm_output": "function initializeToken(address tokenAddress) public payable {\n    require(tokenAddress == address(tokenAddress), \"Invalid address\");\n    require(address(uint160(owner / 0x01)) == msg.sender, \"Only owner can call\");\n\n    bytes4 errorSelector = 0x08c379a0; // Error selector for \"Error(string)\"\n    uint256 offset = ((4 + var_c) + 32) - (4 + var_c); // This calculation is redundant\n    uint8 errorLength = 10; // Length of the error message\n    bytes32 errorMessage = 0x6f6e6c79206f776e657200000000000000000000000000000000000000000000; // \"only owner\"\n\n    token3 = (address(tokenAddress) * 0x01) | uint96(token3);\n}",
+    "ground_truth": "function initToken(address addr) public onlyowner{\r\n        token3 = IERC20(addr);\r\n    }"
+}

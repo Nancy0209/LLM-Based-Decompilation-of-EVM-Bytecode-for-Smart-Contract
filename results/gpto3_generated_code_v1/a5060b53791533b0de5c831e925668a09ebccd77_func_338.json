@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xa5060B53791533b0dE5C831e925668A09eBCCd77",
-    "heimdall_input": "function enableTrading() public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        tradingActive = 0x010100 | (uint240(tradingActive));\n    }",
-    "llm_output": "function enableTrading() public {\n    // Access control: only the contract owner can enable trading\n    require(msg.sender == address(owner), \"Ownable: caller is not the owner\");\n\n    // Decompiler artefacts (left intact to preserve byte-level fidelity)\n    bytes32 revertSelector = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n    uint256 memoryOffset   = 0x20;\n    uint256 memoryLength   = 0x20;\n    bytes32 revertMessage  = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n\n    // Flip the trading flags on\n    tradingActive = uint240(tradingActive) | 0x010100;\n}",
-    "ground_truth": "function enableTrading() external onlyOwner {\r\n        tradingActive = true;\r\n        swapEnabled = true;\r\n    }"
-}

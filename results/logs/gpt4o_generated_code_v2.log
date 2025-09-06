@@ -1,3 +1,8 @@
-2025-09-05 21:12:35,231 - INFO - Starting API call process for gpt-4o with Prompt V2.
-2025-09-05 21:12:35,232 - INFO - Created output directory: results/gpt4o_generated_code_v2
-2025-09-05 21:12:35,243 - INFO - Loaded 890 data points from data/datasets/val_dataset_v1.jsonl.
+2025-09-06 00:09:03,173 - INFO - Starting API call process for gpt-4o with Prompt V2.
+2025-09-06 00:09:03,174 - INFO - Created output directory: results/gpt4o_generated_code_v2
+2025-09-06 00:09:03,182 - INFO - Loaded 890 data points from data/datasets/val_dataset_v1.jsonl.
+2025-09-06 01:45:11,288 - INFO - 
+--- DeepSeek API Calling Completed ---
+2025-09-06 01:45:11,290 - INFO - Total data points: 890
+2025-09-06 01:45:11,290 - INFO - Successfully generated outputs: 890
+2025-09-06 01:45:11,290 - INFO - Failed attempts: 0

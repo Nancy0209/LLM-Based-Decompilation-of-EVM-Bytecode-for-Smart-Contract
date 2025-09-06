@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x3E04B913dD981C1E6DF41aCBD8fB12A0B2A69171",
-    "heimdall_input": "function isOwner(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = !(!(address(getOwner)) == (address(arg0)));\n        return !(!(address(getOwner)) == (address(arg0)));\n    }",
-    "llm_output": "function isOwner(address account) public view returns (bool) {\n    require(account == address(account));\n    return account == getOwner();\n}",
-    "ground_truth": "function isOwner(address account) public view returns (bool) {\r\n        return account == owner;\r\n    }"
-}

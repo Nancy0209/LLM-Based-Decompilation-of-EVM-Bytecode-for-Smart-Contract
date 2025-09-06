@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x172F7a6F8C76321376cf077c4b68f6C0A0907d2f",
-    "heimdall_input": "function claimDividend() public {\n        var_a = 0x15f7e05e00000000000000000000000000000000000000000000000000000000;\n        address var_b = address(msg.sender);\n        require(address(blacklistEnabled / 0x01).code.length);\n        (bool success, bytes memory ret0) = address(blacklistEnabled / 0x01).{ value: 0 ether }Unresolved_15f7e05e(var_b); // call\n    }",
-    "llm_output": "function claimDividend() public {\n    address shareholder = msg.sender;\n\n    // Make sure the dividend distributor address is a contract\n    require(dividendDistributor.code.length > 0);\n\n    // Call claimDividend(address) on the distributor contract\n    (bool success, ) = dividendDistributor.call(\n        abi.encodeWithSelector(0x15f7e05e, shareholder)\n    );\n\n    // Suppress compiler warning about unused variable\n    success;\n}",
-    "ground_truth": "function claimDividend() external {\r\n        distributor.claimDividend(msg.sender);\r\n    }"
-}

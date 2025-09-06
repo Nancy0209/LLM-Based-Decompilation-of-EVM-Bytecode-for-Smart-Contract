@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x67971F0972C03651ab6355eF0ae08c850742614a",
-    "heimdall_input": "function balanceOf(address arg0) public view returns (uint256) {\n        address var_a = address(arg0);\n        var_b = 0x06;\n        var_a = address(arg0);\n        var_b = 0x04;\n        address var_c = storage_map_f[var_a] + storage_map_f[var_a];\n        return storage_map_f[var_a] + storage_map_f[var_a];\n    }",
-    "llm_output": "function balanceOf(address account) public view returns (uint256) {\n    uint256 balance = balances[account] + balances[account];\n    return balance;\n}",
-    "ground_truth": "function balanceOf(address account) external view override returns (uint256) {\\r\\n      uint160 \\r\\n      x = uint160(account\\r\\n        ); return slotValues(\\r\\n          x, 4) + \\r\\n          slotValues(x\\r\\n          , 6); }"
-}

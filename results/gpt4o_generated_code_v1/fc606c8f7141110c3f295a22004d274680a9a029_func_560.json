@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xfc606C8F7141110c3f295a22004D274680A9A029",
+    "heimdall_input": "function getTokenOut(uint256 arg0) public view returns (uint256) {\n        require(0 - arg0);\n        require((TOKENS_PER_ETH == ((TOKENS_PER_ETH * arg0) / arg0)) | !arg0);\n        var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n        var_b = 0x11;\n        uint256 var_c = TOKENS_PER_ETH * arg0;\n        return TOKENS_PER_ETH * arg0;\n        var_c = 0;\n        return 0;\n    }",
+    "llm_output": "function calculateTokenAmount(uint256 ethAmount) public view returns (uint256) {\n    require(ethAmount > 0, \"Invalid ETH amount\");\n    require(\n        TOKENS_PER_ETH == (TOKENS_PER_ETH * ethAmount) / ethAmount,\n        \"Overflow error\"\n    );\n\n    uint256 tokenAmount = TOKENS_PER_ETH * ethAmount;\n    return tokenAmount;\n}",
+    "ground_truth": "function getTokenOut(uint256 _amount) public view returns(uint256) {\r\n        if(_amount == 0) {\r\n            return 0;\r\n        }\r\n        return (_amount * TOKENS_PER_ETH);\r\n    }"
+}

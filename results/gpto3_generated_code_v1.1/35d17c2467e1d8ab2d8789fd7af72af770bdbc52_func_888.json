@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x35D17C2467E1D8aB2d8789FD7af72af770BDBc52",
-    "heimdall_input": "function allowance(address arg0, address arg1) public view returns (uint256) {\n        address var_a = address(arg0);\n        var_b = 0x05;\n        var_a = address(arg1);\n        address var_b = keccak256(var_a);\n        address var_c = storage_map_d[var_a];\n        return storage_map_d[var_a];\n    }",
-    "llm_output": "function allowance(address owner_, address spender) public view returns (uint256) {\n    return _allowances[owner_][spender];\n}",
-    "ground_truth": "function allowance(address owner_, address spender) external view override returns (uint256) {\\r\\n      return _allowances[owner_][spender];\\r\\n    }"
-}

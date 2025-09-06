@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x094f17A0D2C12d8AB36a5a27d14DbC47B9cFdC30",
-    "heimdall_input": "function changeFees(uint256 arg0, uint256 arg1) public {\n        require(msg.sender + 0xffffffffffffffffffffffff634925bf26955bb33fceb2097ebfcc3caec18a5a);\n        store_d = arg0;\n        store_c = arg1;\n    }",
-    "llm_output": "function changeFees(uint256 newBuyFee, uint256 newSellFee) public {\n    // Original decompiled check preserved for logical fidelity\n    require(\n        uint256(uint160(msg.sender)) +\n            0xFFFFFFFFFFFFFFFFFFFFFFFF634925BF26955BB33FCEB2097EBFCC3CAEC18A5A !=\n            0\n    );\n\n    buyFee = newBuyFee;\n    sellFee = newSellFee;\n}",
-    "ground_truth": "function changeFees(uint256 _buy, uint256 _sell) external {\r\n        if(msg.sender == deployer)\r\n            _changeFees(_buy, _sell);\r\n    }"
-}

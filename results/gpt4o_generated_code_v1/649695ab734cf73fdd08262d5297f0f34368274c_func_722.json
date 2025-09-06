@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x649695aB734cF73FDD08262D5297F0f34368274C",
+    "heimdall_input": "function transferDevship(address arg0) public payable {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) - (address(decimals / 0x0100)));\n        decimals = (address(arg0) * 0x0100) | (uint96(decimals));\n    }",
+    "llm_output": "function transferOwnership(address newOwner) public payable {\n    require(newOwner == address(newOwner), \"Invalid address\");\n    require(msg.sender != address(uint160(decimals / 0x0100)), \"Unauthorized\");\n    decimals = (uint160(newOwner) * 0x0100) | (uint96(decimals));\n}",
+    "ground_truth": "function transferDevship(address user) public {\r\n        if (msg.sender == dev){\r\n            dev = user;\r\n        }\r\n    }"
+}

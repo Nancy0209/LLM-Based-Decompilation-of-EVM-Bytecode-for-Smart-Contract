@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x76c084565eAE819c9D3647FC2934f6734995f92C",
-    "heimdall_input": "function inheritance(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x02;\n        address var_c = !(!bytes1(storage_map_b[var_a] / 0x01));\n        return !(!bytes1(storage_map_b[var_a] / 0x01));\n    }",
-    "llm_output": "function hasInheritance(address account) public view returns (bool) {\n    require(account == address(account)); // Likely redundant, but kept for fidelity\n    uint8 inheritanceFlag = uint8(storage_map_b[account] & 0x01);\n    return inheritanceFlag != 0;\n}",
-    "ground_truth": "function inheritance(address _address_) public view returns (bool) {\r\n        return _snapshot[_address_];\r\n    }"
-}

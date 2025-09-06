@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x00BCB434254797479bade33e1eF0aEBDB3F27089",
-    "heimdall_input": "function disableTransferCoolDown() public returns (bool) {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        uniswapV2Router = uint248(uniswapV2Router);\n        var_a = 0x01;\n        return 0x01;\n    }",
-    "llm_output": "function disableTransferCoolDown() public returns (bool) {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    transferCoolDown = false;\n    return true;\n}",
-    "ground_truth": "function disableTransferCoolDown() external onlyOwner returns (bool) {\r\n        transferCoolDown = false;\r\n        return true;\r\n    }"
-}

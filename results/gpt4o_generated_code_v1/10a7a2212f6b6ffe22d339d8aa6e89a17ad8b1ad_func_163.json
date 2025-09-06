@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x10A7A2212f6b6ffE22d339D8Aa6e89a17ad8b1ad",
-    "heimdall_input": "function withdrawStuckEth(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(address(msg.sender) == (address(devWallet / 0x01)));\n        (bool success, bytes memory ret0) = address(arg0).transfer(address(this).balance);\n        require(ret0.length == 0);\n    }",
-    "llm_output": "function withdrawStuckEth(address recipient) public {\n    require(recipient == address(recipient));\n    require(msg.sender == devWallet);\n    (bool success, ) = recipient.call{value: address(this).balance}(\"\");\n    require(success);\n}",
-    "ground_truth": "function withdrawStuckEth(address toAddr) external onlyDev {\n        (bool success, ) = toAddr.call{value: address(this).balance}(\"\");\n        require(success);\n    }"
-}

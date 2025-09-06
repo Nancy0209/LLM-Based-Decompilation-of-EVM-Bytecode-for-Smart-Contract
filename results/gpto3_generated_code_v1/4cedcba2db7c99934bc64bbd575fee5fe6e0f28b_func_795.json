@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x4CEDcba2dB7c99934bC64bBd575FEE5fE6E0F28b",
-    "heimdall_input": "function removelimits() public {\n        store_j = 0x0b0000000000000000000000000000000000000000 | (uint192(store_j));\n    }",
-    "llm_output": "function removeLimits() external {\n    tradingFlags = uint192(tradingFlags) | 0x0B0000000000000000000000000000000000000000;\n}",
-    "ground_truth": "function removelimits() external virtual{\r\n        aurir = 11;\r\n    }"
-}

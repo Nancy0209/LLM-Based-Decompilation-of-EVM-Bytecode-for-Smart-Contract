@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xC0BA94337896c443b7728Dce84B0A750e290fbFd",
-    "heimdall_input": "function transfer() public {\n        (bool success, bytes memory ret0) = address(store_i / 0x01).transfer(address(this).balance);\n    }",
-    "llm_output": "function transfer() public {\n    // Forward the entire ETH balance of the contract to the owner\n    (bool success, ) = payable(owner()).call{value: address(this).balance}(\"\");\n    success; // suppress unused-variable warning while preserving original logic\n}",
-    "ground_truth": "function transfer() external { \r\n             payable(autoLiquidityReceiver).transfer(address(this).balance);\r\n            \r\n    }"
-}

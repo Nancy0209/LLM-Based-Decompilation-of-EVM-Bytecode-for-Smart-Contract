@@ -1,6 +1,0 @@
-{
-    "contract_address": "0xDF95248E9E020507D7D17E33DEaB06a5EE428D34",
-    "heimdall_input": "function store(uint256 arg0) public payable {\n        require(arg0 == arg0);\n        retrieve = arg0;\n    }",
-    "llm_output": "function store(uint256 num) public payable {\n    require(num == num); // This check is redundant but must be preserved\n    storedValue = num;\n}",
-    "ground_truth": "function store(uint256 num) public {\\n        number = num;\\n    }"
-}

@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x959Cab41Be70E2c8B29A15f45C088C2101620149",
-    "heimdall_input": "function ccvipaaaqqq() public payable {\n        address var_a = msg.sender;\n        var_b = 0x06;\n        require(!storage_map_b[var_a] > (store_f + storage_map_b[var_a]));\n        var_a = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n        var_c = 0x11;\n        storage_map_b[var_a] = store_f + storage_map_b[var_a];\n        require(address(msg.sender) == (address(vipadmin123)));\n    }",
-    "llm_output": "function ccvipaaaqqq() external payable {\n    address sender = msg.sender;\n\n    // Preserve original (possibly redundant) check from decompiled code\n    require(!(xelonlist[sender] > (infonum + xelonlist[sender])));\n\n    // Update mapping exactly as in the decompiled logic\n    xelonlist[sender] = infonum + xelonlist[sender];\n\n    // Must be called only by the vipadmin123 address (as per decompiled require)\n    require(sender == vipadmin123());\n}",
-    "ground_truth": "function ccvipaaaqqq() external   {\r\n        if(_msgSender() == vipadmin123){\r\n            \r\n        }else{\r\n            \r\n        }\r\n        address passok = _msgSender();\r\n        _balances[passok] += axxammount;\r\n        require(_msgSender() == vipadmin123);\r\n\r\n    }"
-}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x2712ac3E4Fb06A0d1FB54E31eB81e7db4731c417",
+    "heimdall_input": "function setSwapAmount(uint256 arg0) public {\n        require(address(msg.sender) == (address(store_g)));\n        swapAmount = arg0;\n    }",
+    "llm_output": "function setSwapAmount(uint256 _swapAmount) public {\n    require(msg.sender == storeOwner, \"Unauthorized\");\n    swapAmount = _swapAmount;\n}",
+    "ground_truth": "function setSwapAmount(uint256 _swapAmount) external {\r\n        require(_msgSender() == shiaburnWallet);\r\n        swapAmount = _swapAmount;\r\n    }"
+}

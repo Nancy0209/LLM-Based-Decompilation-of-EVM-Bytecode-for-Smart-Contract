@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x00BCB434254797479bade33e1eF0aEBDB3F27089",
+    "heimdall_input": "function removeLimitis() public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        maxWalletAmount = 0x06765c793fa10079d0000000;\n        maxTxAmount = 0x06765c793fa10079d0000000;\n    }",
+    "llm_output": "function removeLimits() public {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    \n    // These variables appear to be unused and are likely artifacts of the decompiler.\n    // They are removed for clarity as they do not affect the logic.\n    \n    maxWalletAmount = 0x06765c793fa10079d0000000; // Set max wallet amount to a large value\n    maxTxAmount = 0x06765c793fa10079d0000000;    // Set max transaction amount to a large value\n}",
+    "ground_truth": "function removeLimitis() external onlyOwner {\r\n        maxWalletAmount = maxSupply;\r\n        maxTxAmount = maxSupply;\r\n    }"
+}

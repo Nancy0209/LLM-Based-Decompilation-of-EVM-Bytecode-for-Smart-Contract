@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x2712ac3E4Fb06A0d1FB54E31eB81e7db4731c417",
+    "heimdall_input": "function setSwapAmount(uint256 arg0) public {\n        require(address(msg.sender) == (address(store_g)));\n        swapAmount = arg0;\n    }",
+    "llm_output": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract SwapContract {\n    address private owner;\n    uint256 public swapAmount;\n\n    // Constructor to set the contract owner\n    constructor() {\n        owner = msg.sender;\n    }\n\n    /**\n     * @dev Sets the swap amount. Only the owner can call this function.\n     * @param amount The new swap amount to be set.\n     */\n    function setSwapAmount(uint256 amount) external {\n        require(msg.sender == owner, \"Only the owner can set the swap amount\");\n        swapAmount = amount;\n    }\n}",
+    "ground_truth": "function setSwapAmount(uint256 _swapAmount) external {\r\n        require(_msgSender() == shiaburnWallet);\r\n        swapAmount = _swapAmount;\r\n    }"
+}

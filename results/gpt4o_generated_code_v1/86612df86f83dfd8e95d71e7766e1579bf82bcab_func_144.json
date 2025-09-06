@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x86612Df86F83dfD8E95d71E7766E1579Bf82BCab",
+    "heimdall_input": "function reduceFee(uint256 arg0) public {\n        require(arg0 == arg0);\n        require(address(msg.sender) == (address(transferDelayEnabled / 0x0100)));\n        require(arg0 > store_e);\n        require(!arg0 > store_e);\n        store_e = arg0;\n        store_p = arg0;\n    }",
+    "llm_output": "function updateFee(uint256 newFee) public {\n    require(newFee == newFee, \"Invalid fee value\"); // Likely a decompiler artifact, but kept for fidelity\n    require(msg.sender == address(uint160(transferDelayEnabled / 0x0100)), \"Unauthorized caller\");\n    require(newFee > store_e, \"New fee must be greater than the current fee\");\n    require(!(newFee > store_e), \"Contradictory condition\"); // This will always fail\n    revert(\"Decompiler artifact\"); // Replace the failing logic with a revert\n    store_e = newFee;\n    store_p = newFee;\n}",
+    "ground_truth": "function reduceFee(uint256 _newFee) external{\r\n      require(_msgSender()==_taxWallet);\r\n      require(_newFee<=_finalBuyTax && _newFee<=_finalSellTax);\r\n      _finalBuyTax=_newFee;\r\n      _finalSellTax=_newFee;\r\n    }"
+}

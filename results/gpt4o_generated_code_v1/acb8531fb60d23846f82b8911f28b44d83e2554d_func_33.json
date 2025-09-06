@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xaCb8531Fb60d23846f82b8911F28b44D83e2554d",
+    "heimdall_input": "function setTaxWallet(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_f = (address(arg0)) | (uint96(store_f));\n    }",
+    "llm_output": "function setTaxWallet(address newTaxWallet) public {\n    require(newTaxWallet == address(newTaxWallet), \"Invalid address\");\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    \n    // Update the tax wallet address while preserving the lower 96 bits of `store_f`\n    taxWallet = address(newTaxWallet) | uint96(taxWallet);\n}",
+    "ground_truth": "function setTaxWallet(address payable taxWallet) external onlyOwner() {\r\n        _taxWallet = taxWallet;\r\n    }"
+}

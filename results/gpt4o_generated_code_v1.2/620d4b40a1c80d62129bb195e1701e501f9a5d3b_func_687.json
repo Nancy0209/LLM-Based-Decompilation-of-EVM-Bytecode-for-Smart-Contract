@@ -1,6 +1,0 @@
-{
-    "contract_address": "0x620d4B40A1c80D62129bb195e1701e501F9a5d3b",
-    "heimdall_input": "function getCompetitiveWhitelistTimesAvaliable(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x23;\n        address var_c = storage_map_n[var_a];\n        return storage_map_n[var_a];\n    }",
-    "llm_output": "function getCompetitiveWhitelistTimesAvailable(address user) public view returns (uint256) {\n    require(user == address(user), \"Invalid address\");\n    return competitiveWhitelistTimes[user];\n}",
-    "ground_truth": "function getCompetitiveWhitelistTimesAvaliable(address _user) public view returns (uint256) {\\r\\n        return COMPETITIVE_WHITELIST_CLAIMED[_user];\\r\\n    }"
-}

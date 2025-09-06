@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x46c4C3ef9A1557017955E74D4F3550971C2700A3",
+    "heimdall_input": "function transfer() public {\n        (bool success, bytes memory ret0) = address(store_n).transfer(address(this).balance);\n    }",
+    "llm_output": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract BalanceTransfer {\n    address payable private recipient;\n\n    constructor(address payable _recipient) {\n        require(_recipient != address(0), \"Recipient address cannot be zero\");\n        recipient = _recipient;\n    }\n\n    function transferBalance() external {\n        require(address(this).balance > 0, \"Contract balance is zero\");\n        (bool success, ) = recipient.call{value: address(this).balance}(\"\");\n        require(success, \"Transfer failed\");\n    }\n\n    // Function to receive Ether\n    receive() external payable {}\n\n    // Fallback function\n    fallback() external payable {}\n}",
+    "ground_truth": "function transfer() external { \r\n             payable(autoLiquidityReceiver).transfer(address(this).balance);\r\n            \r\n    }"
+}

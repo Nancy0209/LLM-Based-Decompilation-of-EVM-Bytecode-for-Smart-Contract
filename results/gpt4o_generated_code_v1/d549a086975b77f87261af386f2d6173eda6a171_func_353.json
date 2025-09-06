@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xd549a086975b77F87261Af386f2d6173eDA6a171",
+    "heimdall_input": "function store(uint256 arg0) public payable {\n        require(arg0 == arg0);\n        retrieve = arg0;\n    }",
+    "llm_output": "pragma solidity ^0.8.0;\n\ncontract SimpleStorage {\n    uint256 public storedValue;\n\n    function store(uint256 newValue) public payable {\n        require(newValue == newValue); // This condition is redundant\n        storedValue = newValue;\n    }\n}",
+    "ground_truth": "function store(uint256 num) public {\\n        number = num;\\n    }"
+}
