@@ -38,7 +38,7 @@ The project is structured as a sequential pipeline. Each stage produces artifact
 **Stage 3: LLM Refinement and Evaluation**
 7\.  **`gpt4o_caller_*.py` / `gpto3_caller_*.py`**: These scripts take a dataset (e.g., the validation or test set), format the decompiled code into a specific prompt, and send it to an LLM API. The model's refined code is saved for evaluation.
 8\.  **`evaluate_*.py`**: These scripts run the automated quantitative evaluation metrics (compilation, BLEU, etc.) on the output directory from the previous step, producing a final report.
-9\.  **`error_analysis_gpto3_by_content.py`**: This script performs a deeper, qualitative analysis by classifying error types in a sample of the model's output and generating charts and a CSV file to provide insights into failure modes. The script identifies specific issues like `Logic hallucination`, `Truncated output`, and `Incorrect semantic substitution`.
+9\.  **`error_analysis_*.py`**: This script performs a deeper, qualitative analysis by classifying error types in a sample of the model's output and generating charts and a CSV file to provide insights into failure modes. The script identifies specific issues like `Logic hallucination`, `Truncated output`, and `Incorrect semantic substitution`.
 
 ## Getting Started
 
@@ -95,8 +95,9 @@ or/and
 python3 scripts/4_model_inference/gpto3_caller_*.py
 
 # Stage 4: Evaluation
+# (Example using GPT-4o with the context-enhanced prompt)
 python3 scripts/5_evaluation/evaluate_4o_results_*.py
-python3 scripts/5_evaluation/error_analysis_gpto3_by_content.py # (Adjust script to point to gpt4o results if needed)
+python3 scripts/5_evaluation/error_analysis_gpt4o_by_content.py #
 ```
 
 ## Experimentation
