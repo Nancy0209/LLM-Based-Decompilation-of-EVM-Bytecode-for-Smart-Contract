@@ -96,10 +96,13 @@ df.to_csv(csv_path, index=False)
 
 # === Plotting ===
 error_counts = Counter(all_errors)
-labels, counts = zip(*error_counts.items()) if error_counts else ([], [])
+
+# Sort the errors by count for a cleaner chart
+sorted_errors = sorted(error_counts.items(), key=lambda item: item[1], reverse=True)
+labels, counts = zip(*sorted_errors) if sorted_errors else ([], [])
 
 if labels:
-    # Pie chart
+    # Pie chart (no changes needed here)
     plt.figure(figsize=(7, 7))
     plt.pie(counts, labels=labels, autopct="%1.1f%%", startangle=140)
     plt.title("Error Type Distribution (Sample of 500)")
@@ -108,16 +111,32 @@ if labels:
     plt.savefig(pie_path)
     plt.close()
 
+    # --- START OF MODIFICATIONS FOR BAR CHART ---
     # Bar chart
-    plt.figure(figsize=(10, 5))
-    plt.bar(labels, counts)
-    plt.title("Error Type Frequency (Sample of 500)")
-    plt.ylabel("Count")
-    plt.xticks(rotation=30, ha="right")
-    plt.tight_layout()
+    fig, ax = plt.subplots(figsize=(12, 7)) # Use subplots for more control
+    bars = ax.bar(labels, counts, color='skyblue', edgecolor='black')
+
+    ax.set_title("Error Type Frequency (Sample of 500)", fontsize=16)
+    ax.set_ylabel("Count", fontsize=12)
+    ax.set_xticklabels(labels, rotation=45, ha="right") # Use set_xticklabels with ax
+    ax.grid(axis='y', linestyle='--', alpha=0.7)
+
+    # Add data labels on top of each bar
+    for bar in bars:
+        yval = bar.get_height()
+        ax.text(
+            bar.get_x() + bar.get_width()/2.0, # x position (center of bar)
+            yval + 0.5, # y position (slightly above bar)
+            int(yval), # The text label (the count)
+            ha='center', # Horizontal alignment
+            va='bottom'  # Vertical alignment
+        )
+
+    fig.tight_layout() # Use fig.tight_layout()
     bar_path = "data/analysis/error_bar_chart_4o.png"
     plt.savefig(bar_path)
-    plt.close()
+    plt.close(fig) # Close the figure object
+    # --- END OF MODIFICATIONS FOR BAR CHART ---
 
     print("✅ Error analysis completed")
     print("CSV saved to:", csv_path)
