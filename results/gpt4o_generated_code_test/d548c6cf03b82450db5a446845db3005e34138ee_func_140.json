@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xd548c6Cf03b82450db5a446845DB3005e34138eE",
+    "heimdall_input": "function reduceFee() public {\n        require(msg.sender == (address(getOwner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_u = 0xc8;\n        store_v = 0x03e8;\n        store_w = 0;\n    }",
+    "llm_output": "function reduceFee() public {\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n    uint256 newMarketingFee = 200; // 2%\n    uint256 newDevFee = 1000; // 10%\n    uint256 newBuybackFee = 0; // 0%\n    uint256 newBurnFee = 0; // 0%\n    marketingFee = newMarketingFee;\n    devFee = newDevFee;\n    buybackFee = newBuybackFee;\n    burnFee = newBurnFee;\n}",
+    "ground_truth": "function reduceFee() public onlyOwner {\r\n       \r\n        buypercent = 200;\r\n        sellpercent = 1000;\r\n        transferpercent = 0;\r\n                              \r\n    }"
+}

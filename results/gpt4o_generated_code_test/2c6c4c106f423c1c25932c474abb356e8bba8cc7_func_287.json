@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x2C6C4c106F423c1C25932c474Abb356e8BBa8cC7",
+    "heimdall_input": "function hasRole(bytes32 arg0, address arg1) public view returns (bool) {\n        require(arg1 == (address(arg1)));\n        uint256 var_a = arg0;\n        var_b = 0x0b;\n        var_a = address(arg1);\n        uint256 var_b = keccak256(var_a);\n        uint256 var_c = !(!bytes1(storage_map_b[var_a]));\n        return !(!bytes1(storage_map_b[var_a]));\n    }",
+    "llm_output": "function hasRole(bytes32 role, address account) public view returns (bool) {\n    require(account == address(account), \"Invalid address\");\n    uint256 roleHash = uint256(role);\n    uint256 accountHash = uint256(uint160(account));\n    uint256 storageKey = uint256(keccak256(abi.encodePacked(roleHash, accountHash)));\n    return storage_map_b[storageKey] != 0;\n}",
+    "ground_truth": "function hasRole(bytes32 role, address account) external view returns (bool);\\n\\n    /**\\n     * @dev Returns the admin role that controls `role`. See {grantRole}"
+}

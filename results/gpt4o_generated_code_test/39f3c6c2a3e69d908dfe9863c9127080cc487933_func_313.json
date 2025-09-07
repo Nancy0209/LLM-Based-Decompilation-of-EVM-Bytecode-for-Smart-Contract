@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x39f3C6C2a3E69D908DFE9863C9127080CC487933",
+    "heimdall_input": "function updateDeadline(uint256 arg0) public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        require(!(bytes1(tradingEnabled / 0x010000)), \"Can't change when trading has started\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x25;\n        var_d = 0x43616e2774206368616e6765207768656e2074726164696e6720686173207374;\n        var_e = 0x6172746564000000000000000000000000000000000000000000000000000000;\n        store_o = arg0;\n    }",
+    "llm_output": "function updateDeadline(uint256 newDeadline) public {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    require(!tradingEnabled, \"Can't change when trading has started\");\n    deadline = newDeadline;\n}",
+    "ground_truth": "function updateDeadline(uint256 _deadline) external onlyOwner {\r\n        require(!tradingEnabled, \"Can't change when trading has started\");\r\n        deadline = _deadline;\r\n    }"
+}

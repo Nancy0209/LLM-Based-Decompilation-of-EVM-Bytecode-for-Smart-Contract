@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x77bc7B693432Ba92B83D668C0365442773966980",
+    "heimdall_input": "function Stop() public payable {\n        address var_a = address(msg.sender << 0x60);\n        uint256 var_b = ((0x34 + var_c) - var_c) + 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0;\n        uint256 var_c = 0x34 + var_c;\n        var_d = keccak256(var_e);\n        var_f = 0x02;\n        require(bytes1(storage_map_c[var_d]));\n        (bool success, bytes memory ret0) = address(msg.sender).transfer(address(this).balance);\n        store_d = 0;\n    }",
+    "llm_output": "function Stop() public payable {\n    address senderAddr = msg.sender;\n    uint256 offsetA = 0x34;\n    uint256 offsetB = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0;\n    \n    uint256 positionHash = keccak256(abi.encodePacked(address(senderAddr)));\n    \n    require(bytes1(questionsAnswered[positionHash]) != bytes1(0));\n    \n    (bool success, ) = senderAddr.call{value: address(this).balance}(\"\");\n    \n    answeredQuestionsCount = 0;\n}",
+    "ground_truth": "function Stop() public payable isAdmin {\r\n        payable(msg.sender).transfer(address(this).balance);\r\n        responseHash = 0x0;\r\n    }"
+}

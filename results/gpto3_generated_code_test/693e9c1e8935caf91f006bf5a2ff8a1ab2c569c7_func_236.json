@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x693E9C1e8935caf91F006bf5a2FF8a1aB2C569c7",
+    "heimdall_input": "function delBot(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(getOwner)), \"!Owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x06;\n        var_d = 0x214f776e65720000000000000000000000000000000000000000000000000000;\n        address var_e = address(arg0);\n        var_f = 0x09;\n        storage_map_t[var_e] = uint248(storage_map_t[var_e]);\n    }",
+    "llm_output": "function delBot(address account) public {\n    require(account == address(account));\n    require(msg.sender == getOwner(), \"!Owner\");\n\n    // No-op assignment to mirror original decompiled logic\n    bots[account] = bots[account];\n}",
+    "ground_truth": "function delBot(address notbot) external onlyOwner {\r\n        bots[notbot] = false;\r\n    }"
+}

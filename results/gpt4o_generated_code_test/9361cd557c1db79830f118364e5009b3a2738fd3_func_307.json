@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x9361CD557C1db79830F118364E5009B3A2738fD3",
+    "heimdall_input": "function changeActiveStatus() public payable {\n        require(address(msg.sender) == (address(owner / 0x01)));\n        if (!active / 0x01) {\n            active = (0 * 0x01) | (uint248(active));\n            active = (0x01 * 0x01) | (uint248(active));\n        }\n    }",
+    "llm_output": "function changeActiveStatus() public {\n    require(msg.sender == owner, \"Only the owner can change the active status\");\n    active = !active;\n}",
+    "ground_truth": "function changeActiveStatus() external onlyOwner() {\r\n        if(active) {\r\n            active = false;\r\n        } else {\r\n            active = true;\r\n        }\r\n    }"
+}

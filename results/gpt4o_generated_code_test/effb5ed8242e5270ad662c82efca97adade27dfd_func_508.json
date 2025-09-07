@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xeffb5Ed8242e5270aD662C82EfcA97aDAdE27dFD",
+    "heimdall_input": "function manualsend() public {\n        require(address(msg.sender) == (address(store_p)));\n        require(address(msg.sender) == (address(store_q)));\n        (bool success, bytes memory ret0) = address(store_q).transfer(address(this).balance);\n    }",
+    "llm_output": "function manualSend() external {\n    require(msg.sender == _owner, \"Caller is not the owner\");\n    require(msg.sender == _previousOwner, \"Caller is not the previous owner\");\n    (bool success, ) = _previousOwner.call{value: address(this).balance}(\"\");\n    require(success, \"Transfer failed\");\n}",
+    "ground_truth": "function manualsend() external {\r\n        require(_msgSender() == _developmentAddress || _msgSender() == _marketingAddress);\r\n        uint256 contractETHBalance = address(this).balance;\r\n        sendETHToFee(contractETHBalance);\r\n    }"
+}

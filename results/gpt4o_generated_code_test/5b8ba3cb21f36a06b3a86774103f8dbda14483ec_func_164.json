@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x5B8BA3cb21F36a06b3a86774103F8dBDa14483EC",
+    "heimdall_input": "function ownerOf(uint256 arg0) public view returns (address) {\n        require(arg0 == arg0);\n        uint256 var_a = arg0;\n        var_b = 0x02;\n        require(address(storage_map_b[var_a] / 0x01) - 0, \"ERC721: invalid token ID\");\n        uint256 var_c = address(storage_map_b[var_a] / 0x01);\n        return address(storage_map_b[var_a] / 0x01);\n        var_c = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_d = ((0x04 + var_e) + 0x20) - (0x04 + var_e);\n        var_f = 0x18;\n        var_g = 0x4552433732313a20696e76616c696420746f6b656e2049440000000000000000;\n    }",
+    "llm_output": "function ownerOf(uint256 tokenId) public view returns (address) {\n    require(tokenId == tokenId, \"Invalid token ID\"); // Redundant check, but kept for fidelity\n    require(address(_tokenOwners[tokenId] / 0x01) != address(0), \"ERC721: invalid token ID\");\n    return address(_tokenOwners[tokenId] / 0x01);\n}",
+    "ground_truth": "function ownerOf(uint256 tokenId) public view virtual override returns (address) {\r\n        address owner = _ownerOf(tokenId);\r\n        require(owner != address(0), \"ERC721: invalid token ID\");\r\n        return owner;\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xc921a48b2bBd243aC30422B266edf58F472Eca7F",
+    "heimdall_input": "function rescueERC20(address arg0, uint256 arg1) public {\n        require(arg0 == (address(arg0)));\n        var_a = 0xa9059cbb00000000000000000000000000000000000000000000000000000000;\n        address var_b = address(store_m);\n        uint256 var_c = arg1;\n        (bool success, bytes memory ret0) = address(arg0).Unresolved_a9059cbb(var_b); // call\n        uint256 var_d = var_d + (uint248(ret0.length + 0x1f));\n        require(!((var_d + ret0.length) - var_d) < 0x20);\n        require(var_d.length == var_d.length);\n    }",
+    "llm_output": "function rescueERC20(address tokenAddress, uint256 amount) public {\n    require(tokenAddress == address(tokenAddress));\n    bytes4 selector = 0xa9059cbb; // transfer(address,uint256) function selector\n    address recipient = address(this);\n    (bool success, bytes memory data) = tokenAddress.call(abi.encodeWithSelector(selector, recipient, amount));\n    require(success && (data.length == 0 || abi.decode(data, (bool))), \"Transfer failed\");\n}",
+    "ground_truth": "function rescueERC20(address tokenAdd, uint256 amount) external {\\r\\n        IERC20(tokenAdd).transfer(devWallet, amount);\\r\\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x4103F78C623459b3e985dE5F5d78622944B9dE6D",
+    "heimdall_input": "function manualsend() public {\n        require(address(msg.sender) == (address(store_p)));\n        require(address(msg.sender) == (address(store_q)));\n        (bool success, bytes memory ret0) = address(store_q).transfer(address(this).balance);\n    }",
+    "llm_output": "function manualsend() public {\n    require(msg.sender == _feeAddrWallet1);\n    require(msg.sender == _feeAddrWallet2);\n    payable(_feeAddrWallet2).transfer(address(this).balance);\n}",
+    "ground_truth": "function manualsend() external {\r\n        require(_msgSender() == _developmentAddress || _msgSender() == _marketingAddress);\r\n        uint256 contractETHBalance = address(this).balance;\r\n        sendETHToFee(contractETHBalance);\r\n    }"
+}

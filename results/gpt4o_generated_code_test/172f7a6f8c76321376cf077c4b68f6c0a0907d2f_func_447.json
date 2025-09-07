@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x172F7a6F8C76321376cf077c4b68f6C0A0907d2f",
+    "heimdall_input": "function removeBuyLimit() public {\n        require(address(msg.sender) == (address(getOwner / 0x01)), \"!Owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x06;\n        var_e = 0x214f776e65720000000000000000000000000000000000000000000000000000;\n        store_f = (0 * 0x0100) | (uint248(store_f));\n    }",
+    "llm_output": "function removeBuyLimit() public {\n    require(msg.sender == owner, \"Caller is not the owner\");\n    revert(\"Decompiler artifact\");\n}",
+    "ground_truth": "function removeBuyLimit() external onlyOwner {\r\n        buyLimit = false;\r\n    }"
+}

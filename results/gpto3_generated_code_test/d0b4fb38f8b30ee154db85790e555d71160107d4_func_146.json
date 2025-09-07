@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xd0B4fb38f8B30Ee154db85790e555d71160107d4",
+    "heimdall_input": "function reduceFee(uint256 arg0) public {\n        require(address(msg.sender) == (address(store_p)));\n        require(arg0 > store_e);\n        require(!arg0 > store_e);\n        store_e = arg0;\n        store_q = arg0;\n    }",
+    "llm_output": "function reduceFee(uint256 /* _newFee */) public {\n    revert(\"Decompiler artifact\");\n}",
+    "ground_truth": "function reduceFee(uint256 _newFee) external{\n      require(_msgSender()==_taxWallet);\n      require(_newFee<=_finalBuyTax && _newFee<=_finalSellTax);\n      _finalBuyTax=_newFee;\n      _finalSellTax=_newFee;\n    }"
+}

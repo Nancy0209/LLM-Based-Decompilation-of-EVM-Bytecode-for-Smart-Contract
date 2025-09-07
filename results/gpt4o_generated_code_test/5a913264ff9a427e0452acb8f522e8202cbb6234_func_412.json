@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x5a913264FF9a427e0452acB8f522E8202CBB6234",
+    "heimdall_input": "function setBurnAddress(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        burnAddress = (address(arg0)) | (uint96(burnAddress));\n        emit NewBurnAddress(msg.sender, address(arg0));\n    }",
+    "llm_output": "function setBurnAddress(address _burnAddress) public {\n    require(_burnAddress != address(0), \"Invalid address\");\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n\n    burnAddress = _burnAddress;\n    emit NewBurnAddress(msg.sender, _burnAddress);\n}",
+    "ground_truth": "function setBurnAddress(address _burnAddress) external onlyOwner {\\n        burnAddress = _burnAddress;\\n        emit NewBurnAddress(msg.sender, _burnAddress);\\n    }"
+}

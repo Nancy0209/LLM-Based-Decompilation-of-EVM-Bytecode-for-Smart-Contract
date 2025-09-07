@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x8d2d07f485Ea0cEf2E843b1EEE5F2237e8e9d013",
+    "heimdall_input": "function isExcludedFromFees(address arg0) public view returns (bool) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x20;\n        address var_c = !(!bytes1(storage_map_n[var_a]));\n        return !(!bytes1(storage_map_n[var_a]));\n    }",
+    "llm_output": "function isExcludedFromFees(address account) public view returns (bool) {\n    // Solidity-optimizer artifact from original bytecode; always evaluates to true\n    require(account == address(account));\n\n    return _isExcludedFromFees[account];\n}",
+    "ground_truth": "function isExcludedFromFees(address account) public view returns(bool) {\r\n        return _isExcludedFromFees[account];\r\n    }"
+}

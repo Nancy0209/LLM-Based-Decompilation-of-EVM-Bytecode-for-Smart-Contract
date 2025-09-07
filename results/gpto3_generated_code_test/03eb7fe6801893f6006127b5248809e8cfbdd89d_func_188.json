@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x03eB7Fe6801893F6006127B5248809e8CFbdd89D",
+    "heimdall_input": "function bet_length(uint256 arg0) public view returns (uint256) {\n        uint256 var_a = arg0;\n        var_b = 0x05;\n        uint256 var_c = storage_map_z[var_a];\n        return storage_map_z[var_a];\n    }",
+    "llm_output": "function bet_length(uint256 bettingId) public view returns (uint256) {\n    return betCountByBettingId[bettingId];\n}",
+    "ground_truth": "function bet_length(uint256 _bettingId) public view returns (uint256) {\\n        uint256 currentBetting_bet_length = bettings[_bettingId].totalBets;\\n\\n        return currentBetting_bet_length;\\n    }"
+}

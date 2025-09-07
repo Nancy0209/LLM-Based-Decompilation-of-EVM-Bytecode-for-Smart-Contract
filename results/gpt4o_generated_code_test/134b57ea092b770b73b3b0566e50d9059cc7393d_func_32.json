@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x134B57Ea092B770b73b3B0566e50d9059cc7393d",
+    "heimdall_input": "function startGame() public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_b = 0x01000000000000000000000000000000000000000000 | (uint248(store_b));\n    }",
+    "llm_output": "function startGame() public {\n    require(msg.sender == _owner, \"Ownable: caller is not the owner\");\n    uint256 errorSelector = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n    uint256 errorOffset = 0x20;\n    uint256 errorLength = 0x20;\n    uint256 errorMessage = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n    uint256 mask = 0x01000000000000000000000000000000000000000000;\n    uint248 currentValue = uint248(store_b);\n    store_b = mask | currentValue;\n}",
+    "ground_truth": "function startGame() external onlyOwner {\r\n        gameOpen = true;\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x842FD31eAd327AE42D19B7BFbdB045d3A219c662",
+    "heimdall_input": "function AntiWhaleSetThreshold(uint256 arg0) public {\n        require(msg.sender == (address(getOwner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        require((arg0 == ((arg0 * 0x0de0b6b3a7640000) / 0x0de0b6b3a7640000)) | !0x0de0b6b3a7640000);\n        var_e = 0x4e487b7100000000000000000000000000000000000000000000000000000000;\n        var_f = 0x11;\n        antiWhaleThreshold = arg0 * 0x0de0b6b3a7640000;\n    }",
+    "llm_output": "function AntiWhaleSetThreshold(uint256 newThreshold) public {\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n    require(newThreshold == (newThreshold * 1 ether) / 1 ether, \"Invalid threshold\");\n    antiWhaleThreshold = newThreshold * 1 ether;\n}",
+    "ground_truth": "function AntiWhaleSetThreshold(uint256 newThreshold) external onlyOwner {\r\n        antiWhaleThreshold = newThreshold * 10**18;\r\n    }"
+}

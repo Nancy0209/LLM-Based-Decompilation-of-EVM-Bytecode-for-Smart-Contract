@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xa5f88146Cff0673fCea44A32ddB845302c835619",
+    "heimdall_input": "function Trading() public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_o = 0x010100 | (uint240(store_o));\n        store_x = block.number;\n    }",
+    "llm_output": "function activateTrading() public {\n    require(msg.sender == owner, \"Ownable: caller is not the owner\");\n    \n    // This appears to be a decompiler artifact; replacing with a revert statement\n    revert(\"Decompiler artifact\");\n\n    // The following lines are likely artifacts and do not make sense in context:\n    // uint256 var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n    // uint256 var_b = 0x20;\n    // uint256 var_c = 0x20;\n    // uint256 var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n    // store_o = 0x010100 | (uint240(store_o));\n    // store_x = block.number;\n}",
+    "ground_truth": "function Trading() external onlyOwner {\r\n        tradingActive = true;\r\n        swapEnabled = true;\r\n        launchedAt = block.number;\r\n    }"
+}

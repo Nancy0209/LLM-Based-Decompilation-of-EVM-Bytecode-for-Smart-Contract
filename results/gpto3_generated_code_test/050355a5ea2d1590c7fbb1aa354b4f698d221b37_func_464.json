@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x050355a5eA2d1590C7FBB1aA354b4f698d221b37",
+    "heimdall_input": "function disableTransferDelay() public returns (bool) {\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        transferDelayEnabled = (0 * 0x01) | (uint248(transferDelayEnabled));\n        var_a = 0x01;\n        return 0x01;\n    }",
+    "llm_output": "function disableTransferDelay() public returns (bool) {\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n\n    transferDelayEnabled = false;\n\n    return true;\n}",
+    "ground_truth": "function disableTransferDelay() external onlyOwner returns (bool) {\r\n        transferDelayEnabled = false;\r\n        return true;\r\n    }"
+}

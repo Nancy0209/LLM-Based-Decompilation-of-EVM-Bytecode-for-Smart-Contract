@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x39f3C6C2a3E69D908DFE9863C9127080CC487933",
+    "heimdall_input": "function rescueETH(uint256 arg0) public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        (bool success, bytes memory ret0) = address(owner).transfer(arg0);\n    }",
+    "llm_output": "function rescueETH(uint256 weiAmount) external {\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n    payable(owner()).transfer(weiAmount);\n}",
+    "ground_truth": "function rescueETH(uint256 weiAmount) external onlyOwner {\r\n        payable(owner()).transfer(weiAmount);\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x95f7bFda575e002777B856665bD36D954c3aaa59",
+    "heimdall_input": "function clearStuckBalance() public {\n        (bool success, bytes memory ret0) = address(marketingFeeReceiver / 0x01).transfer(address(this).balance);\n    }",
+    "llm_output": "function clearStuckBalance() public {\n    payable(marketingFeeReceiver).transfer(address(this).balance);\n}",
+    "ground_truth": "function clearStuckBalance() external {\r\n        payable(marketingFeeReceiver).transfer(address(this).balance);\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xEBe0De4bfB351537dd8Abdb2e53a880Cc13ce676",
+    "heimdall_input": "function reduceFee(uint256 arg0) public {\n        require(address(msg.sender) == (address(store_k)));\n        require(arg0 > store_l);\n        require(!arg0 > store_l);\n        store_l = arg0;\n        store_f = arg0;\n    }",
+    "llm_output": "function reduceFee(uint256 newFee) external {\n    // original ownership check\n    require(msg.sender == _owner, \"Caller is not the owner\");\n\n    // contradictory checks preserved exactly as in decompiled byte-code\n    require(newFee > _finalBuyTax, \"Condition 1 failed\");\n    require(!(newFee > _finalBuyTax), \"Condition 2 failed\");\n\n    // state updates (unreachable but retained for full logical fidelity)\n    _finalBuyTax  = newFee;\n    _finalSellTax = newFee;\n}",
+    "ground_truth": "function reduceFee(uint256 _newFee) external{\r\n      require(_msgSender()==_taxWallet);\r\n      require(_newFee<=_finalBuyTax && _newFee<=_finalSellTax);\r\n      _finalBuyTax=_newFee;\r\n      _finalSellTax=_newFee;\r\n    }"
+}

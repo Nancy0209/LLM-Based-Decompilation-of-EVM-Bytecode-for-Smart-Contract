@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x700604d812AD038BB5fE00ddDB8c0375E65A307C",
+    "heimdall_input": "function setBuyShiaRate(uint256 arg0) public {\n        require(arg0 == arg0);\n        require(address(msg.sender) == (address(store_f / 0x01)));\n        store_g = arg0;\n    }",
+    "llm_output": "function setBuyShiaRate(uint256 buyShiaToken) public {\n    // Redundant check preserved from decompiled logic\n    require(buyShiaToken == buyShiaToken);\n    \n    // Owner verification (equivalent to original `store_f / 0x01` comparison)\n    require(msg.sender == _owner);\n    \n    buyShiaUpperLimit = buyShiaToken;\n}",
+    "ground_truth": "function setBuyShiaRate(uint256 buyShiaToken) external {\r\n        require(_msgSender() == shiaburnWallet);\r\n        buyShiaUpperLimit = buyShiaToken;\r\n    }"
+}

@@ -8,7 +8,7 @@ from collections import Counter
 # === Configuration ===
 TEST_DATASET_PATH = "data/datasets/test_dataset_v3.jsonl"  # Path to test dataset
 LLM_OUTPUT_DIR = "results/gpto3_generated_code_test"  # Directory containing LLM outputs
-SAMPLE_SIZE = 100
+SAMPLE_SIZE = 500
 
 # === Load test dataset ===
 with open(TEST_DATASET_PATH, "r") as f:
@@ -91,7 +91,7 @@ if not records:
     exit()
 
 df = pd.DataFrame(records)
-csv_path = "error_analysis_sample_100.csv"
+csv_path = "data/analysis/error_analysis_sample_500_o3.csv"
 df.to_csv(csv_path, index=False)
 
 # === Plotting ===
@@ -102,20 +102,20 @@ if labels:
     # Pie chart
     plt.figure(figsize=(7, 7))
     plt.pie(counts, labels=labels, autopct="%1.1f%%", startangle=140)
-    plt.title("Error Type Distribution (Sample of 100)")
+    plt.title("Error Type Distribution (Sample of 500)")
     plt.tight_layout()
-    pie_path = "error_pie_chart.png"
+    pie_path = "data/analysis/error_pie_chart_o3.png"
     plt.savefig(pie_path)
     plt.close()
 
     # Bar chart
     plt.figure(figsize=(10, 5))
     plt.bar(labels, counts)
-    plt.title("Error Type Frequency (Sample of 100)")
+    plt.title("Error Type Frequency (Sample of 500)")
     plt.ylabel("Count")
     plt.xticks(rotation=30, ha="right")
     plt.tight_layout()
-    bar_path = "error_bar_chart.png"
+    bar_path = "data/analysis/error_bar_chart_o3.png"
     plt.savefig(bar_path)
     plt.close()
 

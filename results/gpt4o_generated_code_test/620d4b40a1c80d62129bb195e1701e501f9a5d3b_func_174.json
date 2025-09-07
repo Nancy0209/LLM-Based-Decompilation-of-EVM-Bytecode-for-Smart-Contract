@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x620d4B40A1c80D62129bb195e1701e501F9a5d3b",
+    "heimdall_input": "function getGuaranteedWhitelistTimesAvaliable(address arg0) public view returns (uint256) {\n        require(arg0 == (address(arg0)));\n        address var_a = address(arg0);\n        var_b = 0x1b;\n        address var_c = storage_map_n[var_a];\n        return storage_map_n[var_a];\n    }",
+    "llm_output": "function getGuaranteedWhitelistTimesAvailable(address user) public view returns (uint256) {\n    require(user == address(user), \"Invalid address\");\n    return guaranteedWhitelistTimesAvailable[user];\n}",
+    "ground_truth": "function getGuaranteedWhitelistTimesAvaliable(address _user) public view returns (uint256) {\\r\\n        return GUARANTEED_WHITELIST_CLAIMED[_user];\\r\\n    }"
+}

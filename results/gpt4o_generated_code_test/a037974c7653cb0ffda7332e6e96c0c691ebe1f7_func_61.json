@@ -1,0 +1,6 @@
+{
+    "contract_address": "0xa037974C7653cB0ffdA7332E6E96c0C691eBE1F7",
+    "heimdall_input": "function LockLPToken(uint256 arg0) public {\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_p = arg0;\n        store_q = arg0;\n    }",
+    "llm_output": "function LockLPToken(uint256 fee) public {\n    require(msg.sender == _owner, \"Ownable: caller is not the owner\");\n    uint256 errorSelector = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n    uint256 errorOffset = 0x20;\n    uint256 errorLength = 0x20;\n    uint256 errorMessage = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n    uint256 lockAmount = fee;\n    uint256 anotherLockAmount = fee;\n}",
+    "ground_truth": "function LockLPToken(uint256 fee) external onlyOwner{\r\n        _initialSellTax = fee;\r\n        _finalSellTax=fee;\r\n    }"
+}

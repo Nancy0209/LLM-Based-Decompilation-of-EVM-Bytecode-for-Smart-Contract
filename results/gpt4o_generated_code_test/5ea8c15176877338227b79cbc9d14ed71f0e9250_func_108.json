@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x5Ea8C15176877338227B79CBc9d14Ed71F0E9250",
+    "heimdall_input": "function deposit() public view {\n        require(address(msg.sender) == (address(owner / 0x01)), \"Only the owner can deposit funds\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f6e6c7920746865206f776e65722063616e206465706f7369742066756e6473;\n    }",
+    "llm_output": "function deposit() public payable {\n    require(msg.sender == owner, \"Only the owner can deposit funds\");\n    // Logic for deposit functionality goes here\n}",
+    "ground_truth": "function deposit() external payable {\r\n        require(msg.sender == owner, \"Only the owner can deposit funds\");\r\n    }"
+}

@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x636aD441CdA1EC74BC059A23615b9D9c3464d9e3",
+    "heimdall_input": "function getTime() public view returns (uint256) {\n        uint256 var_a = block.timestamp;\n        return block.timestamp;\n    }",
+    "llm_output": "function getTime() public view returns (uint256) {\n    uint256 currentTimestamp = block.timestamp; // capture current block timestamp\n    return block.timestamp;\n}",
+    "ground_truth": "function getTime() public view returns (uint256) {\r\n        return block.timestamp;\r\n    }"
+}

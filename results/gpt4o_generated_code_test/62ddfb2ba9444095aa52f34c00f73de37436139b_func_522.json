@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x62DdfB2BA9444095aA52f34c00f73de37436139B",
+    "heimdall_input": "function isExcluded(address arg0) public view returns (bool) {\n        address var_a = address(arg0);\n        var_b = 0x04;\n        address var_c = !(!bytes1(storage_map_c[var_a] / 0x01));\n        return !(!bytes1(storage_map_c[var_a] / 0x01));\n    }",
+    "llm_output": "function isExcluded(address account) public view returns (bool) {\n    return _excludedAccounts[account];\n}",
+    "ground_truth": "function isExcluded(address account) public view returns (bool) {\r\n        return _isExcluded[account];\r\n    }"
+}

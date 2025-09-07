@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x6BC7d0c26885D7c1C384c3aF3CA6214D628B2712",
+    "heimdall_input": "function manualsend() public {\n        (bool success, bytes memory ret0) = address(store_r).transfer(address(this).balance);\n        if (ret0.length == 0) {\n            uint256 var_a = var_a + (uint248(ret0.length + 0x3f));\n            uint256 var_b = ret0.length;\n        }\n    }",
+    "llm_output": "function manualsend() public {\n    (bool success, ) = payable(store_r).call{value: address(this).balance}(\"\");\n    if (!success) {\n        revert(\"Transfer failed\");\n    }\n}",
+    "ground_truth": "function manualsend() external {\\n        bool success;\\n        (success,) = address(devWallet).call{value: address(this).balance}(\\\"\\\");\\n    }"
+}

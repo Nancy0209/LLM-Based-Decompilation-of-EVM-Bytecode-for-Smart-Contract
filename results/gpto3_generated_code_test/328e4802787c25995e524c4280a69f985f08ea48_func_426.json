@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x328E4802787C25995e524C4280a69F985f08ea48",
+    "heimdall_input": "function manualSend() public {\n        require(address(this).balance > 0, \"Contract balance must be greater than zero\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x2a;\n        var_d = 0x436f6e74726163742062616c616e6365206d7573742062652067726561746572;\n        var_e = 0x207468616e207a65726f00000000000000000000000000000000000000000000;\n        (bool success, bytes memory ret0) = address(store_o).transfer(address(this).balance);\n    }",
+    "llm_output": "function manualSend() public {\n    require(address(this).balance > 0, \"Contract balance must be greater than zero\");\n    payable(_taxWallet).transfer(address(this).balance);\n}",
+    "ground_truth": "function manualSend() external {\\r\\n        require(address(this).balance > 0, \\\"Contract balance must be greater than zero\\\");\\r\\n        uint256 balance = address(this).balance;\\r\\n        payable(_taxWallet).transfer(balance);\\r\\n    }"
+}

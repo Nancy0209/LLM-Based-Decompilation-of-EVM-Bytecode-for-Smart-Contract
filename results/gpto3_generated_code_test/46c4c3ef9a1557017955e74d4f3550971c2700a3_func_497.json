@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x46c4C3ef9A1557017955E74D4F3550971C2700A3",
+    "heimdall_input": "function stepOne() public {\n        require(msg.sender == (address(getOwner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_f = 0x0190;\n        store_g = 0x015e;\n        store_h = 0x64;\n    }",
+    "llm_output": "function stepOne() external {\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n\n    buypercent       = 400;  // 0x0190\n    sellpercent      = 350;  // 0x015e\n    transferpercent  = 100;  // 0x0064\n}",
+    "ground_truth": "function stepOne() external onlyOwner {\r\n        sellpercent = 400;\r\n        buypercent = 350;\r\n        transferpercent = 100; \r\n         \r\n    }"
+}

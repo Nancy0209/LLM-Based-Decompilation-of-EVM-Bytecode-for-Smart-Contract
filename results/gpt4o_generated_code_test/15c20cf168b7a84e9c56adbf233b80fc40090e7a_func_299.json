@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x15C20cF168b7A84E9C56ADbf233b80Fc40090e7a",
+    "heimdall_input": "function removeCoal(address arg0) public payable {\n        require(arg0 == (address(arg0)));\n        require(address(owner / 0x01) == (address(msg.sender)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        uint256 var_b = ((0x04 + var_c) + 0x20) - (0x04 + var_c);\n        var_d = 0x20;\n        var_e = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        address var_f = address(arg0);\n        var_g = 0x98;\n        storage_map_i[var_f] = (0 * 0x01) | (uint248(storage_map_i[var_f]));\n    }",
+    "llm_output": "function removeCoal(address account) public payable {\n    require(account == address(account));\n    require(owner == msg.sender, \"Ownable: caller is not the owner\");\n    storage_map_coal[account] = uint248(storage_map_coal[account]);\n}",
+    "ground_truth": "function removeCoal(address account) public onlyOwner {\\r\\n        coal[account] = false;\\r\\n    }"
+}

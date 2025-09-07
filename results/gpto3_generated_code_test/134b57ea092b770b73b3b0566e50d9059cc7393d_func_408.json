@@ -1,0 +1,6 @@
+{
+    "contract_address": "0x134B57Ea092B770b73b3B0566e50d9059cc7393d",
+    "heimdall_input": "function changeRandomizer(address arg0) public {\n        require(arg0 == (address(arg0)));\n        require(msg.sender == (address(owner)), \"Ownable: caller is not the owner\");\n        var_a = 0x08c379a000000000000000000000000000000000000000000000000000000000;\n        var_b = 0x20;\n        var_c = 0x20;\n        var_d = 0x4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572;\n        store_n = (address(arg0)) | (uint96(store_n));\n        store_i = (uint96(store_i)) | (address(arg0));\n    }",
+    "llm_output": "function changeRandomizer(address newRandomizerAddress) public {\n    // Tautological check kept to preserve decompiled logic fidelity\n    require(newRandomizerAddress == newRandomizerAddress);\n\n    // Ownership verification (mirrors inlined require from decompiled output)\n    require(msg.sender == owner(), \"Ownable: caller is not the owner\");\n\n    // Update stored randomizer references\n    randomizerAddress = newRandomizerAddress;\n    randomizer = randomizerContract(newRandomizerAddress);\n}",
+    "ground_truth": "function changeRandomizer(address newRandomizerAddress) external onlyOwner() {\r\n        randomizerAddress = newRandomizerAddress;\r\n        randomizer = randomizerContract(newRandomizerAddress);\r\n    }"
+}
