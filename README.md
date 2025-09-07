@@ -89,7 +89,8 @@ python3 scripts/2_decompilation/heimdall_decompiler_final.py
 python3 scripts/3_dataset_building/split_and_pair_functions_*.py
 python3 scripts/3_dataset_building/split_dataset_*.py
 
-# Stage 3: LLM Refinement (Example using GPT-4o or/and GPT-o3 with the context-enhanced prompt)
+# Stage 3: LLM Refinement
+# (Example using GPT-4o or/and GPT-o3 with the context-enhanced prompt)
 python3 scripts/4_model_inference/gpt4o_caller_*.py
 or/and
 python3 scripts/4_model_inference/gpto3_caller_*.py
