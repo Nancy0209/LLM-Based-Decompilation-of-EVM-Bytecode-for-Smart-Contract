@@ -23,11 +23,12 @@ API_CALL_DELAY = 1.0
 API_TIMEOUT = 120
 
 # --- Logging Setup ---
+LOG_FILE = "results/logs/gpt4o_generated_code_test.log"
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(f'{OUTPUT_DIR}.log', mode='w'),
+        logging.FileHandler(LOG_FILE, mode='w'),
         logging.StreamHandler()
     ]
 )
