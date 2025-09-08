@@ -590,3 +590,9 @@
 2025-09-06 00:03:31,779 - INFO - Total addresses processed: 708
 2025-09-06 00:03:31,779 - INFO - Successfully enriched: 0
 2025-09-06 00:03:31,779 - INFO - Skipped/Failed (already enriched or couldn't fetch): 419
+2025-09-08 11:44:38,794 - INFO - Starting Etherscan data enrichment process.
+2025-09-08 11:44:38,798 - INFO - Found 708 contract addresses to lookup from Etherscan.
+2025-09-08 11:44:39,643 - INFO - Failed to verify/enrich 0x0A82fC64ECFD6669899857aE3bB4C85398721Fdd from Etherscan (code not verified or API error).
+2025-09-08 11:44:40,718 - INFO - Failed to verify/enrich 0x98CF2F424d19A2F7b7a0A832b3f0FA20b1d5ff20 from Etherscan (code not verified or API error).
+2025-09-08 11:44:41,673 - INFO - Failed to verify/enrich 0xa2689B688405fFCa66ae9F793fBB54cb3544F31f from Etherscan (code not verified or API error).
+2025-09-08 11:44:42,459 - INFO - Failed to verify/enrich 0xC1e27F7d94ca4f7316595D6bc290603208B61c8d from Etherscan (code not verified or API error).
