@@ -19,13 +19,13 @@ NODE_URL = "http://192.168.0.237:19544"
 YOUR_ETHERSCAN_API_KEY = 'TS3GDH7BV6BXP7ZVBTS48GUCQZIVVVJFQP' # <<<  Etherscan API Key >>>
 
 # 
-OUTPUT_DATA_DIR = 'raw_contract_data' 
+OUTPUT_DATA_DIR = 'data/raw_contract_data' 
 #  Etherscan 
-CONTRACT_ADDRESSES_FILE = 'contract_addresses_for_etherscan.txt' 
+CONTRACT_ADDRESSES_FILE = 'data/contract_addresses_for_etherscan.txt' 
 # 
-PROGRESS_FILE = 'last_processed_block.txt'
+PROGRESS_FILE = 'data/last_processed_block.txt'
 # 
-ERROR_LOG_FILE = 'scraper_errors.log'
+ERROR_LOG_FILE = 'results/logs/scraper_errors.log'
 
 #  ()
 START_BLOCK = 18000000  #  2023  9 
